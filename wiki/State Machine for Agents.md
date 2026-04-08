@@ -3,7 +3,7 @@ type: concept
 created: 2026-04-09
 updated: 2026-04-09
 tags:
-  - agent
+  - 智能体
   - state
   - tools
 source_count: 1
@@ -11,7 +11,7 @@ source_count: 1
 
 # State Machine for Agents
 
-状态机是一种管理 AI Agent 工具可用性的模式，通过屏蔽 token logits 而非动态增删工具定义。
+状态机是一种管理 AI 智能体工具可用性的模式，通过屏蔽词元 logits 而非动态增删工具定义。
 
 ## 背景
 
@@ -21,7 +21,7 @@ source_count: 1
 
 ## 解决方案
 
-使用**上下文感知的状态机**进行 token masking：
+使用**上下文感知的状态机**进行词元屏蔽（token masking）：
 
 ### 实现方式
 - 工具名用一致性前缀（`browser_`、`shell_`）
@@ -30,7 +30,7 @@ source_count: 1
 
 ### 三种模式（以 Hermes 格式为例）
 - **Auto** — 可调用也可不调用，仅预填回复前缀
-- **Required** — 必须调用某个函数，预填至 tool_call token
+- **Required** — 必须调用某个函数，预填至 `tool_call` 词元
 - **Specified** — 必须调用指定子集的函数，预填至函数名开头
 
 ## 好处

@@ -10,7 +10,7 @@ source_count: 1
 
 # Manus
 
-Manus 是一个 AI agent 项目，后来被 **Meta** 收购。他们的经验总结文章 "Context Engineering for AI Agents: Lessons from Building Manus" 提供了构建生产级 AI Agent 时的上下文工程最佳实践。
+Manus 是一个 AI 智能体项目，后来被 **Meta** 收购。他们的经验总结文章 "Context Engineering for AI Agents: Lessons from Building Manus" 提供了构建生产级 AI 智能体时的上下文工程最佳实践。
 
 ## 核心贡献
 
@@ -21,7 +21,7 @@ Manus 选择了基于上下文工程而非端到端训练的道路，原因：
 ## 六个关键原则
 
 1. **Design Around the KV-Cache** — 围绕 KV-Cache 设计，保持提示前缀稳定，上下文仅追加，关注 KV-Cache 命中率（直接影响延迟和成本）
-2. **Mask, Don't Remove** — 使用上下文感知的状态机管理工具可用性，通过 token masking 而非动态增删工具
+2. **Mask, Don't Remove** — 使用上下文感知的状态机管理工具可用性，通过词元屏蔽（token masking）而非动态增删工具
 3. **Use the File System as Context** — 将文件系统视为终极上下文，容量无限、持久，作为结构化外部内存
 4. **Manipulate Attention Through Recitation** — 通过重复读写（如 todo.md）将目标保持在上下文末尾，避免 "lost-in-the-middle"
 5. **Keep the Wrong Stuff In** — 保留错误痕迹在上下文中，让模型能自适应、不重复犯错
@@ -29,7 +29,7 @@ Manus 选择了基于上下文工程而非端到端训练的道路，原因：
 
 ## 相关概念
 
-- [[KV-Cache]] — 键值缓存对 AI Agent 性能至关重要
+- [[KV-Cache]] — 键值缓存对 AI 智能体性能至关重要
 - [[Context Engineering]] — 上下文工程的实际应用
 - [[Agent Loop]]
 - [[State Machine for Agents]]

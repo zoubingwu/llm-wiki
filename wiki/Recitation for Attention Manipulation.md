@@ -3,7 +3,7 @@ type: concept
 created: 2026-04-09
 updated: 2026-04-09
 tags:
-  - agent
+  - 智能体
   - attention
   - memory
 source_count: 1
@@ -11,7 +11,7 @@ source_count: 1
 
 # Recitation for Attention Manipulation
 
-通过背诵（Recitation）操纵注意力的技术，指 Agent 在长循环中不断重写任务目标（如 todo.md）到上下文末尾，以将全局计划保持在模型的近期注意力范围。
+通过背诵（Recitation）操纵注意力的技术，指智能体在长循环中不断重写任务目标（如 todo.md）到上下文末尾，以将全局计划保持在模型的近期注意力范围。
 
 ## 场景
 
