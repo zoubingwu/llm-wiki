@@ -39,7 +39,7 @@ Append-only 变更记录，最新在底部。
   - `File System as Context.md` — 文件系统作为终极上下文
   - `Keep Errors in Context.md` — 保留错误痕迹让模型自适应
   - `Few-Shot Prompting in Agents.md` — 少样本提示的陷阱
-  - `Stochastic Graduate Descent.md` — 随机研究生下降法
+  - `Stochastic Graduate Descent.md` — “随机研究生梯度下降”，Manus 团队对实验迭代过程的戏称
 - 更新了以下页面：
   - `index.md` — 新增 9 个概念和 1 个实体
   - `Context Engineering.md` — 补充了实战案例链接

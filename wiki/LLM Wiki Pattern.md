@@ -44,4 +44,4 @@ Obsidian 是 IDE，LLM 是程序员，wiki 是代码库。
 
 - [[Retrieval-Augmented Generation (RAG)]] — LLM Wiki 是 RAG 的进化
 - [[Long-term Memory for LLMs]] — wiki 本质上就是一个长期记忆系统
-- [[Scratchpads]] — wiki 本身可视为一种 scratchpad
+- [[Scratchpads]] — wiki 本身也可以视为一种外部草稿区
