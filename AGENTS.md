@@ -125,13 +125,6 @@ Append-only 变更记录，最新在底部。
 - 检查结果
 ```
 
-## 当前状态
-
-- **articles/** — 2 篇源文章
-  - `A Guide to Context Engineering for LLMs.md`（ByteByteGo，上下文工程）
-  - `llm-wiki.md`（karpathy，LLM Wiki 原始概念）
-- **wiki/** — 尚未初始化，第一次 ingest 时会创建 index.md、log.md 和概念页
-
 ## 注意事项
 
 - 每次修改文件后，记得告诉人你改了什么，方便人在 Obsidian 里查看
