@@ -1,0 +1,140 @@
+# AGENTS.md — LLM Wiki 维护指南
+
+你是这个个人 wiki 的管理员。这个仓库就是你的职责范围，你负责读取、写入和维护其中的所有文件。
+
+## 目录结构
+
+```
+llm-wiki/
+├── AGENTS.md              # 本文件（schema），你唯一需要阅读的指南
+├── .gitignore
+├── articles/              # 【源文章】已归档的知识源（不可修改，只增不删不改）
+│   └── <title>.md
+├── wiki/                  # 【维基层】你生成和维护的 markdown 文件
+│   ├── index.md           # 目录索引，每次 ingest 后更新
+│   ├── log.md             # 变更日志，append-only
+│   └── *.md               # 概念页、实体页、综述页等
+├── raw/
+│   └── assets/            # 文章附件（图片等），不可修改
+└── .obsidian/             # Obsidian 配置，你不用管
+```
+
+## 核心原则
+
+1. **你写 wiki，人读 wiki。** 你负责所有内容生成和交叉引用，人负责提供源、提问、审查。
+2. **源文件不可变。** `articles/` 和 `raw/` 下的文件只读，你从不修改它们。
+3. **维基是持久产物。** 每次新增源文章，你要提取知识、创建或更新维基页面、维护交叉引用，而不是每次回答问题时重新推导。
+4. **好答案可以归档。** 人在对话中提出的问题、做的对比分析，如果值得保留，就作为新页面写入 `wiki/`。
+
+## 工作流
+
+### Ingest（录入新源）
+
+当人给你一篇文章并说要录入时：
+1. 读取源文件（`articles/` 下已归档的，或直接给的内容）
+2. 提取关键概念、实体、事实
+3. 在 `wiki/` 中创建或更新相关页面
+4. 建立 `[[wikilink]]` 交叉引用
+5. 更新 `wiki/index.md`
+6. 在 `wiki/log.md` 末尾追加一条日志记录
+
+单个源可能影响 10-15 个维基页面是正常的。
+
+### Query（回答问题）
+
+当人针对 wiki 提问时：
+1. 先在 `wiki/index.md` 中定位相关页面
+2. 读取相关维基页面，综合答案
+3. 给出带引用的回答（标注来源文章和维基页面）
+4. 如果答案很有价值（对比分析、综合综述、新发现的关系），主动建议将答案归档为 `wiki/` 下的新页面
+
+### Lint（健康检查）
+
+当人要求进行健康检查时，扫描 `wiki/` 目录并报告：
+- 页面之间的矛盾说法
+- 已被新源推翻的过时内容
+- 没有入链的孤立页面
+- 被多处提及但没有独立页面的重要概念
+- 缺失的交叉引用
+
+## 文件约定
+
+### 维基页面格式
+
+```markdown
+---
+type: concept | entity | source | overview | analysis
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+tags:
+  - tag1
+  - tag2
+source_count: 0
+---
+
+# 页面标题
+
+内容...
+```
+
+- `type` 必须指定，取值见上
+- `concept` — 概念解释（如"上下文工程"、"RAG"）
+- `entity` — 实体（人物、组织、技术产品等）
+- `source` — 源文件摘要页
+- `overview` — 综述 / 总览
+- `analysis` — 分析 / 对比
+
+### Wikilink 语法
+
+使用 Obsidian 风格的双括号引用：`[[概念名称]]`。链接文本应该与目标文件名一致（不含 `.md` 后缀）。如果文件名包含空格，直接写全称如 `[[Context Engineering]]`。
+
+### index.md 格式
+
+```markdown
+# Wiki Index
+
+## 概念 Pages
+- [[Concept A]] — 一句话概述
+- [[Concept B]] — 一句话概述
+
+## 实体 Pages
+- [[Entity A]] — 一句话概述
+
+## 源摘要
+- [[Source Title]] — 一句话概述（来源，日期）
+
+## 分析
+- [[Analysis Title]] — 一句话概述
+```
+
+### log.md 格式
+
+```markdown
+# Wiki Log
+
+Append-only 变更记录，最新在底部。
+
+## [YYYY-MM-DD] ingest | 文章标题
+- 录入了什么
+- 创建/更新了哪些页面
+
+## [YYYY-MM-DD] query | 问题简述
+- 简要结果，如果有新页面则记录
+
+## [YYYY-MM-DD] lint
+- 检查结果
+```
+
+## 当前状态
+
+- **articles/** — 2 篇源文章
+  - `A Guide to Context Engineering for LLMs.md`（ByteByteGo，上下文工程）
+  - `llm-wiki.md`（karpathy，LLM Wiki 原始概念）
+- **wiki/** — 尚未初始化，第一次 ingest 时会创建 index.md、log.md 和概念页
+
+## 注意事项
+
+- 每次修改文件后，记得告诉人你改了什么，方便人在 Obsidian 里查看
+- 如果文章中有图片引用（如 `![[url]]`），图片已下载到 `raw/assets/`，维基页面中引用图片时使用本地路径
+- 不确定某个页面是否存在时，用 Grep 或 Glob 先确认，别假设
+- 人可以随时和你一起修改 schema 本身（就是本文件），如果约定有变化，以最新版本为准
