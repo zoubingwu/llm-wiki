@@ -1,6 +1,7 @@
 # Wiki Index
 
 ## 概念 Pages
+- [[Overview]] — 当前知识库总览，串联上下文工程与 LLM Wiki 模式
 - [[Context Engineering]] — 设计和管理 LLM 上下文窗口的四种策略（Write、Select、Compress、Isolate）
 - [[Context Rot]] — 输入长度增加导致 LLM 性能断崖式下降
 - [[Attention Mechanism]] — 注意力机制的工作原理、计算代价和注意力分配不均
@@ -19,6 +20,9 @@
 - [[Keep Errors in Context]] — 保留错误痕迹让模型自适应更新
 - [[Few-Shot Prompting in Agents]] — 少样本提示在 Agent 系统中的陷阱
 - [[Stochastic Graduate Descent]] — “随机研究生梯度下降”，Manus 团队对实验式迭代方法的戏称
+- [[State Space Model (SSM)]] — 一类可替代 Transformer 的序列建模路线
+- [[Neural Turing Machines]] — 将神经网络与外部可读写记忆结合的模型设计
+- [[Masking Tool Logits]] — 通过屏蔽工具相关词元来约束动作选择
 
 ## 实体
 - [[ByteByteGo]] — 技术博客，发布了 Context Engineering 指南
@@ -27,6 +31,7 @@
 - [[Anthropic]] — AI 公司，多智能体研究系统的开发方
 - [[Cognition]] — Devin 编码智能体的开发商
 - [[Manus]] — AI 智能体项目，被 Meta 收购，提供了上下文工程实战经验
+- [[qmd]] — 面向 Markdown wiki 的本地搜索工具
 
 ## 源摘要
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）

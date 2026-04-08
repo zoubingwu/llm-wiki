@@ -43,3 +43,14 @@ Append-only 变更记录，最新在底部。
 - 更新了以下页面：
   - `index.md` — 新增 9 个概念和 1 个实体
   - `Context Engineering.md` — 补充了实战案例链接
+
+## [2026-04-09] lint
+- 修复了 wiki 中 4 个缺失的链接目标页面：
+  - `State Space Model (SSM).md`
+  - `Neural Turing Machines.md`
+  - `qmd.md`
+  - `Masking Tool Logits.md`
+- 修复了多处弱交叉引用：
+  - `Manus.md` — 补充对 `File System as Context`、`Keep Errors in Context`、`Few-Shot Prompting in Agents`、`Stochastic Graduate Descent` 等页面的入链
+  - `Multi-agent System.md`、`Scratchpads.md`、`Context Engineering.md` — 补充对 `Anthropic`、`Karpathy`、`ByteByteGo` 的交叉引用
+  - `index.md` — 补充 `Overview` 以及新建页面入口

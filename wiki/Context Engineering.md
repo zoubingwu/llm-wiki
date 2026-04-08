@@ -56,7 +56,7 @@ source_count: 1
 
 ### 4. Isolate（隔离）
 
-将工作分配给多个专业化的 [[Multi-agent System|智能体]]，每个智能体都有自己干净、专注的上下文。Anthropic 的多智能体研究系统在研究任务上比单个智能体提升了 90.2%，完全来自于上下文管理的优化。
+将工作分配给多个专业化的 [[Multi-agent System|智能体]]，每个智能体都有自己干净、专注的上下文。[[Anthropic]] 的多智能体研究系统在研究任务上比单个智能体提升了 90.2%，完全来自于上下文管理的优化。
 
 ## 相关问题
 
@@ -71,4 +71,5 @@ source_count: 1
 
 ## 参考文献
 
-- Karpathy 关于 context engineering 的 [推文](https://x.com/karpathy/status/1937902205765607626)
+- [[Karpathy]] 关于 context engineering 的 [推文](https://x.com/karpathy/status/1937902205765607626)
+- [[ByteByteGo]] 的上下文工程指南为本页提供了主要综述来源

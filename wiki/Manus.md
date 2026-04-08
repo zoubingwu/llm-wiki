@@ -33,7 +33,12 @@ Manus 选择了基于上下文工程而非端到端训练的道路，原因：
 - [[Context Engineering]] — 上下文工程的实际应用
 - [[Agent Loop]]
 - [[State Machine for Agents]]
+- [[Masking Tool Logits]]
+- [[File System as Context]]
 - [[Recitation for Attention Manipulation]]
+- [[Keep Errors in Context]]
+- [[Few-Shot Prompting in Agents]]
+- [[Stochastic Graduate Descent]]
 
 ## 参考文献
 
