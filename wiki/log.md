@@ -27,3 +27,19 @@ Append-only 变更记录，最新在底部。
 - 更新了以下页面（关联了 RAG 和 wiki 的关系）：
   - `Retrieval-Augmented Generation (RAG).md` — 补充了 RAG 与 wiki 模式的对比
   - `index.md` — 全量更新
+
+## [2026-04-09] ingest | Context Engineering for AI Agents Lessons from Building Manus
+- 录入了 Manus 团队的实战经验文章
+- 创建了以下页面：
+  - `Manus.md` — 实体页，总结六个核心原则
+  - `KV-Cache.md` — KV-Cache 对 AI Agent 的重要性
+  - `Agent Loop.md` — Agent 循环流程与挑战
+  - `State Machine for Agents.md` — 状态机管理工具可用性
+  - `Recitation for Attention Manipulation.md` — 通过重复读写操纵注意力
+  - `File System as Context.md` — 文件系统作为终极上下文
+  - `Keep Errors in Context.md` — 保留错误痕迹让模型自适应
+  - `Few-Shot Prompting in Agents.md` — 少样本提示的陷阱
+  - `Stochastic Graduate Descent.md` — 随机研究生下降法
+- 更新了以下页面：
+  - `index.md` — 新增 9 个概念和 1 个实体
+  - `Context Engineering.md` — 补充了实战案例链接
