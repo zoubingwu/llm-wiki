@@ -54,3 +54,22 @@ Append-only 变更记录，最新在底部。
   - `Manus.md` — 补充对 `File System as Context`、`Keep Errors in Context`、`Few-Shot Prompting in Agents`、`Stochastic Graduate Descent` 等页面的入链
   - `Multi-agent System.md`、`Scratchpads.md`、`Context Engineering.md` — 补充对 `Anthropic`、`Karpathy`、`ByteByteGo` 的交叉引用
   - `index.md` — 补充 `Overview` 以及新建页面入口
+
+## [2026-04-09] ingest | 音频可视化：采样、频率和傅里叶变换
+- 录入了一篇关于声音波形、采样、傅里叶变换与 Web 音频可视化的中文技术文章
+- 创建了以下页面：
+  - `Audio Visualization.md` — 音频可视化的整体实现思路
+  - `Sound Wave.md` — 声波与波形表示
+  - `Frequency and Amplitude in Sound.md` — 频率与振幅在声音中的含义
+  - `Pure Tone.md` — 纯音概念
+  - `Audio Sampling.md` — 音频采样的基本过程
+  - `Sampling Rate and Bit Depth.md` — 采样率与采样深度
+  - `Fourier Transform.md` — 傅里叶变换的作用
+  - `Time Domain and Frequency Domain.md` — 时域与频域的区别
+  - `FFT and rFFT.md` — FFT 与 rFFT 的计算角色
+  - `Time Smoothing.md` — 音频频谱可视化中的时间平滑
+  - `Web Audio API.md` — 浏览器端音频处理接口
+  - `Window Function.md` — FFT 前的窗函数预处理
+- 更新了以下页面：
+  - `Overview.md` — 新增“音频信号处理与音频可视化”主题
+  - `index.md` — 新增 12 个概念和 1 条源摘要

@@ -23,6 +23,18 @@
 - [[State Space Model (SSM)]] — 一类可替代 Transformer 的序列建模路线
 - [[Neural Turing Machines]] — 将神经网络与外部可读写记忆结合的模型设计
 - [[Masking Tool Logits]] — 通过屏蔽工具相关词元来约束动作选择
+- [[Audio Visualization]] — 将音频频率分量映射成动态图形的技术
+- [[Sound Wave]] — 描述声音振动随时间变化的波形表示
+- [[Frequency and Amplitude in Sound]] — 声音的频率与振幅分别对应音高与响度
+- [[Pure Tone]] — 只含单一频率的正弦波声音
+- [[Audio Sampling]] — 将连续声音离散化为样本序列
+- [[Sampling Rate and Bit Depth]] — 数字音频的两个核心参数
+- [[Fourier Transform]] — 将信号从时域转换到频域的方法
+- [[Time Domain and Frequency Domain]] — 观察信号的两种视角
+- [[FFT and rFFT]] — 傅里叶变换的常用快速算法
+- [[Time Smoothing]] — 让频谱动画更平稳的帧间平滑方法
+- [[Web Audio API]] — 浏览器中的音频解码与处理接口
+- [[Window Function]] — FFT 前常见的样本窗口预处理
 
 ## 实体
 - [[ByteByteGo]] — 技术博客，发布了 Context Engineering 指南
@@ -37,6 +49,7 @@
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
 - [[llm-wiki]] — karpathy 关于 LLM Wiki 模式的原始概念文件（2026-04-04）
 - [[Context Engineering for AI Agents Lessons from Building Manus]] — Manus 团队的实战经验（2025-07-18）
+- [[音频可视化：采样、频率和傅里叶变换]] — 从声音波形、采样到频谱可视化的实现链路（2021-08-06）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）

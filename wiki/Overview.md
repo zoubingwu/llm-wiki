@@ -1,15 +1,15 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-09
 tags:
   - overview
-source_count: 2
+source_count: 3
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖两个核心主题：**上下文工程**（Context Engineering）和 **LLM Wiki 模式**。
+个人知识库的主题总览。目前涵盖三个核心主题：**上下文工程**（Context Engineering）、**LLM Wiki 模式** 和 **音频信号处理 / 音频可视化**。
 
 ## Context Engineering（上下文工程）
 
@@ -26,3 +26,11 @@ source_count: 2
 人负责：提供源资料、提出问题、审查结果。LLM 负责：总结、交叉引用、归档、维护一致性。
 
 涉及：[[Scratchpads]]、[[Long-term Memory for LLMs]]、Obsidian 工具链（Web Clipper、Dataview、Marp）。
+
+## 音频信号处理与音频可视化
+
+研究声音如何从连续波形变成数字样本，如何通过 [[Fourier Transform]] 从时域切换到频域，以及如何把这些频率分量绘制成播放器里的频谱柱状图。
+
+这条知识线串起了声音的物理直觉、数字音频的采样表示、频谱分析和浏览器端可视化实现。
+
+涉及：[[Sound Wave]]、[[Frequency and Amplitude in Sound]]、[[Pure Tone]]、[[Audio Sampling]]、[[Sampling Rate and Bit Depth]]、[[Time Domain and Frequency Domain]]、[[FFT and rFFT]]、[[Audio Visualization]]、[[Time Smoothing]]、[[Web Audio API]]。
