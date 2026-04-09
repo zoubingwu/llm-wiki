@@ -87,3 +87,17 @@ Append-only 变更记录，最新在底部。
 - 更新了以下页面：
   - `Overview.md` — 新增“前端动画中的物理模型”主题
   - `index.md` — 新增 5 个概念、2 个实体和 1 条源摘要
+
+## [2026-04-09] ingest | Attention Is All You Need
+- 录入了 Transformer 的原始论文，并按英文原文校正了中文机翻中的明显术语错误
+- 创建了以下页面：
+  - `Attention Is All You Need.md` — 源摘要页，记录论文贡献和机翻校对点
+  - `Transformer.md` — Transformer 架构总览
+  - `Self-Attention.md` — 自注意力机制
+  - `Scaled Dot-Product Attention.md` — 缩放点积注意力
+  - `Multi-Head Attention.md` — 多头注意力
+  - `Positional Encoding.md` — 位置编码
+- 更新了以下页面：
+  - `Attention Mechanism.md` — 补充 Transformer 路线下的注意力实现结构
+  - `Overview.md` — 新增“Transformer 架构与注意力机制”主题
+  - `index.md` — 新增 5 个概念和 1 条源摘要

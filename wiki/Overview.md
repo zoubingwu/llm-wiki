@@ -4,12 +4,12 @@ created: 2026-04-08
 updated: 2026-04-09
 tags:
   - overview
-source_count: 4
+source_count: 5
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖四个核心主题：**上下文工程**（Context Engineering）、**LLM Wiki 模式**、**音频信号处理 / 音频可视化** 和 **前端动画中的物理模型**。
+个人知识库的主题总览。目前涵盖五个核心主题：**上下文工程**（Context Engineering）、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化** 和 **前端动画中的物理模型**。
 
 ## Context Engineering（上下文工程）
 
@@ -26,6 +26,12 @@ source_count: 4
 人负责：提供源资料、提出问题、审查结果。LLM 负责：总结、交叉引用、归档、维护一致性。
 
 涉及：[[Scratchpads]]、[[Long-term Memory for LLMs]]、Obsidian 工具链（Web Clipper、Dataview、Marp）。
+
+## Transformer 架构与注意力机制
+
+研究现代 LLM 的基础架构从何而来，以及注意力机制为什么既带来了表达能力，也带来了长上下文成本。
+
+这条知识线从 [[Attention Is All You Need]] 出发，串起 [[Transformer]]、[[Self-Attention]]、[[Scaled Dot-Product Attention]]、[[Multi-Head Attention]] 和 [[Positional Encoding]]，也为理解 [[Context Window]]、[[Lost in the Middle Problem]] 等现象提供底层背景。
 
 ## 音频信号处理与音频可视化
 

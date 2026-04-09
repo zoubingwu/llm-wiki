@@ -5,6 +5,11 @@
 - [[Context Engineering]] — 设计和管理 LLM 上下文窗口的四种策略（Write、Select、Compress、Isolate）
 - [[Context Rot]] — 输入长度增加导致 LLM 性能断崖式下降
 - [[Attention Mechanism]] — 注意力机制的工作原理、计算代价和注意力分配不均
+- [[Transformer]] — 以注意力机制替代 RNN/CNN 的基础序列建模架构
+- [[Self-Attention]] — 让序列中每个位置直接读取其他位置信息的机制
+- [[Scaled Dot-Product Attention]] — Transformer 中标准的注意力计算形式
+- [[Multi-Head Attention]] — 并行关注不同表示子空间的注意力机制
+- [[Positional Encoding]] — 为 Transformer 注入顺序信息的位置表示
 - [[Context Window]] — 模型单次交互能看到的词元总数，有效长度远小于营销值
 - [[Lost in the Middle Problem]] — LLM 对输入中间部分关注度不足的现象
 - [[Retrieval-Augmented Generation (RAG)]] — 检索增强生成，只拉取相关信息注入上下文
@@ -58,6 +63,7 @@
 - [[Context Engineering for AI Agents Lessons from Building Manus]] — Manus 团队的实战经验（2025-07-18）
 - [[音频可视化：采样、频率和傅里叶变换]] — 从声音波形、采样到频谱可视化的实现链路（2021-08-06）
 - [[The physics behind spring animations - The Blog of Maxime Heckel]] — 解释弹簧动画背后的物理模型与 Framer Motion 参数（2020-06-23）
+- [[Attention Is All You Need]] — 提出 Transformer 架构的经典论文（2017-06-12）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）
