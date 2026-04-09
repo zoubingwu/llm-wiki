@@ -73,3 +73,17 @@ Append-only 变更记录，最新在底部。
 - 更新了以下页面：
   - `Overview.md` — 新增“音频信号处理与音频可视化”主题
   - `index.md` — 新增 12 个概念和 1 条源摘要
+
+## [2026-04-09] ingest | The physics behind spring animations - The Blog of Maxime Heckel
+- 录入了一篇关于弹簧动画、阻尼和 Framer Motion 参数的英文文章，并修正了其中可见的中文机器翻译问题
+- 创建了以下页面：
+  - `Spring Animation.md` — 弹簧动画的整体概念
+  - `Hooke's Law.md` — 胡克定律
+  - `Harmonic Oscillator.md` — 简谐振子
+  - `Damping in Spring Animation.md` — 弹簧动画中的阻尼
+  - `Spring Parameters in Framer Motion.md` — mass、stiffness、damping 三个参数
+  - `Framer Motion.md` — 动画库实体页
+  - `Maxime Heckel.md` — 作者实体页
+- 更新了以下页面：
+  - `Overview.md` — 新增“前端动画中的物理模型”主题
+  - `index.md` — 新增 5 个概念、2 个实体和 1 条源摘要

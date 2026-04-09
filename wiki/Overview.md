@@ -4,12 +4,12 @@ created: 2026-04-08
 updated: 2026-04-09
 tags:
   - overview
-source_count: 3
+source_count: 4
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖三个核心主题：**上下文工程**（Context Engineering）、**LLM Wiki 模式** 和 **音频信号处理 / 音频可视化**。
+个人知识库的主题总览。目前涵盖四个核心主题：**上下文工程**（Context Engineering）、**LLM Wiki 模式**、**音频信号处理 / 音频可视化** 和 **前端动画中的物理模型**。
 
 ## Context Engineering（上下文工程）
 
@@ -34,3 +34,11 @@ source_count: 3
 这条知识线串起了声音的物理直觉、数字音频的采样表示、频谱分析和浏览器端可视化实现。
 
 涉及：[[Sound Wave]]、[[Frequency and Amplitude in Sound]]、[[Pure Tone]]、[[Audio Sampling]]、[[Sampling Rate and Bit Depth]]、[[Time Domain and Frequency Domain]]、[[FFT and rFFT]]、[[Audio Visualization]]、[[Time Smoothing]]、[[Web Audio API]]。
+
+## 前端动画中的物理模型
+
+研究前端交互动画如何借用物理模型来获得更自然的运动效果，尤其是弹簧动画（[[Spring Animation]]）背后的恢复力、质量和阻尼。
+
+这条知识线把数学/物理模型与 UI 动画参数连接起来，帮助理解为什么 `mass`、`stiffness`、`damping` 会直接改变动画手感。
+
+涉及：[[Hooke's Law]]、[[Harmonic Oscillator]]、[[Damping in Spring Animation]]、[[Spring Parameters in Framer Motion]]、[[Framer Motion]]。

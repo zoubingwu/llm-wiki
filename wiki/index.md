@@ -35,6 +35,11 @@
 - [[Time Smoothing]] — 让频谱动画更平稳的帧间平滑方法
 - [[Web Audio API]] — 浏览器中的音频解码与处理接口
 - [[Window Function]] — FFT 前常见的样本窗口预处理
+- [[Spring Animation]] — 使用弹簧物理模型驱动动画收敛的方式
+- [[Hooke's Law]] — 弹簧恢复力与位移成正比的基本定律
+- [[Harmonic Oscillator]] — 偏离平衡后受到恢复力的振荡系统
+- [[Damping in Spring Animation]] — 让弹簧动画逐渐停下的阻尼机制
+- [[Spring Parameters in Framer Motion]] — mass、stiffness、damping 三个核心参数
 
 ## 实体
 - [[ByteByteGo]] — 技术博客，发布了 Context Engineering 指南
@@ -44,12 +49,15 @@
 - [[Cognition]] — Devin 编码智能体的开发商
 - [[Manus]] — AI 智能体项目，被 Meta 收购，提供了上下文工程实战经验
 - [[qmd]] — 面向 Markdown wiki 的本地搜索工具
+- [[Framer Motion]] — React 动画库，支持弹簧动画
+- [[Maxime Heckel]] — 撰写前端动画与交互原理文章的作者
 
 ## 源摘要
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
 - [[llm-wiki]] — karpathy 关于 LLM Wiki 模式的原始概念文件（2026-04-04）
 - [[Context Engineering for AI Agents Lessons from Building Manus]] — Manus 团队的实战经验（2025-07-18）
 - [[音频可视化：采样、频率和傅里叶变换]] — 从声音波形、采样到频谱可视化的实现链路（2021-08-06）
+- [[The physics behind spring animations - The Blog of Maxime Heckel]] — 解释弹簧动画背后的物理模型与 Framer Motion 参数（2020-06-23）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）
