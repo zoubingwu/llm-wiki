@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wiki Query"
+  short_description: "Answer questions from the maintained repo wiki"
+  default_prompt: "Use $wiki-query to answer a question from this repository wiki and its source pages."

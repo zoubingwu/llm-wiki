@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wiki Ingest"
+  short_description: "Ingest new articles into the repo wiki"
+  default_prompt: "Use $wiki-ingest to ingest a new source article into this repository wiki."

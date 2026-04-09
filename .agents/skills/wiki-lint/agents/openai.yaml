@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wiki Lint"
+  short_description: "Audit wiki consistency, coverage, and links"
+  default_prompt: "Use $wiki-lint to audit this repository wiki for contradictions, stale pages, and missing links."
