@@ -45,6 +45,10 @@
 - [[Harmonic Oscillator]] — 偏离平衡后受到恢复力的振荡系统
 - [[Damping in Spring Animation]] — 让弹簧动画逐渐停下的阻尼机制
 - [[Spring Parameters in Framer Motion]] — mass、stiffness、damping 三个核心参数
+- [[Liquid Glass Effect]] — 通过折射位移和边缘高光近似实现玻璃 UI 的视觉效果
+- [[Refraction]] — 光线跨介质传播时改变方向的现象，也是液态玻璃位移建模的基础
+- [[SVG Displacement Map]] — 用图像通道编码像素位移并交给 `<feDisplacementMap />` 执行
+- [[Specular Highlight]] — 材质表面的明亮反光区域，帮助玻璃效果建立厚度感
 
 ## 实体
 - [[ByteByteGo]] — 技术博客，发布了 Context Engineering 指南
@@ -64,6 +68,7 @@
 - [[音频可视化：采样、频率和傅里叶变换]] — 从声音波形、采样到频谱可视化的实现链路（2021-08-06）
 - [[The physics behind spring animations - The Blog of Maxime Heckel]] — 解释弹簧动画背后的物理模型与 Framer Motion 参数（2020-06-23）
 - [[Attention Is All You Need]] — 提出 Transformer 架构的经典论文（2017-06-12）
+- [[Liquid Glass in the Browser Refraction with CSS and SVG]] — 用折射建模和 SVG 位移贴图近似实现 Liquid Glass（2025-10-04）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）

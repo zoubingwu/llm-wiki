@@ -101,3 +101,15 @@ Append-only 变更记录，最新在底部。
   - `Attention Mechanism.md` — 补充 Transformer 路线下的注意力实现结构
   - `Overview.md` — 新增“Transformer 架构与注意力机制”主题
   - `index.md` — 新增 5 个概念和 1 条源摘要
+
+## [2026-04-11] ingest | Liquid Glass in the Browser Refraction with CSS and SVG
+- 录入了一篇关于浏览器端 Liquid Glass 效果实现的英文文章，并按英文原文修正了其中明显损坏的中文机翻
+- 创建了以下页面：
+  - `Liquid Glass in the Browser Refraction with CSS and SVG.md` — 源摘要页，记录实现链路、限制与机翻校对点
+  - `Liquid Glass Effect.md` — 液态玻璃视觉效果的整体概念
+  - `Refraction.md` — 折射在 UI 位移建模中的作用
+  - `SVG Displacement Map.md` — 浏览器中位移贴图的编码方式与约束
+  - `Specular Highlight.md` — 镜面高光在玻璃材质感中的角色
+- 更新了以下页面：
+  - `Overview.md` — 新增“浏览器中的折射玻璃效果”主题
+  - `index.md` — 新增 4 个概念和 1 条源摘要

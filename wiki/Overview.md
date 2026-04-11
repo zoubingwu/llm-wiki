@@ -1,15 +1,15 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-04-09
+updated: 2026-04-11
 tags:
   - overview
-source_count: 5
+source_count: 6
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖五个核心主题：**上下文工程**（Context Engineering）、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化** 和 **前端动画中的物理模型**。
+个人知识库的主题总览。目前涵盖六个核心主题：**上下文工程**（Context Engineering）、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型** 和 **浏览器中的折射玻璃效果**。
 
 ## Context Engineering（上下文工程）
 
@@ -48,3 +48,11 @@ source_count: 5
 这条知识线把数学/物理模型与 UI 动画参数连接起来，帮助理解为什么 `mass`、`stiffness`、`damping` 会直接改变动画手感。
 
 涉及：[[Hooke's Law]]、[[Harmonic Oscillator]]、[[Damping in Spring Animation]]、[[Spring Parameters in Framer Motion]]、[[Framer Motion]]。
+
+## 浏览器中的折射玻璃效果
+
+研究如何在浏览器里近似实现具有“材质感”的玻璃 UI，重点不是普通模糊，而是通过 [[Refraction]] 建模背景位移，再交给 [[SVG Displacement Map]] 和 [[Specular Highlight]] 组合出可感知的厚度与高光。
+
+这条知识线连接了光学直觉、位移贴图编码和浏览器滤镜约束，也补充了前端渲染层面对“Apple 风格视觉效果”可实现边界的理解。
+
+涉及：[[Liquid Glass Effect]]、[[Refraction]]、[[SVG Displacement Map]]、[[Specular Highlight]]。
