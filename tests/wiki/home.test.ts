@@ -23,9 +23,9 @@ describe("home data helpers", () => {
     expect(parseRecentLogEntries(logBody, 1)[0]?.title).toContain("2026-04-22");
     expect(
       sortLatestArticles([
-        { title: "Older", date: "2026-04-20", mtime: 10 },
-        { title: "Newer", date: "2026-04-22", mtime: 1 }
+        { title: "Published Earlier", published: "2026-04-20", mtime: 10 },
+        { title: "Archived Later", created: "2026-04-22", published: "2020-01-01", mtime: 1 }
       ])[0]?.title
-    ).toBe("Newer");
+    ).toBe("Archived Later");
   });
 });

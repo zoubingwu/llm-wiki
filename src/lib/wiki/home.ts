@@ -5,7 +5,8 @@ export interface LogEntry {
 
 export interface ArticleListItem {
   title: string;
-  date?: string;
+  created?: string | Date | null;
+  published?: string | Date | null;
   mtime: number;
 }
 
@@ -32,9 +33,19 @@ export function parseRecentLogEntries(logBody: string, limit = 8): LogEntry[] {
 }
 
 export function sortLatestArticles(entries: ArticleListItem[]): ArticleListItem[] {
+  const toTimestamp = (value: string | Date | null | undefined): number => {
+    if (!value) return NaN;
+    return value instanceof Date ? value.getTime() : Date.parse(String(value));
+  };
+
   const toSortableValue = (entry: ArticleListItem): number => {
-    const parsedDate = entry.date ? Date.parse(entry.date) : NaN;
-    return Number.isNaN(parsedDate) ? entry.mtime : parsedDate;
+    const createdTimestamp = toTimestamp(entry.created);
+    if (!Number.isNaN(createdTimestamp)) return createdTimestamp;
+
+    const publishedTimestamp = toTimestamp(entry.published);
+    if (!Number.isNaN(publishedTimestamp)) return publishedTimestamp;
+
+    return entry.mtime;
   };
 
   return [...entries].sort((a, b) => toSortableValue(b) - toSortableValue(a));

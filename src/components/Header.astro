@@ -1,5 +1,7 @@
 ---
 import SearchBox from "./SearchBox.astro";
+
+const githubUrl = "https://github.com/zoubingwu/llm-wiki";
 ---
 
 <header class="site-header">
@@ -14,8 +16,6 @@ import SearchBox from "./SearchBox.astro";
     <SearchBox />
   </div>
   <nav class="site-header__actions" aria-label="Primary">
-    <a href="/">Portal</a>
-    <a href="/wiki/index/">Wiki index</a>
-    <a href="/articles/A%20Guide%20to%20Context%20Engineering%20for%20LLMs/">Sources</a>
+    <a href={githubUrl} rel="noreferrer" target="_blank">GitHub</a>
   </nav>
 </header>

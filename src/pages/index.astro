@@ -26,7 +26,8 @@ const recentLogs = parseRecentLogEntries(logEntry?.body ?? "").slice(0, 8);
 const latestArticles = sortLatestArticles(
   articleEntries.map((entry) => ({
     title: fileTitle(entry),
-    date: typeof entry.data?.date === "string" ? entry.data.date : undefined,
+    created: entry.data?.created,
+    published: entry.data?.published,
     mtime: entry.filePath
       ? (() => {
           try {
@@ -62,11 +63,11 @@ const latestArticles = sortLatestArticles(
     </section>
     <section class="card">
       <div class="card__heading">
-        <h2>Recent Log Entries</h2>
+        <h2>Recent Activity</h2>
         <a class="card__link" href={pageUrl("wiki", "log")}>Full log</a>
       </div>
       {recentLogs.length === 0 ? (
-        <p class="empty-note">No log entries yet.</p>
+        <p class="empty-note">No activity yet.</p>
       ) : (
         recentLogs.map((entry) => <article><h3>{entry.title}</h3></article>)
       )}
