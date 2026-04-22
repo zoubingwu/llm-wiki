@@ -43,6 +43,7 @@ Obsidian 是 IDE，LLM 是程序员，wiki 是代码库。
 ## 相关概念
 
 - [[Overview]] — 当前知识库的主题总览
+- [[llm-wiki]] — 这一模式在当前仓库中的原始说明文件
 - [[Retrieval-Augmented Generation (RAG)]] — LLM Wiki 是 RAG 的进化
 - [[Long-term Memory for LLMs]] — wiki 本质上就是一个长期记忆系统
 - [[Scratchpads]] — wiki 本身也可以视为一种外部草稿区

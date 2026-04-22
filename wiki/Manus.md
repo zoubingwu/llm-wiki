@@ -42,5 +42,5 @@ Manus 选择了基于上下文工程而非端到端训练的道路，原因：
 
 ## 参考文献
 
-- [Context Engineering for AI Agents: Lessons from Building Manus](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus) (2025-07-18)
+- [[Context Engineering for AI Agents Lessons from Building Manus]]
 - Manus 现已加入 Meta

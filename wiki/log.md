@@ -132,3 +132,15 @@ Append-only 变更记录，最新在底部。
   - `index.md` — 新增 6 个概念、1 个实体和 1 条源摘要
 - 校对了以下源文件：
   - `articles/Intent by Discovery Designing the AI User Experience.md` — 修正标题粘连、关键术语和文末漏译
+
+## [2026-04-22] lint | source page 结构补齐
+- 补齐了 5 个此前只在 `index.md` 和少量页面中被链接、但缺少目标文件的 source page：
+  - `A Guide to Context Engineering for LLMs.md`
+  - `Context Engineering for AI Agents Lessons from Building Manus.md`
+  - `llm-wiki.md`
+  - `The physics behind spring animations - The Blog of Maxime Heckel.md`
+  - `音频可视化：采样、频率和傅里叶变换.md`
+- 更新了以下页面以补强入链：
+  - `Manus.md`
+  - `Maxime Heckel.md`
+  - `LLM Wiki Pattern.md`
