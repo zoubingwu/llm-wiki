@@ -31,8 +31,8 @@ const byline =
         <p class="article-header__byline">{byline}</p>
       </header>
       <slot />
+      <FooterPanels related={related} backlinks={backlinks} sources={sources} />
     </main>
     <BrowseSidebar items={browseItems} />
   </div>
-  <FooterPanels related={related} backlinks={backlinks} sources={sources} />
 </BaseLayout>

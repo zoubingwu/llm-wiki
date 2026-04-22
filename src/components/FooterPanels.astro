@@ -11,19 +11,28 @@ interface Props {
 }
 
 const { related, backlinks, sources } = Astro.props;
+const sections = [
+  { title: "See also", items: related },
+  { title: "Backlinks", items: backlinks },
+  { title: "References", items: sources }
+].filter((section) => section.items.length > 0);
 ---
 
-<footer class="footer-panels" data-pagefind-ignore>
-  <section>
-    <h2>Related pages</h2>
-    {related.length === 0 ? <p class="empty-note">No entries</p> : related.map((item) => <p><a href={item.url}>{item.title}</a></p>)}
-  </section>
-  <section>
-    <h2>Backlinks</h2>
-    {backlinks.length === 0 ? <p class="empty-note">No entries</p> : backlinks.map((item) => <p><a href={item.url}>{item.title}</a></p>)}
-  </section>
-  <section>
-    <h2>Sources</h2>
-    {sources.length === 0 ? <p class="empty-note">No entries</p> : sources.map((item) => <p><a href={item.url}>{item.title}</a></p>)}
-  </section>
-</footer>
+{
+  sections.length > 0 && (
+    <div class="content-tail" data-pagefind-ignore>
+      {sections.map((section) => (
+        <section class="content-tail__section">
+          <h2>{section.title}</h2>
+          <ul>
+            {section.items.map((item) => (
+              <li>
+                <a href={item.url}>{item.title}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  )
+}
