@@ -16,6 +16,16 @@ type MetadataRow =
   | { label: "Published" | "Archived" | "Original URL"; value: string };
 
 const { authors = [], published, archived, source } = Astro.props;
+
+function displayUrl(value: string): string {
+  try {
+    const url = new URL(value);
+    return `${url.origin}${url.pathname}`;
+  } catch {
+    return value.split("?")[0]?.split("#")[0] ?? value;
+  }
+}
+
 const rows = [
   authors.length > 0 ? { label: "Author", value: authors } : null,
   published ? { label: "Published", value: published } : null,
@@ -41,7 +51,7 @@ const rows = [
                     </>
                   ))
                 ) : row.label === "Original URL" ? (
-                  <a href={row.value}>{row.value}</a>
+                  <a href={row.value}>{displayUrl(row.value)}</a>
                 ) : (
                   row.value
                 )}
