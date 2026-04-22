@@ -5,6 +5,7 @@ import ArticleMetadata from "../../components/ArticleMetadata.astro";
 import ContentLayout from "../../layouts/ContentLayout.astro";
 import { buildRegistry, resolvePage } from "../../lib/wiki/registry";
 import { buildLinkGraph, graphKey } from "../../lib/wiki/backlinks";
+import { excerptFromMarkdown, normalizeWikilinkLabel } from "../../lib/seo";
 
 export async function getStaticPaths() {
   const articleEntries = await getCollection("articles");
@@ -63,10 +64,25 @@ const authors = Array.isArray(entry.data.author)
   : entry.data.author
     ? [parseAuthor(entry.data.author)]
     : [];
+const authorNames = Array.isArray(entry.data.author)
+  ? entry.data.author.map(normalizeWikilinkLabel)
+  : entry.data.author
+    ? [normalizeWikilinkLabel(entry.data.author)]
+    : [];
+const description =
+  typeof entry.data.description === "string" && entry.data.description.trim().length > 0
+    ? entry.data.description
+    : excerptFromMarkdown(entry.body ?? "");
+const publishedTime = formatDate(entry.data.published);
 ---
 
 <ContentLayout
   title={title}
+  description={description}
+  canonical={entry.data.source ?? undefined}
+  robots="noindex,follow"
+  publishedTime={publishedTime ?? undefined}
+  authors={authorNames}
   seeAlsoItems={node?.related ?? []}
   headings={headings}
   related={node?.related ?? []}

@@ -1,0 +1,22 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F8F9FA"/>
+  <rect x="72" y="56" width="1056" height="518" fill="#FFFFFF" stroke="#C8CCD1" stroke-width="2"/>
+  <line x1="72" y1="136" x2="1128" y2="136" stroke="#EAECF0" stroke-width="2"/>
+  <line x1="112" y1="500" x2="1088" y2="500" stroke="#EAECF0" stroke-width="2"/>
+
+  <text x="112" y="108" fill="#202122" font-family="Georgia, 'Times New Roman', serif" font-size="26">LLM Wiki</text>
+  <text x="236" y="108" fill="#54595D" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18">
+    Inspired by karpathy's llm-wiki idea
+  </text>
+
+  <text x="112" y="226" fill="#000000" font-family="Georgia, 'Times New Roman', serif" font-size="76">LLM Wiki</text>
+  <text x="112" y="296" fill="#202122" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="32">
+    This site turns a markdown repository
+  </text>
+  <text x="112" y="340" fill="#202122" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="32">
+    into a personal encyclopedia.
+  </text>
+  <text x="112" y="546" fill="#3366CC" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24">
+    wiki.zoubingwu.com
+  </text>
+</svg>

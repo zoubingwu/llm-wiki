@@ -4,6 +4,7 @@ import { basename } from "node:path";
 import ContentLayout from "../../layouts/ContentLayout.astro";
 import { buildRegistry } from "../../lib/wiki/registry";
 import { buildLinkGraph, graphKey } from "../../lib/wiki/backlinks";
+import { excerptFromMarkdown } from "../../lib/seo";
 
 export async function getStaticPaths() {
   const wikiEntries = await getCollection("wiki");
@@ -38,10 +39,12 @@ const graph = buildLinkGraph(
 );
 
 const node = graph.get(graphKey({ collection: "wiki", title }));
+const description = excerptFromMarkdown(entry.body ?? "");
 ---
 
 <ContentLayout
   title={title}
+  description={description}
   seeAlsoItems={node?.related ?? []}
   headings={headings}
   related={node?.related ?? []}

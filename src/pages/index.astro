@@ -39,9 +39,11 @@ const latestArticles = sortLatestArticles(
       : 0,
   })),
 ).slice(0, 8);
+const homeDescription =
+  "Inspired by karpathy's llm-wiki idea, this site turns a markdown repository into a personal encyclopedia for AI, interfaces, and systems.";
 ---
 
-<BaseLayout title="LLM Wiki">
+<BaseLayout title="LLM Wiki" description={homeDescription}>
   <Header />
   <main class="home-shell">
     <article class="home-main content-prose" data-pagefind-body>

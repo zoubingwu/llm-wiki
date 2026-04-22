@@ -5,13 +5,36 @@ import BrowseSidebar from "../components/BrowseSidebar.astro";
 import TableOfContents from "../components/TableOfContents.astro";
 import FooterPanels from "../components/FooterPanels.astro";
 
-const { title, seeAlsoItems, headings, related, backlinks, sources, kind = "wiki" } = Astro.props;
+const {
+  title,
+  description,
+  canonical,
+  robots,
+  image,
+  publishedTime,
+  authors,
+  seeAlsoItems,
+  headings,
+  related,
+  backlinks,
+  sources,
+  kind = "wiki"
+} = Astro.props;
 const sidebarItems = seeAlsoItems ?? related;
 const byline =
   kind === "article" ? "From the LLM Wiki source archive" : "From LLM Wiki, the personal encyclopedia";
 ---
 
-<BaseLayout title={title}>
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  robots={robots}
+  image={image}
+  ogType="article"
+  publishedTime={publishedTime}
+  authors={authors}
+>
   <Header />
   <div class={`page-shell page-shell--article${sidebarItems.length === 0 ? " page-shell--no-sidebar" : ""}`}>
     <TableOfContents headings={headings} />
