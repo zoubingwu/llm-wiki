@@ -61,7 +61,10 @@ const latestArticles = sortLatestArticles(
       )}
     </section>
     <section class="card">
-      <h2>Recent Log Entries</h2>
+      <div class="card__heading">
+        <h2>Recent Log Entries</h2>
+        <a class="card__link" href={pageUrl("wiki", "log")}>Full log</a>
+      </div>
       {recentLogs.length === 0 ? (
         <p class="empty-note">No log entries yet.</p>
       ) : (
