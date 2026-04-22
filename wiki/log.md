@@ -113,3 +113,22 @@ Append-only 变更记录，最新在底部。
 - 更新了以下页面：
   - `Overview.md` — 新增“浏览器中的折射玻璃效果”主题
   - `index.md` — 新增 4 个概念和 1 条源摘要
+
+## [2026-04-22] ingest | Intent by Discovery: Designing the AI User Experience
+- 录入了 Jakob Nielsen 关于 AI UX 范式转移的文章，建立了从意图表达、编排层、风险校准到发现式交互的一组页面
+- 创建了以下页面：
+  - `Intent by Discovery Designing the AI User Experience.md` — 源摘要页，记录文章论点与中文校对点
+  - `Intent-based Outcome Specification.md` — 基于意图的结果规范
+  - `Articulation Barrier.md` — 表达障碍
+  - `Orchestration Surface.md` — 编排界面
+  - `Intentional Cognitive Friction.md` — 有意认知摩擦
+  - `Slow AI.md` — 长时运行 AI 的交互模式
+  - `Intent by Discovery.md` — 通过探索形成意图的长期 UX 模式
+  - `Jakob Nielsen.md` — 作者实体页
+- 更新了以下页面：
+  - `Long-term Memory for LLMs.md` — 补充可见、可编辑用户模型的 UX 视角
+  - `Multi-agent System.md` — 补充编排层与协作意图的 UX 约束
+  - `Overview.md` — 新增“AI 时代的用户体验”主题
+  - `index.md` — 新增 6 个概念、1 个实体和 1 条源摘要
+- 校对了以下源文件：
+  - `articles/Intent by Discovery Designing the AI User Experience.md` — 修正标题粘连、关键术语和文末漏译

@@ -1,12 +1,12 @@
 ---
 type: concept
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-22
 tags:
   - LLM
   - 智能体
   - 多智能体
-source_count: 1
+source_count: 2
 ---
 
 # Multi-agent System
@@ -30,6 +30,12 @@ source_count: 1
 - 研究任务上比单个 Opus 4 提升了 **90.2%**，使用相同的模型家族
 - 全部性能提升来自上下文管理方式的优化，而非更强大的模型
 
+## 在 AI UX 中的角色
+
+当多个智能体同时作用于共享系统、共享预算和共享责任时，用户需要借助 [[Orchestration Surface]] 看见受影响对象、权限边界和冲突指令。
+
+多智能体系统的可用性问题，很多时候会出现在协调层，而不只是模型层。
+
 ## 争论
 
 其他研究（如 [[Cognition]]/Devin）认为，具有良好压缩能力的**单智能体**比多智能体更稳定、成本更低。答案取决于任务复杂度、成本容忍度和可靠性要求。
@@ -38,3 +44,4 @@ source_count: 1
 
 - [[Context Engineering]]
 - [[Scratchpads]]
+- [[Orchestration Surface]]

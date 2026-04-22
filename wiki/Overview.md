@@ -1,15 +1,15 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-04-11
+updated: 2026-04-22
 tags:
   - overview
-source_count: 6
+source_count: 7
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖六个核心主题：**上下文工程**（Context Engineering）、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型** 和 **浏览器中的折射玻璃效果**。
+个人知识库的主题总览。目前涵盖七个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型** 和 **浏览器中的折射玻璃效果**。
 
 ## Context Engineering（上下文工程）
 
@@ -18,6 +18,12 @@ source_count: 6
 核心发现：输入更多信息反而可能降低模型表现（[[Context Rot]] 问题），需要通过 [[Context Engineering]] 的四种策略（Write、Select、Compress、Isolate）来优化。
 
 涉及：[[Attention Mechanism]]、[[Context Window]]、[[Retrieval-Augmented Generation (RAG)]]、[[Lost in the Middle Problem]] 等。
+
+## AI 时代的用户体验
+
+研究 AI 把用户角色从“执行步骤的人”转成“监督自动化的人”之后，交互设计、可用性指标和风险控制方式会如何被重写。
+
+这条知识线从 [[Intent-based Outcome Specification]] 出发，串起 [[Articulation Barrier]]、[[Orchestration Surface]]、[[Intentional Cognitive Friction]]、[[Slow AI]] 与 [[Intent by Discovery]]，也和 [[Long-term Memory for LLMs]]、[[Multi-agent System]] 等系统层能力发生交叉。
 
 ## LLM Wiki 模式
 
