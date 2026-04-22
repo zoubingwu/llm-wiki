@@ -19,7 +19,7 @@ const logEntry = wikiEntries.find((entry) => entry.id === "log");
 
 const featured = pickFeaturedConcepts(indexEntry?.body ?? "").map((title) => ({
   title,
-  url: pageUrl("wiki", title)
+  url: pageUrl("wiki", title),
 }));
 
 const recentLogs = parseRecentLogEntries(logEntry?.body ?? "").slice(0, 8);
@@ -36,10 +36,10 @@ const latestArticles = sortLatestArticles(
             return 0;
           }
         })()
-      : 0
-  }))
+      : 0,
+  })),
 ).slice(0, 8);
---- 
+---
 
 <BaseLayout title="LLM Wiki">
   <Header />
@@ -49,46 +49,53 @@ const latestArticles = sortLatestArticles(
         <h1 class="article-header__title">LLM Wiki</h1>
         <p>
           Inspired by
-          <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">karpathy's llm-wiki idea</a>,
-          this site turns a markdown repository into a personal encyclopedia for AI, interfaces, and systems.
+          <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">karpathy's llm-wiki idea</a>, this
+          site turns a markdown repository into a personal encyclopedia.
         </p>
-        <p class="home__description">
+        <p>
           Source lives in
-          <a href="https://github.com/zoubingwu/llm-wiki">github.com/zoubingwu/llm-wiki</a>,
-          with content maintained in <code>wiki/</code> and <code>articles/</code> through Obsidian-style wikilinks.
+          <a href="https://github.com/zoubingwu/llm-wiki">github.com/zoubingwu/llm-wiki</a>, with content maintained in <code
+            >wiki/</code
+          > and <code>articles/</code> through Obsidian-style wikilinks.
         </p>
       </header>
       <section class="home-section">
-      <h2>Featured Concepts</h2>
-      {featured.length === 0 ? (
-        <p class="empty-note">No featured concepts yet.</p>
-      ) : (
-        <ul class="home-list">
-          {featured.map((item) => (
-            <li><a href={item.url}>{item.title}</a></li>
-          ))}
-        </ul>
-      )}
+        <h2>Featured Concepts</h2>
+        {
+          featured.length === 0 ? (
+            <p class="empty-note">No featured concepts yet.</p>
+          ) : (
+            <ul class="home-list">
+              {featured.map((item) => (
+                <li>
+                  <a href={item.url}>{item.title}</a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
       </section>
       <section class="home-section">
-      <h2>Latest Sources</h2>
-      {latestArticles.length === 0 ? (
-        <p class="empty-note">No source files yet.</p>
-      ) : (
-        <ul class="home-list">
-          {latestArticles.map((item) => (
-            <li><a href={pageUrl("articles", item.title)}>{item.title}</a></li>
-          ))}
-        </ul>
-      )}
+        <h2>Latest Sources</h2>
+        {
+          latestArticles.length === 0 ? (
+            <p class="empty-note">No source files yet.</p>
+          ) : (
+            <ul class="home-list">
+              {latestArticles.map((item) => (
+                <li>
+                  <a href={pageUrl("articles", item.title)}>{item.title}</a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
       </section>
       <section class="home-section">
         <h2>Recent Activity</h2>
         {recentLogs.length === 0 && <p class="empty-note">No activity yet.</p>}
         <ul class="home-list">
-          {recentLogs.map((entry) => (
-            <li>{entry.title}</li>
-          ))}
+          {recentLogs.map((entry) => <li>{entry.title}</li>)}
           <li><a href={pageUrl("wiki", "log")}>Full log</a></li>
         </ul>
       </section>
