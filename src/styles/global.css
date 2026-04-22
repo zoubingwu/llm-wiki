@@ -37,9 +37,8 @@ a {
   gap: 14px;
   width: min(1360px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 14px 0 12px;
+  padding: 14px 12px 12px;
   background: var(--surface);
-  border-bottom: 1px solid var(--border);
 }
 
 .site-header__leading {
@@ -171,8 +170,6 @@ a {
   margin: 0 auto 28px;
   background: var(--surface);
   padding: 0 16px 24px;
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
 }
 
 .page-shell--article {
@@ -320,7 +317,7 @@ a {
   padding: 0;
 }
 
-.content-prose > h1:first-child {
+.content-prose>h1:first-child {
   display: none;
 }
 
