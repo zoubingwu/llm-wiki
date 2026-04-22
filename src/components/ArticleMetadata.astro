@@ -1,0 +1,55 @@
+---
+interface AuthorItem {
+  label: string;
+  url?: string;
+}
+
+interface Props {
+  authors?: AuthorItem[];
+  published?: string | null;
+  archived?: string | null;
+  source?: string | null;
+}
+
+type MetadataRow =
+  | { label: "Author"; value: AuthorItem[] }
+  | { label: "Published" | "Archived" | "Original URL"; value: string };
+
+const { authors = [], published, archived, source } = Astro.props;
+const rows = [
+  authors.length > 0 ? { label: "Author", value: authors } : null,
+  published ? { label: "Published", value: published } : null,
+  archived ? { label: "Archived", value: archived } : null,
+  source ? { label: "Original URL", value: source } : null
+].filter((row): row is MetadataRow => row !== null);
+---
+
+{
+  rows.length > 0 && (
+    <section class="article-metadata" aria-label="Source metadata">
+      <dl class="article-metadata__list">
+        {
+          rows.map((row) => (
+            <div class="article-metadata__row">
+              <dt>{row.label}</dt>
+              <dd>
+                {Array.isArray(row.value) ? (
+                  row.value.map((author, index) => (
+                    <>
+                      {index > 0 && ", "}
+                      {author.url ? <a href={author.url}>{author.label}</a> : author.label}
+                    </>
+                  ))
+                ) : row.label === "Original URL" ? (
+                  <a href={row.value}>{row.value}</a>
+                ) : (
+                  row.value
+                )}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+  )
+}

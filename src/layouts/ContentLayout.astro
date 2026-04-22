@@ -20,6 +20,7 @@ const byline =
         <h1 class="article-header__title">{title}</h1>
         <p class="article-header__byline">{byline}</p>
       </header>
+      <slot name="article-meta" />
       <slot />
       <FooterPanels backlinks={backlinks} sources={sources} />
     </main>

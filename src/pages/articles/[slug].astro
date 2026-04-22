@@ -1,8 +1,9 @@
 ---
 import { getCollection, render } from "astro:content";
 import { basename } from "node:path";
+import ArticleMetadata from "../../components/ArticleMetadata.astro";
 import ContentLayout from "../../layouts/ContentLayout.astro";
-import { buildRegistry } from "../../lib/wiki/registry";
+import { buildRegistry, resolvePage } from "../../lib/wiki/registry";
 import { buildLinkGraph, graphKey } from "../../lib/wiki/backlinks";
 
 export async function getStaticPaths() {
@@ -38,6 +39,30 @@ const graph = buildLinkGraph(
 );
 
 const node = graph.get(graphKey({ collection: "articles", title }));
+
+function formatDate(value: Date | string | null | undefined): string | null {
+  if (!value) return null;
+  if (value instanceof Date) return value.toISOString().slice(0, 10);
+  return String(value);
+}
+
+function parseAuthor(value: string): { label: string; url?: string } {
+  const match = value.match(/^\[\[([^[\]|]+)(?:\|([^[\]]+))?\]\]$/);
+  if (!match) {
+    return { label: value };
+  }
+
+  const target = match[1].trim();
+  const label = (match[2] ?? match[1]).trim();
+  const page = resolvePage(registry, target);
+  return page?.collection === "wiki" ? { label, url: page.url } : { label };
+}
+
+const authors = Array.isArray(entry.data.author)
+  ? entry.data.author.map(parseAuthor)
+  : entry.data.author
+    ? [parseAuthor(entry.data.author)]
+    : [];
 ---
 
 <ContentLayout
@@ -49,6 +74,13 @@ const node = graph.get(graphKey({ collection: "articles", title }));
   sources={node?.sources ?? []}
   kind="article"
 >
+  <ArticleMetadata
+    slot="article-meta"
+    authors={authors}
+    published={formatDate(entry.data.published)}
+    archived={formatDate(entry.data.created)}
+    source={entry.data.source ?? null}
+  />
   <article class="content-prose">
     <h1>{title}</h1>
     <Content />
