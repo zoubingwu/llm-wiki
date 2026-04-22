@@ -1,5 +1,7 @@
 import { visit } from "unist-util-visit";
 import { buildRegistry, resolveAsset, resolvePage } from "./registry";
+import { pageUrl } from "./paths";
+import type { WikiCollectionName } from "./types";
 
 const registry = buildRegistry(process.cwd());
 const WIKILINK_RE = /(!)?\[\[([^[\]|]+)(?:\|([^[\]]+))?\]\]/g;
@@ -24,6 +26,15 @@ interface ImageNode {
 type MarkdownNode = TextNode | LinkNode | ImageNode;
 
 type FileLike = { message: (reason: string) => void };
+
+function rewriteMarkdownUrl(url: string): string | null {
+  const match = url.match(/^\.\.\/(wiki|articles)\/(.+?)\.md$/);
+  if (!match) return null;
+
+  const collection = match[1] as WikiCollectionName;
+  const title = decodeURIComponent(match[2]);
+  return pageUrl(collection, title);
+}
 
 function toNodes(value: string, file: FileLike): MarkdownNode[] {
   const nodes: MarkdownNode[] = [];
@@ -74,6 +85,13 @@ function toNodes(value: string, file: FileLike): MarkdownNode[] {
 
 export function remarkWikiLinks() {
   return (tree: any, file: FileLike) => {
+    visit(tree, "link", (node: { url: string }) => {
+      const rewritten = rewriteMarkdownUrl(node.url);
+      if (rewritten) {
+        node.url = rewritten;
+      }
+    });
+
     visit(tree, "text", (node: TextNode, index, parent) => {
       if (!parent || typeof index !== "number") return;
       if (!node.value.includes("[[")) return;
