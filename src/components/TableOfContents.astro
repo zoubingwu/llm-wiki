@@ -1,0 +1,20 @@
+---
+interface Props {
+  headings: { depth: number; slug: string; text: string }[];
+}
+
+const { headings } = Astro.props;
+---
+
+<aside class="toc" data-pagefind-ignore>
+  <div class="sidebar-box__heading">Contents</div>
+  <ul>
+    {headings
+      .filter((heading) => heading.depth <= 3)
+      .map((heading) => (
+        <li class={`depth-${heading.depth}`}>
+          <a href={`#${heading.slug}`}>{heading.text}</a>
+        </li>
+      ))}
+  </ul>
+</aside>

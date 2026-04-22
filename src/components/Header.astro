@@ -1,0 +1,21 @@
+---
+import SearchBox from "./SearchBox.astro";
+---
+
+<header class="site-header">
+  <div class="site-header__leading" aria-hidden="true">
+    <span class="site-header__menu-icon">☰</span>
+  </div>
+  <div class="site-header__brand">
+    <a href="/" class="site-header__wordmark">LLM Wiki</a>
+    <span class="site-header__tagline">A personal encyclopedia for ideas, systems, and sources</span>
+  </div>
+  <div class="site-header__search">
+    <SearchBox />
+  </div>
+  <nav class="site-header__actions" aria-label="Primary">
+    <a href="/">Portal</a>
+    <a href="/wiki/index/">Wiki index</a>
+    <a href="/articles/A%20Guide%20to%20Context%20Engineering%20for%20LLMs/">Sources</a>
+  </nav>
+</header>

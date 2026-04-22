@@ -1,0 +1,65 @@
+---
+import { getCollection, render } from "astro:content";
+import { basename } from "node:path";
+import ContentLayout from "../../layouts/ContentLayout.astro";
+import { buildRegistry } from "../../lib/wiki/registry";
+import { buildLinkGraph, graphKey } from "../../lib/wiki/backlinks";
+import { pageUrl } from "../../lib/wiki/paths";
+
+export async function getStaticPaths() {
+  const wikiEntries = await getCollection("wiki");
+
+  return wikiEntries.map((entry) => ({
+    params: { slug: entry.filePath ? basename(entry.filePath, ".md") : entry.id },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+const title = entry.filePath ? basename(entry.filePath, ".md") : entry.id;
+const { Content, headings } = await render(entry);
+const wikiEntries = await getCollection("wiki");
+const articleEntries = await getCollection("articles");
+const indexEntry = wikiEntries.find((item) => item.id === "index");
+const registry = buildRegistry(process.cwd());
+const graph = buildLinkGraph(
+  [
+    ...wikiEntries.map((item) => ({
+      title: item.filePath ? basename(item.filePath, ".md") : item.id,
+      collection: "wiki" as const,
+      type: item.data.type,
+      body: item.body ?? ""
+    })),
+    ...articleEntries.map((item) => ({
+      title: item.filePath ? basename(item.filePath, ".md") : item.id,
+      collection: "articles" as const,
+      body: item.body ?? ""
+    }))
+  ],
+  registry
+);
+
+const node = graph.get(graphKey({ collection: "wiki", title }));
+const browseItems = [...(indexEntry?.body ?? "").matchAll(/- \[\[([^[\]]+)\]\]/g)]
+  .map((match) => match[1] ?? "")
+  .filter(Boolean)
+  .slice(0, 12)
+  .map((item) => ({
+    title: item,
+    url: pageUrl("wiki", item)
+  }));
+---
+
+<ContentLayout
+  title={title}
+  browseItems={browseItems}
+  headings={headings}
+  related={node?.related ?? []}
+  backlinks={node?.backlinks ?? []}
+  sources={node?.sources ?? []}
+  kind="wiki"
+>
+  <article class="content-prose">
+    <Content />
+  </article>
+</ContentLayout>

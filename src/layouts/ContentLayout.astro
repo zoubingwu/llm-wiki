@@ -1,0 +1,38 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Header from "../components/Header.astro";
+import BrowseSidebar from "../components/BrowseSidebar.astro";
+import TableOfContents from "../components/TableOfContents.astro";
+import FooterPanels from "../components/FooterPanels.astro";
+
+const { title, browseItems, headings, related, backlinks, sources, kind = "wiki" } = Astro.props;
+const sectionLabel = kind === "article" ? "Source archive" : "Article";
+const byline =
+  kind === "article" ? "From the LLM Wiki source archive" : "From LLM Wiki, the personal encyclopedia";
+---
+
+<BaseLayout title={title}>
+  <Header />
+  <div class="page-shell page-shell--article">
+    <TableOfContents headings={headings} />
+    <main class="page-main" data-pagefind-body>
+      <header class="article-header">
+        <h1 class="article-header__title">{title}</h1>
+        <div class="article-header__tabs">
+          <div class="article-header__tabs-group">
+            <a class="is-active" href="#top">{sectionLabel}</a>
+            <a href="/wiki/index/">Index</a>
+          </div>
+          <div class="article-header__tabs-group article-header__tabs-group--quiet">
+            <a class="is-active" href="#top">Read</a>
+            <a href="/wiki/log/">History</a>
+          </div>
+        </div>
+        <p class="article-header__byline">{byline}</p>
+      </header>
+      <slot />
+    </main>
+    <BrowseSidebar items={browseItems} />
+  </div>
+  <FooterPanels related={related} backlinks={backlinks} sources={sources} />
+</BaseLayout>

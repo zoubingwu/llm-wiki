@@ -1,0 +1,82 @@
+---
+import { getCollection } from "astro:content";
+import { statSync } from "node:fs";
+import { basename, join } from "node:path";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import { pageUrl } from "../lib/wiki/paths";
+import { parseRecentLogEntries, pickFeaturedConcepts, sortLatestArticles } from "../lib/wiki/home";
+
+function fileTitle(entry: { id: string; filePath?: string }) {
+  return entry.filePath ? basename(entry.filePath, ".md") : entry.id;
+}
+
+const wikiEntries = await getCollection("wiki");
+const articleEntries = await getCollection("articles");
+
+const indexEntry = wikiEntries.find((entry) => entry.id === "index");
+const logEntry = wikiEntries.find((entry) => entry.id === "log");
+
+const featured = pickFeaturedConcepts(indexEntry?.body ?? "").map((title) => ({
+  title,
+  url: pageUrl("wiki", title)
+}));
+
+const recentLogs = parseRecentLogEntries(logEntry?.body ?? "").slice(0, 8);
+const latestArticles = sortLatestArticles(
+  articleEntries.map((entry) => ({
+    title: fileTitle(entry),
+    date: typeof entry.data?.date === "string" ? entry.data.date : undefined,
+    mtime: entry.filePath
+      ? (() => {
+          try {
+            return statSync(join(process.cwd(), entry.filePath)).mtimeMs;
+          } catch {
+            return 0;
+          }
+        })()
+      : 0
+  }))
+).slice(0, 8);
+--- 
+
+<BaseLayout title="LLM Wiki">
+  <Header />
+  <main class="home" data-pagefind-body>
+    <section class="home__hero card">
+      <h1>LLM Wiki</h1>
+      <p>Repository-backed encyclopedia for AI, interfaces, and systems.</p>
+      <p class="home__description">
+        Content loads from <code>wiki/</code> and <code>articles/</code> with Obsidian-style wikilinks.
+      </p>
+    </section>
+    <section class="card">
+      <h2>Featured Concepts</h2>
+      {featured.length === 0 ? (
+        <p class="empty-note">No featured concepts yet.</p>
+      ) : (
+        featured.map((item) => (
+          <p><a href={item.url}>{item.title}</a></p>
+        ))
+      )}
+    </section>
+    <section class="card">
+      <h2>Recent Log Entries</h2>
+      {recentLogs.length === 0 ? (
+        <p class="empty-note">No log entries yet.</p>
+      ) : (
+        recentLogs.map((entry) => <article><h3>{entry.title}</h3></article>)
+      )}
+    </section>
+    <section class="card">
+      <h2>Latest Sources</h2>
+      {latestArticles.length === 0 ? (
+        <p class="empty-note">No source files yet.</p>
+      ) : (
+        latestArticles.map((item) => (
+          <p><a href={pageUrl("articles", item.title)}>{item.title}</a></p>
+        ))
+      )}
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,140 @@
+<div class="search-box" data-pagefind-ignore>
+  <div class="search-box__form">
+    <input
+      id="wiki-search"
+      class="search-box__input"
+      type="search"
+      placeholder="Search LLM Wiki"
+      autocomplete="off"
+      aria-label="Search LLM Wiki"
+    />
+    <button class="search-box__button" type="button">Search</button>
+  </div>
+  <div id="wiki-search-results" class="search-results" hidden></div>
+</div>
+
+<script is:inline>
+  const input = document.getElementById("wiki-search");
+  const results = document.getElementById("wiki-search-results");
+  const button = document.querySelector(".search-box__button");
+  let pagefindLoader;
+
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>"']/g, (char) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[char]
+    );
+  }
+
+  function resetResults() {
+    if (!results) return;
+    results.innerHTML = "";
+    results.hidden = true;
+  }
+
+  function excerptFromResult(item) {
+    const excerpt =
+      typeof item.excerpt === "string"
+        ? item.excerpt
+        : Array.isArray(item.excerpts)
+          ? item.excerpts.join("…")
+          : "";
+    return excerpt || "";
+  }
+
+  async function loadPagefind() {
+    if (!pagefindLoader) {
+      pagefindLoader = import("/pagefind/pagefind.js")
+        .then((mod) => mod.search?.bind(mod) ? mod : null)
+        .catch(() => null);
+    }
+
+    return pagefindLoader;
+  }
+
+  input?.addEventListener("input", async (event) => {
+    const term = (event.target.value || "").trim();
+
+    if (!term) {
+      resetResults();
+      return;
+    }
+
+    const pagefind = await loadPagefind();
+    if (!pagefind || !results) return;
+
+    const response = await pagefind.search(term);
+    const items = await Promise.all(response.results.slice(0, 6).map((result) => result.data()));
+    const hasResults = items.length > 0;
+
+    results.hidden = !hasResults;
+    if (!hasResults) {
+      results.innerHTML = "";
+      return;
+    }
+
+    results.innerHTML = items
+      .map(
+        (item) => `
+          <a class="search-results__item" href="${item.url}">
+            <strong>${escapeHtml(item.meta?.title || "Untitled")}</strong>
+            <p>${excerptFromResult(item)}</p>
+          </a>
+        `
+      )
+      .join("");
+  });
+
+  input?.addEventListener("focus", async () => {
+    if (!input?.value.trim()) return;
+    const term = input.value.trim();
+
+    const pagefind = await loadPagefind();
+    if (!pagefind || !results) return;
+
+    const response = await pagefind.search(term);
+    const items = await Promise.all(response.results.slice(0, 6).map((result) => result.data()));
+    const hasResults = items.length > 0;
+
+    results.hidden = !hasResults;
+    if (!hasResults) {
+      results.innerHTML = "";
+      return;
+    }
+
+    results.innerHTML = items
+      .map(
+        (item) => `
+          <a class="search-results__item" href="${item.url}">
+            <strong>${escapeHtml(item.meta?.title || "Untitled")}</strong>
+            <p>${excerptFromResult(item)}</p>
+          </a>
+        `
+      )
+      .join("");
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".search-box")) {
+      resetResults();
+    }
+  });
+
+  input?.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      resetResults();
+      input.value = "";
+      input.blur();
+    }
+  });
+
+  button?.addEventListener("click", () => {
+    input?.focus();
+    input?.dispatchEvent(new Event("input", { bubbles: true }));
+  });
+</script>

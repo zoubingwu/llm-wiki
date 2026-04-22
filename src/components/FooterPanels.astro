@@ -1,0 +1,29 @@
+---
+interface LinkItem {
+  title: string;
+  url: string;
+}
+
+interface Props {
+  related: LinkItem[];
+  backlinks: LinkItem[];
+  sources: LinkItem[];
+}
+
+const { related, backlinks, sources } = Astro.props;
+---
+
+<footer class="footer-panels" data-pagefind-ignore>
+  <section>
+    <h2>Related pages</h2>
+    {related.length === 0 ? <p class="empty-note">No entries</p> : related.map((item) => <p><a href={item.url}>{item.title}</a></p>)}
+  </section>
+  <section>
+    <h2>Backlinks</h2>
+    {backlinks.length === 0 ? <p class="empty-note">No entries</p> : backlinks.map((item) => <p><a href={item.url}>{item.title}</a></p>)}
+  </section>
+  <section>
+    <h2>Sources</h2>
+    {sources.length === 0 ? <p class="empty-note">No entries</p> : sources.map((item) => <p><a href={item.url}>{item.title}</a></p>)}
+  </section>
+</footer>
