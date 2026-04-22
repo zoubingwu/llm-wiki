@@ -2,4 +2,10 @@
 .obsidian/workspace*
 .obsidian/app.json
 .app-status
+.superpowers/
+docs/
+node_modules/
+.astro/
+dist/
+public/assets/wiki/
 trash/

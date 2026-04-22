@@ -10,6 +10,9 @@ llm-wiki/
 ├── .agents/
 │   └── skills/            # 本仓库自带的 Agent Skills（如 ingest/query/lint）
 ├── .gitignore
+├── docs/
+│   └── superpowers/
+│       └── specs/         # 设计文档与实现前规格说明
 ├── articles/              # 【源文章】已归档的知识源（英文原文保持不改；中文机翻允许校对修正）
 │   └── <title>.md
 ├── wiki/                  # 【维基层】你生成和维护的 markdown 文件
@@ -18,6 +21,7 @@ llm-wiki/
 │   └── *.md               # 概念页、实体页、综述页等
 ├── raw/
 │   └── assets/            # 文章附件（图片等），不可修改
+├── .superpowers/          # 本地 brainstorm / mockup / 临时状态目录，加入 .gitignore
 └── .obsidian/             # Obsidian 配置，你不用管
 ```
 
@@ -88,6 +92,12 @@ llm-wiki/
 - 缺失的交叉引用
 
 ## 文件约定
+
+### 设计文档
+
+- 设计和实现前规格统一写入 `docs/superpowers/specs/`
+- 设计文档文件名使用 `YYYY-MM-DD-<topic>-design.md`
+- 设计文档服务于实现，不替代 `wiki/` 的知识内容
 
 ### 维基页面格式
 
