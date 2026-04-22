@@ -5,14 +5,15 @@ import BrowseSidebar from "../components/BrowseSidebar.astro";
 import TableOfContents from "../components/TableOfContents.astro";
 import FooterPanels from "../components/FooterPanels.astro";
 
-const { title, browseItems, headings, related, backlinks, sources, kind = "wiki" } = Astro.props;
+const { title, seeAlsoItems, headings, related, backlinks, sources, kind = "wiki" } = Astro.props;
+const sidebarItems = seeAlsoItems ?? related;
 const byline =
   kind === "article" ? "From the LLM Wiki source archive" : "From LLM Wiki, the personal encyclopedia";
 ---
 
 <BaseLayout title={title}>
   <Header />
-  <div class="page-shell page-shell--article">
+  <div class={`page-shell page-shell--article${sidebarItems.length === 0 ? " page-shell--no-sidebar" : ""}`}>
     <TableOfContents headings={headings} />
     <main class="page-main" data-pagefind-body>
       <header class="article-header">
@@ -20,8 +21,8 @@ const byline =
         <p class="article-header__byline">{byline}</p>
       </header>
       <slot />
-      <FooterPanels related={related} backlinks={backlinks} sources={sources} />
+      <FooterPanels backlinks={backlinks} sources={sources} />
     </main>
-    <BrowseSidebar items={browseItems} />
+    <BrowseSidebar items={sidebarItems} />
   </div>
 </BaseLayout>

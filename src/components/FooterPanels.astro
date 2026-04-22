@@ -5,14 +5,12 @@ interface LinkItem {
 }
 
 interface Props {
-  related: LinkItem[];
   backlinks: LinkItem[];
   sources: LinkItem[];
 }
 
-const { related, backlinks, sources } = Astro.props;
+const { backlinks, sources } = Astro.props;
 const sections = [
-  { title: "See also", items: related },
   { title: "Backlinks", items: backlinks },
   { title: "References", items: sources }
 ].filter((section) => section.items.length > 0);

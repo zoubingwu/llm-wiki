@@ -6,15 +6,19 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<aside class="browse-sidebar" data-pagefind-ignore>
-  <div class="sidebar-box__heading">Browse</div>
-  <ul>
-    {
-      items.map((item) => (
-        <li>
-          <a href={item.url}>{item.title}</a>
-        </li>
-      ))
-    }
-  </ul>
-</aside>
+{
+  items.length > 0 && (
+    <aside class="browse-sidebar" data-pagefind-ignore>
+      <div class="sidebar-box__heading">See also</div>
+      <ul>
+        {
+          items.map((item) => (
+            <li>
+              <a href={item.url}>{item.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </aside>
+  )
+}
