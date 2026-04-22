@@ -2,19 +2,13 @@
 title: "Context Engineering for AI Agents: Lessons from Building Manus"
 source: https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus
 author:
-  - "[[constantly rewriting the todo list]]"
-  - "[[Manus is]]"
+  - "[[Manus]]"
 published: 2025-07-18
 created: 2026-04-09
 description: This post shares the local optima Manus arrived at through our own "SGD". If you're building your own AI agent, we hope these principles help you converge faster.
 tags:
   - articles
 ---
-[Manus is now part of Meta — bringing AI to businesses worldwide  
-Manus 现已成为 Meta 的一部分，致力于将人工智能带给全球企业。](https://manus.im/team)
-
-·Friday, July 18
-7月18日，星期五
 
 ## Context Engineering for AI Agents: Lessons from Building Manus
 ## 面向 AI 智能体的上下文工程：构建 Manus 的经验教训
