@@ -34,6 +34,7 @@ llm-wiki/
 │   └── styles/
 ├── .superpowers/          # 本地 brainstorm / mockup / 临时状态目录，加入 .gitignore
 ├── tsconfig.json          # 站点 TypeScript 配置
+├── wrangler.jsonc         # Cloudflare Workers Static Assets 部署配置
 └── .obsidian/             # Obsidian 配置，你不用管
 ```
 
