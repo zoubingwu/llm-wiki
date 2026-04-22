@@ -10,18 +10,30 @@ llm-wiki/
 ├── .agents/
 │   └── skills/            # 本仓库自带的 Agent Skills（如 ingest/query/lint）
 ├── .gitignore
+├── astro.config.mjs       # Astro 站点配置（remark / markdown / site）
 ├── docs/
 │   └── superpowers/
 │       └── specs/         # 设计文档与实现前规格说明
+├── package.json           # Web 站点依赖与脚本（pnpm）
+├── pnpm-lock.yaml         # pnpm lockfile
 ├── articles/              # 【源文章】已归档的知识源（英文原文保持不改；中文机翻允许校对修正）
 │   └── <title>.md
+├── scripts/
+│   └── sync-wiki-assets.mjs # 构建前同步 raw/assets 到站点静态目录
 ├── wiki/                  # 【维基层】你生成和维护的 markdown 文件
 │   ├── index.md           # 目录索引，每次 ingest 后更新
 │   ├── log.md             # 变更日志，append-only
 │   └── *.md               # 概念页、实体页、综述页等
 ├── raw/
 │   └── assets/            # 文章附件（图片等），不可修改
+├── src/                   # Astro 站点源码（页面、布局、组件、wikilink 解析、搜索接入）
+│   ├── components/
+│   ├── layouts/
+│   ├── lib/wiki/
+│   ├── pages/
+│   └── styles/
 ├── .superpowers/          # 本地 brainstorm / mockup / 临时状态目录，加入 .gitignore
+├── tsconfig.json          # 站点 TypeScript 配置
 └── .obsidian/             # Obsidian 配置，你不用管
 ```
 
@@ -90,6 +102,13 @@ llm-wiki/
 - 没有入链的孤立页面
 - 被多处提及但没有独立页面的重要概念
 - 缺失的交叉引用
+
+### Web 站点层（Astro）
+
+1. `src/`、`astro.config.mjs`、`package.json`、`scripts/` 构成网页发布层，它读取 `wiki/` 和 `articles/` 作为内容源。
+2. 日常 wiki 操作聚焦内容层：`wiki/*.md`、`articles/*.md`、`wiki/index.md`、`wiki/log.md`。
+3. 站点层修改对应这些任务：用户明确要求调整网页样式、布局、路由、搜索、构建、部署、wikilink 解析或 backlinks 生成。
+4. ingest / query / lint 这类内容维护任务默认保持站点层稳定，持续复用现有 Astro 实现。
 
 ## 文件约定
 
