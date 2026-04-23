@@ -17,12 +17,9 @@ const {
   headings,
   related,
   backlinks,
-  sources,
-  kind = "wiki"
+  sources
 } = Astro.props;
 const sidebarItems = seeAlsoItems ?? related;
-const byline =
-  kind === "article" ? "From the LLM Wiki source archive" : "From LLM Wiki, the personal encyclopedia";
 ---
 
 <BaseLayout
@@ -41,7 +38,6 @@ const byline =
     <main class="page-main" data-pagefind-body>
       <header class="article-header">
         <h1 class="article-header__title">{title}</h1>
-        <p class="article-header__byline">{byline}</p>
       </header>
       <slot name="article-meta" />
       <slot />
