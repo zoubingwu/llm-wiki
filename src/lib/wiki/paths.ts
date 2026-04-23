@@ -1,4 +1,4 @@
-import type { WikiCollectionName } from "./types";
+import type { WikiCollectionName } from "./types.ts";
 
 export function stripMarkdownExtension(filename: string): string {
   return filename.replace(/\.md$/i, "");

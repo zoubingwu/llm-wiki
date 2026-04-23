@@ -1,25 +1,22 @@
 import { readdirSync } from "node:fs";
 import { join } from "node:path";
-import { assetUrl, pageUrl, stripMarkdownExtension } from "./paths";
-import type { PageRecord, Registry, WikiCollectionName } from "./types";
+import { assetUrl, pageUrl, stripMarkdownExtension } from "./paths.ts";
+import type { PageRecord, Registry, WikiCollectionName } from "./types.ts";
 
 const SINGLE_QUOTE_RE = /[\u2018\u2019\u201A\u201B\u2032\u2035\uFF07]/g;
 const DOUBLE_QUOTE_RE = /[\u201C\u201D\u201E\u201F\u2033\u2036\uFF02]/g;
 const DASH_RE = /[\u2010\u2011\u2012\u2013\u2014\u2015\u2212\uFE58\uFE63\uFF0D]/g;
 
-function readMarkdownTitles(root: string, collection: WikiCollectionName): PageRecord[] {
-  const folder = join(root, collection);
+export interface TitleEntry {
+  collection: WikiCollectionName;
+  title: string;
+  path: string;
+}
 
-  return readdirSync(folder)
-    .filter((name) => name.endsWith(".md"))
-    .map((name) => {
-      const title = stripMarkdownExtension(name);
-      return {
-        title,
-        collection,
-        url: pageUrl(collection, title)
-      };
-    });
+export interface TitleCollision {
+  collection: WikiCollectionName;
+  normalizedTitle: string;
+  entries: TitleEntry[];
 }
 
 export function normalizePageTitle(value: string): string {
@@ -30,6 +27,67 @@ export function normalizePageTitle(value: string): string {
     .replace(DASH_RE, "-")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+export function collectMarkdownTitles(
+  root: string,
+  collections: WikiCollectionName[] = ["wiki", "articles"]
+): TitleEntry[] {
+  return collections.flatMap((collection) =>
+    readdirSync(join(root, collection))
+      .filter((name) => name.endsWith(".md"))
+      .map((name) => ({
+        collection,
+        title: stripMarkdownExtension(name),
+        path: `${collection}/${name}`
+      }))
+  );
+}
+
+export function findNormalizedTitleCollisions(entries: TitleEntry[]): TitleCollision[] {
+  const groups = new Map<string, TitleCollision>();
+
+  for (const entry of entries) {
+    const normalizedTitle = normalizePageTitle(entry.title);
+    const key = `${entry.collection}\u0000${normalizedTitle}`;
+    const group = groups.get(key);
+
+    if (group) {
+      group.entries.push(entry);
+      continue;
+    }
+
+    groups.set(key, {
+      collection: entry.collection,
+      normalizedTitle,
+      entries: [entry]
+    });
+  }
+
+  return [...groups.values()]
+    .filter((group) => group.entries.length > 1)
+    .map((group) => ({
+      ...group,
+      entries: [...group.entries].sort((left, right) => left.path.localeCompare(right.path))
+    }))
+    .sort((left, right) =>
+      left.collection.localeCompare(right.collection) || left.normalizedTitle.localeCompare(right.normalizedTitle)
+    );
+}
+
+export function findTitleCollisions(
+  root: string,
+  collections: WikiCollectionName[] = ["wiki", "articles"]
+): TitleCollision[] {
+  return findNormalizedTitleCollisions(collectMarkdownTitles(root, collections));
+}
+
+function readMarkdownTitles(root: string, collection: WikiCollectionName): PageRecord[] {
+  return collectMarkdownTitles(root, [collection]).map(({ title }) => ({
+    title,
+    collection,
+    url: pageUrl(collection, title)
+  }));
 }
 
 export function buildRegistry(root: string): Registry {

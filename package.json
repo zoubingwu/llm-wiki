@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "deploy": "pnpm run build && wrangler deploy",
     "check": "astro check",
+    "wiki:check-titles": "node scripts/check-wiki-title-collisions.ts",
     "test": "vitest run"
   },
   "dependencies": {
