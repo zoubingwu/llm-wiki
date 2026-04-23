@@ -144,3 +144,27 @@ Append-only 变更记录，最新在底部。
   - `Manus.md`
   - `Maxime Heckel.md`
   - `LLM Wiki Pattern.md`
+
+## [2026-04-23] ingest | Web 应用快捷键支持系列
+- 录入了 Peng Lyu 关于 Web 应用快捷键支持的三篇系列文章，建立了从 `Keyboard Event`、布局映射到 `Keybinding Service` 的完整主题线
+- 创建了以下页面：
+  - `Keyboard Shortcut Support in Web Apps.md` — Web 快捷键系统总览
+  - `Keyboard Event.md` — 浏览器键盘事件与主派发时机
+  - `keyCode.md` — 废弃属性的歧义和替代方案
+  - `Keyboard Layout Mapping.md` — 国际化键盘布局归一化
+  - `Keyboard Map API.md` — 浏览器侧布局映射提案
+  - `Keybinding Service.md` — 快捷键到命令的查找与冲突裁决
+  - `Context Key Expression.md` — `when` 条件表达式
+  - `Peng Lyu.md` — 系列作者实体页
+  - `VS Code.md` — 案例应用实体页
+  - `node-native-keymap.md` — 键盘布局模块实体页
+  - `Web 应用快捷键支持（一）：正确处理 Keyboard Event.md` — 第一篇源摘要页
+  - `Web 应用快捷键支持（二）：codekey 的缺点和 Node native keymap.md` — 第二篇源摘要页
+  - `Web 应用快捷键支持（三）：VS Code 快捷键服务的实现.md` — 第三篇源摘要页
+- 更新了以下页面：
+  - `Overview.md` — 新增“Web 应用快捷键系统”主题
+  - `index.md` — 新增 7 个概念、3 个实体和 3 条源摘要
+- 校对了以下源文件：
+  - `articles/Web 应用快捷键支持（一）：正确处理 Keyboard Event.md` — 修正明显笔误
+  - `articles/Web 应用快捷键支持（二）：codekey 的缺点和 Node native keymap.md` — 修正示例代码排版和错字
+  - `articles/Web 应用快捷键支持（三）：VS Code 快捷键服务的实现.md` — 修正代码示例排版和错字

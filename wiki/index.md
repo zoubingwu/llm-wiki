@@ -55,6 +55,13 @@
 - [[Refraction]] — 光线跨介质传播时改变方向的现象，也是液态玻璃位移建模的基础
 - [[SVG Displacement Map]] — 用图像通道编码像素位移并交给 `<feDisplacementMap />` 执行
 - [[Specular Highlight]] — 材质表面的明亮反光区域，帮助玻璃效果建立厚度感
+- [[Keyboard Shortcut Support in Web Apps]] — 从事件采集、布局映射到命令分派的 Web 快捷键系统总览
+- [[Keyboard Event]] — 浏览器键盘事件是快捷键系统的第一层输入
+- [[keyCode]] — 已废弃的键盘事件属性，在跨布局场景里存在歧义
+- [[Keyboard Layout Mapping]] — 将物理按键与字符输出归一化为意图快捷键
+- [[Keyboard Map API]] — 浏览器获取当前键盘布局映射的接口提案
+- [[Keybinding Service]] — 将规范化快捷键映射到命令并裁决冲突的服务
+- [[Context Key Expression]] — 用 `when` 表达式描述快捷键绑定的生效条件
 
 ## 实体
 - [[ByteByteGo]] — 技术博客，发布了 Context Engineering 指南
@@ -67,6 +74,9 @@
 - [[Framer Motion]] — React 动画库，支持弹簧动画
 - [[Maxime Heckel]] — 撰写前端动画与交互原理文章的作者
 - [[Jakob Nielsen]] — 可用性领域先驱，提出 AI 时代 UX 需要重写评估指标与交互范式
+- [[Peng Lyu]] — 《Web 应用快捷键支持》系列作者
+- [[VS Code]] — 作为案例应用解释 Web 快捷键系统实现
+- [[node-native-keymap]] — 读取操作系统键盘布局的 Node 原生模块
 
 ## 源摘要
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
@@ -77,6 +87,9 @@
 - [[Attention Is All You Need]] — 提出 Transformer 架构的经典论文（2017-06-12）
 - [[Liquid Glass in the Browser Refraction with CSS and SVG]] — 用折射建模和 SVG 位移贴图近似实现 Liquid Glass（2025-10-04）
 - [[Intent by Discovery Designing the AI User Experience]] — Jakob Nielsen 关于 AI UX 范式转移与发现式交互的文章（2026-03-26）
+- [[Web 应用快捷键支持（一）：正确处理 Keyboard Event]] — 解释 `keydown`、`keyCode` 歧义和 `key` / `code` 的起点问题（2019-08-11）
+- [[Web 应用快捷键支持（二）：codekey 的缺点和 Node native keymap]] — 解释 `code/key`、布局映射和 Keyboard Map API 的边界（2019-08-25）
+- [[Web 应用快捷键支持（三）：VS Code 快捷键服务的实现]] — 解释 `when`、冲突裁决和快捷键到命令的分派过程（2019-09-11）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）

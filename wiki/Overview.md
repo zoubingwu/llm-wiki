@@ -1,15 +1,15 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-04-22
+updated: 2026-04-23
 tags:
   - overview
-source_count: 7
+source_count: 10
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖七个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型** 和 **浏览器中的折射玻璃效果**。
+个人知识库的主题总览。目前涵盖八个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果** 和 **Web 应用快捷键系统**。
 
 ## Context Engineering（上下文工程）
 
@@ -62,3 +62,11 @@ source_count: 7
 这条知识线连接了光学直觉、位移贴图编码和浏览器滤镜约束，也补充了前端渲染层面对“Apple 风格视觉效果”可实现边界的理解。
 
 涉及：[[Liquid Glass Effect]]、[[Refraction]]、[[SVG Displacement Map]]、[[Specular Highlight]]。
+
+## Web 应用快捷键系统
+
+研究 Web 应用如何在浏览器环境里实现接近桌面应用的快捷键体验，问题链路从 [[Keyboard Event]] 的采集开始，经过 [[Keyboard Layout Mapping]] 的国际化归一化，再落到 [[Keybinding Service]] 的命令分派和冲突裁决。
+
+这条知识线把浏览器输入事件、键盘布局检测、绑定解析和上下文条件系统连成了一条完整实现链路。
+
+涉及：[[Keyboard Shortcut Support in Web Apps]]、[[keyCode]]、[[Keyboard Map API]]、[[Context Key Expression]]、[[VS Code]]、[[node-native-keymap]]。
