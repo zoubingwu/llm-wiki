@@ -15,6 +15,9 @@ Search `articles/` and `git status --short` to find newly added article files. D
 2. Read the source and inspect existing wiki coverage.
 Open the article, `wiki/index.md`, `wiki/log.md`, and any obviously related pages before editing.
 
+Check candidate titles against normalized title collisions before creating new pages.
+For each candidate page title, apply the repo's normalized title rule and verify that the same collection does not already contain another file that resolves to the same normalized title.
+
 3. Extract durable knowledge.
 Prefer persistent concepts, entities, source summaries, and cross-source relationships over ephemeral chat answers.
 
@@ -28,6 +31,7 @@ If the article is English-first with Chinese translation:
 5. Create or update wiki pages.
 Follow the page frontmatter and naming rules from `AGENTS.md`.
 Use concise pages with durable facts, terminology in `中文（English）` form on first mention, and Obsidian `[[wikilink]]` references.
+Merge into the existing page or pick a clearer canonical title when a normalized title collision appears. Keep one canonical filename per normalized title inside each collection.
 
 6. Update repository indexes.
 Always update:
@@ -35,6 +39,7 @@ Always update:
 - `wiki/log.md`
 
 Update overview pages or related concept/entity pages when the new source materially changes them.
+After edits, run `pnpm wiki:check-titles` when available to validate the full repository state.
 
 ## Page Selection
 

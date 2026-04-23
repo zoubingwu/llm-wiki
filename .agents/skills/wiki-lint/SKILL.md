@@ -15,6 +15,7 @@ Scan `wiki/` and report:
 - orphan pages with no meaningful inbound links
 - important concepts/entities mentioned repeatedly but lacking their own page
 - missing cross-links between closely related pages
+- normalized title collisions inside the same collection, such as typographic quote or full-width punctuation variants resolving to the same canonical title
 
 ## Workflow
 
@@ -26,6 +27,8 @@ Use repository search to find:
 - pages with no inbound links
 - repeated mentions without target pages
 - inconsistent terminology
+
+Run `pnpm wiki:check-titles` when available and include any normalized title collisions in the findings. Treat collisions within the same collection as structural problems because they make wikilink resolution ambiguous after title normalization.
 
 3. Validate against sources when needed.
 If a claim looks stale or inconsistent, check the corresponding source page or source article before calling it out.
