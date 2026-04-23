@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkStringify from "remark-stringify";
-import { remarkWikiLinks } from "../../src/lib/wiki/wikilinks";
+import { rehypeWikiLinks, remarkWikiLinks } from "../../src/lib/wiki/wikilinks";
 
 async function render(markdown: string) {
   const file = await unified()
@@ -31,6 +31,57 @@ describe("remarkWikiLinks", () => {
     await expect(render("![[ModalNet-21.png]]")).resolves.toContain(
       "![](/assets/wiki/ModalNet-21.png)"
     );
+  });
+
+  it("rewrites the first wikilink when multiple wikilinks share one text node", async () => {
+    await expect(
+      render("涉及：[[Hooke’s Law]]、[[Harmonic Oscillator]]、[[Damping in Spring Animation]]。")
+    ).resolves.toContain(
+      "涉及：[Hooke’s Law](/wiki/Hooke's%20Law/)、[Harmonic Oscillator](/wiki/Harmonic%20Oscillator/)、[Damping in Spring Animation](/wiki/Damping%20in%20Spring%20Animation/)。"
+    );
+  });
+
+  it("rewrites residual wikilinks in html text nodes during rehype fallback", () => {
+    const tree = {
+      type: "root",
+      children: [
+        {
+          type: "element",
+          tagName: "p",
+          properties: {},
+          children: [
+            {
+              type: "text",
+              value: "涉及：[[Hooke’s Law]]、[[Harmonic Oscillator]]。"
+            }
+          ]
+        }
+      ]
+    };
+    const messages: string[] = [];
+
+    rehypeWikiLinks()(tree, {
+      message(reason: string) {
+        messages.push(reason);
+      }
+    });
+
+    const children = tree.children[0].children;
+    expect(children).toHaveLength(5);
+    expect(children[0]).toMatchObject({ type: "text", value: "涉及：" });
+    expect(children[1]).toMatchObject({
+      type: "element",
+      tagName: "a",
+      properties: { href: "/wiki/Hooke's%20Law/" }
+    });
+    expect(children[2]).toMatchObject({ type: "text", value: "、" });
+    expect(children[3]).toMatchObject({
+      type: "element",
+      tagName: "a",
+      properties: { href: "/wiki/Harmonic%20Oscillator/" }
+    });
+    expect(children[4]).toMatchObject({ type: "text", value: "。" });
+    expect(messages).toHaveLength(0);
   });
 
   it("leaves unresolved wikilinks as text", async () => {
