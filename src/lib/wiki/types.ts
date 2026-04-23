@@ -8,5 +8,6 @@ export interface PageRecord {
 
 export interface Registry {
   pages: Map<string, PageRecord>;
+  pageAliases?: Map<string, PageRecord>;
   assets: Map<string, string>;
 }

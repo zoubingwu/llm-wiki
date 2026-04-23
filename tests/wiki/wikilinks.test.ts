@@ -19,6 +19,9 @@ describe("remarkWikiLinks", () => {
     await expect(render("[[Context Engineering]]")).resolves.toContain(
       "[Context Engineering](/wiki/Context%20Engineering/)"
     );
+    await expect(render("[[Hooke’s Law]]")).resolves.toContain(
+      "[Hooke’s Law](/wiki/Hooke's%20Law/)"
+    );
     await expect(render("[source](../articles/A%20Guide%20to%20Context%20Engineering%20for%20LLMs.md)")).resolves.toContain(
       "[source](/articles/A%20Guide%20to%20Context%20Engineering%20for%20LLMs/)"
     );

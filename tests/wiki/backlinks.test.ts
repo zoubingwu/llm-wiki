@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { buildLinkGraph, graphKey } from "../../src/lib/wiki/backlinks";
+import { normalizePageTitle } from "../../src/lib/wiki/registry";
 import { pageUrl } from "../../src/lib/wiki/paths";
 import type { Registry } from "../../src/lib/wiki/types";
 
@@ -79,5 +80,36 @@ describe("link graph", () => {
     expect(target?.backlinks.map((entry) => entry.url)).toContain("/articles/Source/");
     expect(target?.related.map((entry) => entry.url)).toContain("/wiki/Source/");
     expect(target?.related.map((entry) => entry.url)).not.toContain("/articles/Source/");
+  });
+
+  it("matches normalized wikilink titles when building backlinks", () => {
+    const target = { title: "Hooke's Law", collection: "wiki" as const, url: pageUrl("wiki", "Hooke's Law") };
+    const registry: Registry = {
+      pages: new Map([["Hooke's Law", target]]),
+      pageAliases: new Map([[normalizePageTitle("Hooke's Law"), target]]),
+      assets: new Map()
+    };
+
+    const graph = buildLinkGraph(
+      [
+        {
+          title: "Hooke's Law",
+          collection: "wiki",
+          type: "concept",
+          body: ""
+        },
+        {
+          title: "Spring Animation",
+          collection: "wiki",
+          type: "concept",
+          body: "See [[Hooke’s Law]]."
+        }
+      ],
+      registry
+    );
+
+    expect(graph.get(graphKey({ collection: "wiki", title: "Hooke's Law" }))?.backlinks.map((entry) => entry.title)).toContain(
+      "Spring Animation"
+    );
   });
 });
