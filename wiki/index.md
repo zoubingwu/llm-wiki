@@ -72,6 +72,15 @@
 - [[Hex Grid Line Drawing]] — 通过插值和 `cube_round` 找出直线穿过的六边形
 - [[Hex Grid Map Storage]] — 将六边形坐标映射到数组、哈希表或压缩行结构
 - [[Hex Grid Pathfinding]] — 在六边形地图上复用 A*、Dijkstra 等图搜索算法
+- [[Hacker Culture]] — 软件黑客共同体围绕能力、贡献和同行认可形成的文化
+- [[Hacker Attitude]] — 解决问题、共享方案、自动化重复劳动、尊重能力的价值观
+- [[Basic Hacking Skills]] — 编程、Unix/Linux、Web/HTML 和技术英语构成的入门工具箱
+- [[Hacker vs Cracker]] — 构建系统的 hacker 与破坏系统的 cracker 的术语边界
+- [[Hacker Status and Reputation]] — 黑客共同体中由开源贡献、调试、文档和基础设施维护形成的声望机制
+- [[Gift Culture in Hacker Culture]] — 通过赠与时间、创造力和成果来获得同行认可的共同体机制
+- [[Open Source Software]] — 现代黑客文化最重要的贡献场域和软件协作实践
+- [[Unix-centered Hacker Culture]] — 围绕 Unix、Linux、BSD 和互联网基础设施形成的学习传统
+- [[Free Software Movement]] — 以软件自由为核心的运动及其与 open source 术语的历史分化
 
 ## 实体
 - [[ByteByteGo]] — 技术博客，发布了 Context Engineering 指南
@@ -88,6 +97,7 @@
 - [[VS Code]] — 作为案例应用解释 Web 快捷键系统实现
 - [[node-native-keymap]] — 读取操作系统键盘布局的 Node 原生模块
 - [[Amit J. Patel]] — Red Blob Games 作者，整理六边形网格、寻路和游戏开发可视化资料
+- [[Eric Steven Raymond]] — 黑客文化和开源运动作者，编写 How To Become A Hacker
 
 ## 源摘要
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
@@ -102,6 +112,7 @@
 - [[Web 应用快捷键支持（二）：codekey 的缺点和 Node native keymap]] — 解释 `code/key`、布局映射和 Keyboard Map API 的边界（2019-08-25）
 - [[Web 应用快捷键支持（三）：VS Code 快捷键服务的实现]] — 解释 `when`、冲突裁决和快捷键到命令的分派过程（2019-09-11）
 - [[Red Blob Games Hexagonal Grids]] — Amit J. Patel 关于六边形网格数学、坐标系统和算法实现的指南（2013-03-11）
+- [[How To Become A Hacker]] — Eric Steven Raymond 关于黑客文化、学习路径和开源声望机制的经典 FAQ（2001-01-01）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）

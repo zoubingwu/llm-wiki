@@ -4,12 +4,12 @@ created: 2026-04-08
 updated: 2026-04-26
 tags:
   - overview
-source_count: 11
+source_count: 12
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖九个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**Web 应用快捷键系统** 和 **六边形网格算法**。
+个人知识库的主题总览。目前涵盖十个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**Web 应用快捷键系统**、**六边形网格算法** 和 **黑客文化 / 开源传统**。
 
 ## Context Engineering（上下文工程）
 
@@ -76,3 +76,9 @@ source_count: 11
 研究游戏和可视化系统中六边形网格（Hexagonal Grids）的几何、坐标系统、存储和算法实现。核心思路是把六边形地图建模为可做向量运算的坐标系统，再在其上实现距离、线段、移动范围、视野和寻路。
 
 这条知识线从 [[Red Blob Games Hexagonal Grids]] 出发，串起 [[Hexagonal Grid Geometry]]、[[Hex Coordinate Systems]]、[[Cube Coordinates for Hex Grids]]、[[Axial Coordinates for Hex Grids]]、[[Offset Coordinates for Hex Grids]]、[[Doubled Coordinates for Hex Grids]]、[[Hex Grid Distance]]、[[Hex Grid Line Drawing]]、[[Hex Grid Map Storage]] 和 [[Hex Grid Pathfinding]]。
+
+## 黑客文化 / 开源传统
+
+研究 hacker 一词在软件共同体中的原始含义、学习路径、声望机制和开源历史。核心关注点是能力、态度、贡献和同行认可如何共同形成技术身份。
+
+这条知识线从 [[How To Become A Hacker]] 出发，串起 [[Hacker Culture]]、[[Hacker Attitude]]、[[Basic Hacking Skills]]、[[Hacker vs Cracker]]、[[Hacker Status and Reputation]]、[[Gift Culture in Hacker Culture]]、[[Open Source Software]]、[[Unix-centered Hacker Culture]] 和 [[Free Software Movement]]。

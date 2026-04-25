@@ -188,3 +188,22 @@ Append-only 变更记录，最新在底部。
   - `Overview.md` — 新增“六边形网格算法”主题
   - `index.md` — 新增 10 个概念、1 个实体和 1 条源摘要
 - 源文件为英文原文，未包含中文机翻校对项
+
+## [2026-04-26] ingest | How To Become A Hacker
+- 录入了 Eric Steven Raymond 关于黑客文化、学习路径、共同体声望和开源历史的英文 FAQ
+- 创建了以下页面：
+  - `How To Become A Hacker.md` — 源摘要页，记录文章的核心论点和主题链路
+  - `Eric Steven Raymond.md` — 作者实体页
+  - `Hacker Culture.md` — 黑客文化的共同体定义
+  - `Hacker Attitude.md` — 黑客态度的五个原则
+  - `Basic Hacking Skills.md` — 编程、Unix/Linux、Web/HTML 和技术英语入门技能
+  - `Hacker vs Cracker.md` — hacker 与 cracker 的术语边界
+  - `Hacker Status and Reputation.md` — 黑客共同体中的声望机制
+  - `Gift Culture in Hacker Culture.md` — 赠与文化与贡献驱动的地位系统
+  - `Open Source Software.md` — 开源软件在黑客文化中的角色
+  - `Unix-centered Hacker Culture.md` — Unix/Linux 作为黑客学习环境
+  - `Free Software Movement.md` — 自由软件运动与 open source 的历史分化
+- 更新了以下页面：
+  - `Overview.md` — 新增“黑客文化 / 开源传统”主题
+  - `index.md` — 新增 9 个概念、1 个实体和 1 条源摘要
+- 源文件为纯英文原文，articles 保持原样
