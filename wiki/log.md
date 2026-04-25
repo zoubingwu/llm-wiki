@@ -168,3 +168,23 @@ Append-only 变更记录，最新在底部。
   - `articles/Web 应用快捷键支持（一）：正确处理 Keyboard Event.md` — 修正明显笔误
   - `articles/Web 应用快捷键支持（二）：codekey 的缺点和 Node native keymap.md` — 修正示例代码排版和错字
   - `articles/Web 应用快捷键支持（三）：VS Code 快捷键服务的实现.md` — 修正代码示例排版和错字
+
+## [2026-04-26] ingest | Red Blob Games: Hexagonal Grids
+- 录入了 Amit J. Patel 关于六边形网格几何、坐标系统、距离、线段、存储和寻路算法的英文指南
+- 创建了以下页面：
+  - `Red Blob Games Hexagonal Grids.md` — 源摘要页，记录文章的坐标系统选择和算法链路
+  - `Amit J. Patel.md` — 作者实体页
+  - `Hexagonal Grid Geometry.md` — 六边形几何、朝向、间距和角点计算
+  - `Hex Coordinate Systems.md` — offset、cube、axial、doubled 坐标系统总览
+  - `Cube Coordinates for Hex Grids.md` — cube 坐标和 `q + r + s = 0` 约束
+  - `Axial Coordinates for Hex Grids.md` — axial 坐标及其与 cube 的关系
+  - `Offset Coordinates for Hex Grids.md` — odd/even row/column offset 坐标
+  - `Doubled Coordinates for Hex Grids.md` — double-width 和 double-height 坐标
+  - `Hex Grid Distance.md` — 六边形网格距离公式
+  - `Hex Grid Line Drawing.md` — 插值采样与 `cube_round`
+  - `Hex Grid Map Storage.md` — 数组、哈希表和压缩行存储
+  - `Hex Grid Pathfinding.md` — 六边形地图上的图搜索接口
+- 更新了以下页面：
+  - `Overview.md` — 新增“六边形网格算法”主题
+  - `index.md` — 新增 10 个概念、1 个实体和 1 条源摘要
+- 源文件为英文原文，未包含中文机翻校对项

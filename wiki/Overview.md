@@ -1,15 +1,15 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-04-23
+updated: 2026-04-26
 tags:
   - overview
-source_count: 10
+source_count: 11
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖八个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果** 和 **Web 应用快捷键系统**。
+个人知识库的主题总览。目前涵盖九个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**Web 应用快捷键系统** 和 **六边形网格算法**。
 
 ## Context Engineering（上下文工程）
 
@@ -70,3 +70,9 @@ source_count: 10
 这条知识线把浏览器输入事件、键盘布局检测、绑定解析和上下文条件系统连成了一条完整实现链路。
 
 涉及：[[Keyboard Shortcut Support in Web Apps]]、[[keyCode]]、[[Keyboard Map API]]、[[Context Key Expression]]、[[VS Code]]、[[node-native-keymap]]。
+
+## 六边形网格算法
+
+研究游戏和可视化系统中六边形网格（Hexagonal Grids）的几何、坐标系统、存储和算法实现。核心思路是把六边形地图建模为可做向量运算的坐标系统，再在其上实现距离、线段、移动范围、视野和寻路。
+
+这条知识线从 [[Red Blob Games Hexagonal Grids]] 出发，串起 [[Hexagonal Grid Geometry]]、[[Hex Coordinate Systems]]、[[Cube Coordinates for Hex Grids]]、[[Axial Coordinates for Hex Grids]]、[[Offset Coordinates for Hex Grids]]、[[Doubled Coordinates for Hex Grids]]、[[Hex Grid Distance]]、[[Hex Grid Line Drawing]]、[[Hex Grid Map Storage]] 和 [[Hex Grid Pathfinding]]。

@@ -62,6 +62,16 @@
 - [[Keyboard Map API]] — 浏览器获取当前键盘布局映射的接口提案
 - [[Keybinding Service]] — 将规范化快捷键映射到命令并裁决冲突的服务
 - [[Context Key Expression]] — 用 `when` 表达式描述快捷键绑定的生效条件
+- [[Hexagonal Grid Geometry]] — 六边形网格的尺寸、方向、间距和角点计算
+- [[Hex Coordinate Systems]] — offset、cube、axial、doubled 四类六边形坐标系统
+- [[Cube Coordinates for Hex Grids]] — 用 `q + r + s = 0` 的三轴坐标表达六边形算法
+- [[Axial Coordinates for Hex Grids]] — cube 坐标的二轴存储形式，算法需要时恢复第三轴
+- [[Offset Coordinates for Hex Grids]] — 通过奇偶行或列错位来适配矩形数组的坐标系统
+- [[Doubled Coordinates for Hex Grids]] — 通过加倍行或列步长表达错位关系的坐标系统
+- [[Hex Grid Distance]] — 六边形网格中基于 cube 坐标的最短步数公式
+- [[Hex Grid Line Drawing]] — 通过插值和 `cube_round` 找出直线穿过的六边形
+- [[Hex Grid Map Storage]] — 将六边形坐标映射到数组、哈希表或压缩行结构
+- [[Hex Grid Pathfinding]] — 在六边形地图上复用 A*、Dijkstra 等图搜索算法
 
 ## 实体
 - [[ByteByteGo]] — 技术博客，发布了 Context Engineering 指南
@@ -77,6 +87,7 @@
 - [[Peng Lyu]] — 《Web 应用快捷键支持》系列作者
 - [[VS Code]] — 作为案例应用解释 Web 快捷键系统实现
 - [[node-native-keymap]] — 读取操作系统键盘布局的 Node 原生模块
+- [[Amit J. Patel]] — Red Blob Games 作者，整理六边形网格、寻路和游戏开发可视化资料
 
 ## 源摘要
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
@@ -90,6 +101,7 @@
 - [[Web 应用快捷键支持（一）：正确处理 Keyboard Event]] — 解释 `keydown`、`keyCode` 歧义和 `key` / `code` 的起点问题（2019-08-11）
 - [[Web 应用快捷键支持（二）：codekey 的缺点和 Node native keymap]] — 解释 `code/key`、布局映射和 Keyboard Map API 的边界（2019-08-25）
 - [[Web 应用快捷键支持（三）：VS Code 快捷键服务的实现]] — 解释 `when`、冲突裁决和快捷键到命令的分派过程（2019-09-11）
+- [[Red Blob Games Hexagonal Grids]] — Amit J. Patel 关于六边形网格数学、坐标系统和算法实现的指南（2013-03-11）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）
