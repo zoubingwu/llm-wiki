@@ -37,7 +37,7 @@ a {
 
 .site-header {
   display: grid;
-  grid-template-columns: 42px 178px minmax(360px, 1fr) auto;
+  grid-template-columns: 42px 188px minmax(360px, 1fr) auto;
   align-items: center;
   gap: 14px;
   width: min(1360px, calc(100% - 32px));
