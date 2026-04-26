@@ -4,7 +4,7 @@ created: 2026-04-08
 updated: 2026-04-26
 tags:
   - overview
-source_count: 12
+source_count: 13
 ---
 
 # Overview
@@ -73,9 +73,9 @@ source_count: 12
 
 ## 六边形网格算法
 
-研究游戏和可视化系统中六边形网格（Hexagonal Grids）的几何、坐标系统、存储和算法实现。核心思路是把六边形地图建模为可做向量运算的坐标系统，再在其上实现距离、线段、移动范围、视野和寻路。
+研究游戏和可视化系统中六边形网格（Hexagonal Grids）的几何、坐标系统、存储和算法实现。核心思路是把六边形地图建模为可做向量运算的坐标系统，再在其上实现距离、线段、移动范围、视野、寻路和屏幕坐标转换。
 
-这条知识线从 [[Red Blob Games Hexagonal Grids]] 出发，串起 [[Hexagonal Grid Geometry]]、[[Hex Coordinate Systems]]、[[Cube Coordinates for Hex Grids]]、[[Axial Coordinates for Hex Grids]]、[[Offset Coordinates for Hex Grids]]、[[Doubled Coordinates for Hex Grids]]、[[Hex Grid Distance]]、[[Hex Grid Line Drawing]]、[[Hex Grid Map Storage]] 和 [[Hex Grid Pathfinding]]。
+这条知识线从 [[Red Blob Games Hexagonal Grids]] 和 [[Implementation of Hex Grids]] 出发，串起 [[Hexagonal Grid Geometry]]、[[Hex Coordinate Systems]]、[[Cube Coordinates for Hex Grids]]、[[Axial Coordinates for Hex Grids]]、[[Offset Coordinates for Hex Grids]]、[[Doubled Coordinates for Hex Grids]]、[[Hex Grid Distance]]、[[Hex Grid Line Drawing]]、[[Hex Grid Layout]]、[[Fractional Hex Coordinates]]、[[Hex Map Shapes]]、[[Hex Grid Map Storage]] 和 [[Hex Grid Pathfinding]]。
 
 ## 黑客文化 / 开源传统
 

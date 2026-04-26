@@ -5,7 +5,7 @@ updated: 2026-04-26
 tags:
   - hexagonal-grids
   - coordinate-systems
-source_count: 1
+source_count: 2
 ---
 
 # Hex Coordinate Systems
@@ -26,6 +26,9 @@ source_count: 1
 
 算法层优先使用 axial/cube，存储层根据地图形状和访问模式选择。矩形地图可用 offset 或 doubled；任意形状地图可用 axial/cube 配合哈希表或压缩数组。
 
+[[Implementation of Hex Grids]] 给出实现层取舍：项目可以存储完整 `q,r,s`，也可以只存 `q,r` 并通过 accessor 计算 `s`。代码风格可以使用命名字段、数组、模板或已有 vector 类型，关键是全项目一致。
+
 ## 来源
 
 - [[Red Blob Games Hexagonal Grids]]
+- [[Implementation of Hex Grids]]

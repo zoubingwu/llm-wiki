@@ -5,7 +5,7 @@ updated: 2026-04-26
 tags:
   - hexagonal-grids
   - data-structures
-source_count: 1
+source_count: 2
 ---
 
 # Hex Grid Map Storage
@@ -26,6 +26,9 @@ source_count: 1
 
 存储访问建议封装在 map 的 getter/setter 中，让寻路、渲染和玩法逻辑继续使用清晰的 [[Hex Coordinate Systems]]。
 
+[[Implementation of Hex Grids]] 补充了实现取舍：hash table 适合任意 shape 和带洞地图；显式图结构适合边界、墙和洞长期稳定的 irregular map；紧凑数组适合大地图或存储规模敏感场景。[[Hex Map Shapes]] 的生成循环决定紧凑数组的索引公式。
+
 ## 来源
 
 - [[Red Blob Games Hexagonal Grids]]
+- [[Implementation of Hex Grids]]

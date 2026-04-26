@@ -5,7 +5,7 @@ updated: 2026-04-26
 tags:
   - hexagonal-grids
   - algorithms
-source_count: 1
+source_count: 2
 ---
 
 # Hex Grid Distance
@@ -36,6 +36,9 @@ distance = max(abs(dq), abs(dr), abs(ds))
 - 移动范围用距离不等式生成半径内所有格子。
 - [[Hex Grid Pathfinding]] 中的 A* 启发式通常使用距离乘以单步移动成本。
 
+[[Implementation of Hex Grids]] 将距离实现拆成 `hex_length` 和 `hex_distance`：前者计算一个 cube 向量的长度，后者先做 `hex_subtract` 再计算长度。
+
 ## 来源
 
 - [[Red Blob Games Hexagonal Grids]]
+- [[Implementation of Hex Grids]]

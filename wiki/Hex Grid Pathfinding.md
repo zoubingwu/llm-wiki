@@ -6,7 +6,7 @@ tags:
   - hexagonal-grids
   - pathfinding
   - algorithms
-source_count: 1
+source_count: 2
 ---
 
 # Hex Grid Pathfinding
@@ -23,6 +23,9 @@ source_count: 1
 
 无障碍移动范围可由 cube/axial 坐标不等式生成。带障碍的移动范围适合用限制深度的广度优先搜索（breadth-first search）。视野可先从起点对范围内每个格子做 [[Hex Grid Line Drawing]]，再判断线段是否穿过墙。
 
+[[Implementation of Hex Grids]] 将寻路视为 graph algorithms 的应用：只要 `Hex`、neighbors 和 map nodes 已实现，移动范围、distance map 与 pathfinding 都可以复用图算法。
+
 ## 来源
 
 - [[Red Blob Games Hexagonal Grids]]
+- [[Implementation of Hex Grids]]

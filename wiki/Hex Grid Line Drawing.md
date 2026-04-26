@@ -5,7 +5,7 @@ updated: 2026-04-26
 tags:
   - hexagonal-grids
   - algorithms
-source_count: 1
+source_count: 2
 ---
 
 # Hex Grid Line Drawing
@@ -28,6 +28,9 @@ A + (B - A) * (i / N)
 
 当线段恰好落在格子边界上时，可对端点加一个很小的 epsilon，让边界选择保持一致。
 
+[[Implementation of Hex Grids]] 将线段绘制拆成 `hex_lerp`、[[Fractional Hex Coordinates]] 和 `hex_round` 三步，并用 `max(N, 1)` 处理起点终点相同的长度 0 线段。
+
 ## 来源
 
 - [[Red Blob Games Hexagonal Grids]]
+- [[Implementation of Hex Grids]]

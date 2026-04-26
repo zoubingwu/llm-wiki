@@ -5,7 +5,7 @@ updated: 2026-04-26
 tags:
   - hexagonal-grids
   - geometry
-source_count: 1
+source_count: 2
 ---
 
 # Hexagonal Grid Geometry
@@ -24,6 +24,9 @@ source_count: 1
 
 几何层负责把抽象坐标映射成像素。[[Hex Coordinate Systems]] 负责地图中的格子身份，[[Hex Grid Distance]]、[[Hex Grid Line Drawing]] 和 [[Hex Grid Pathfinding]] 依赖坐标系统运行。
 
+[[Hex Grid Layout]] 将几何层实现为 orientation、size 和 origin 的组合，覆盖平顶/尖顶、像素素材拉伸、y 轴方向和原点偏移。
+
 ## 来源
 
 - [[Red Blob Games Hexagonal Grids]]
+- [[Implementation of Hex Grids]]

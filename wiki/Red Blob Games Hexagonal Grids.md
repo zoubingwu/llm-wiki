@@ -6,12 +6,12 @@ tags:
   - source
   - hexagonal-grids
   - game-development
-source_count: 1
+source_count: 2
 ---
 
 # Red Blob Games Hexagonal Grids
 
-[[Red Blob Games Hexagonal Grids]] 是 [[Amit J. Patel]] 在 Red Blob Games 发布的六边形网格（Hexagonal Grids）指南，原文发布于 2013-03-11，覆盖六边形几何、坐标系统、坐标转换、邻居、距离、线段绘制、移动范围、旋转、反射、环、视野、像素映射、地图存储和寻路。
+[[Red Blob Games Hexagonal Grids]] 是 [[Amit J. Patel]] 在 [[Red Blob Games]] 发布的六边形网格（Hexagonal Grids）指南，原文发布于 2013-03-11，覆盖六边形几何、坐标系统、坐标转换、邻居、距离、线段绘制、移动范围、旋转、反射、环、视野、像素映射、地图存储和寻路。
 
 这篇文章的核心价值是把六边形网格从“画格子”整理成一套可实现的数学模型。作者推荐用 [[Cube Coordinates for Hex Grids]] 或 [[Axial Coordinates for Hex Grids]] 表达算法，用 axial 或 doubled 存储坐标，并在需要矩形数组存储时考虑 [[Offset Coordinates for Hex Grids]] 或 [[Doubled Coordinates for Hex Grids]]。
 
@@ -27,6 +27,8 @@ source_count: 1
 ## 实现取舍
 
 作者的实践建议是：矩形地图可以使用与地图朝向匹配的 offset 或 doubled 坐标；其他形状的地图优先使用 axial/cube。Axial 和 cube 本质上是同一套坐标系统，axial 存储 `q,r`，算法需要时通过 `s = -q-r` 恢复第三轴。
+
+[[Implementation of Hex Grids]] 是本文的配套实现指南，把这些公式组织成 [[Hex Grid Implementation]]、[[Hex Grid Layout]]、[[Fractional Hex Coordinates]]、[[Hex Map Shapes]] 和 [[Offset Coordinate Conversion]]。
 
 ## 来源
 

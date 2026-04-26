@@ -72,6 +72,11 @@
 - [[Hex Grid Line Drawing]] — 通过插值和 `cube_round` 找出直线穿过的六边形
 - [[Hex Grid Map Storage]] — 将六边形坐标映射到数组、哈希表或压缩行结构
 - [[Hex Grid Pathfinding]] — 在六边形地图上复用 A*、Dijkstra 等图搜索算法
+- [[Hex Grid Implementation]] — 将六边形网格数学组织成值对象、纯函数和可移植代码 recipe
+- [[Hex Grid Layout]] — 用 orientation、size 和 origin 处理 hex 坐标与屏幕坐标互转
+- [[Fractional Hex Coordinates]] — 用浮点 `q,r,s` 支持屏幕反算、线性插值和 rounding
+- [[Hex Map Shapes]] — 用坐标循环生成 parallelogram、triangle、hexagon、rectangle 等地图形状
+- [[Offset Coordinate Conversion]] — 在 offset 坐标和 cube/axial 坐标之间互转的实现模式
 - [[Hacker Culture]] — 软件黑客共同体围绕能力、贡献和同行认可形成的文化
 - [[Hacker Attitude]] — 解决问题、共享方案、自动化重复劳动、尊重能力的价值观
 - [[Basic Hacking Skills]] — 编程、Unix/Linux、Web/HTML 和技术英语构成的入门工具箱
@@ -98,6 +103,7 @@
 - [[node-native-keymap]] — 读取操作系统键盘布局的 Node 原生模块
 - [[Amit J. Patel]] — Red Blob Games 作者，整理六边形网格、寻路和游戏开发可视化资料
 - [[Eric Steven Raymond]] — 黑客文化和开源运动作者，编写 How To Become A Hacker
+- [[Red Blob Games]] — Amit J. Patel 的交互式游戏开发算法与可视化写作网站
 
 ## 源摘要
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
@@ -113,6 +119,7 @@
 - [[Web 应用快捷键支持（三）：VS Code 快捷键服务的实现]] — 解释 `when`、冲突裁决和快捷键到命令的分派过程（2019-09-11）
 - [[Red Blob Games Hexagonal Grids]] — Amit J. Patel 关于六边形网格数学、坐标系统和算法实现的指南（2013-03-11）
 - [[How To Become A Hacker]] — Eric Steven Raymond 关于黑客文化、学习路径和开源声望机制的经典 FAQ（2001-01-01）
+- [[Implementation of Hex Grids]] — Red Blob Games 六边形网格实现 recipe，覆盖 `Hex`、`Layout`、map shape 和 offset 转换（2015-05-06）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）

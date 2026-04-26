@@ -207,3 +207,29 @@ Append-only 变更记录，最新在底部。
   - `Overview.md` — 新增“黑客文化 / 开源传统”主题
   - `index.md` — 新增 9 个概念、1 个实体和 1 条源摘要
 - 源文件为纯英文原文，articles 保持原样
+
+## [2026-04-26] ingest | Implementation of Hex Grids
+- 录入了 Red Blob Games 关于六边形网格代码实现的英文配套指南
+- 创建了以下页面：
+  - `Implementation of Hex Grids.md` — 源摘要页，记录实现对象、算法和代码 recipe
+  - `Red Blob Games.md` — 网站实体页
+  - `Hex Grid Implementation.md` — 六边形网格库的核心实现结构
+  - `Hex Grid Layout.md` — hex 坐标与屏幕坐标互转的 layout 模型
+  - `Fractional Hex Coordinates.md` — 浮点 hex 坐标、rounding 和插值
+  - `Hex Map Shapes.md` — parallelogram、triangle、hexagon、rectangle 等地图形状生成
+  - `Offset Coordinate Conversion.md` — odd/even offset 与 cube/axial 的转换模式
+- 更新了以下页面：
+  - `Red Blob Games Hexagonal Grids.md`
+  - `Amit J. Patel.md`
+  - `Hex Coordinate Systems.md`
+  - `Cube Coordinates for Hex Grids.md`
+  - `Axial Coordinates for Hex Grids.md`
+  - `Offset Coordinates for Hex Grids.md`
+  - `Hex Grid Distance.md`
+  - `Hex Grid Line Drawing.md`
+  - `Hex Grid Map Storage.md`
+  - `Hex Grid Pathfinding.md`
+  - `Hexagonal Grid Geometry.md`
+  - `Overview.md`
+  - `index.md`
+- 源文件为纯英文原文，articles 保持原样
