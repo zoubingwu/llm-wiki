@@ -9,9 +9,6 @@ description:
 tags:
   - "articles"
 ---
-<table><tbody><tr><th align="left" colspan="3"><strong>Revision History</strong></th></tr><tr><td align="left">Revision 1.52</td><td align="left">03 Jasnuary 2020</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Go makes a place as a plausible learning language, displacing Java.</td></tr><tr><td align="left">Revision 1.51</td><td align="left">06 October 2017</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Link to "Things Every Hacker Once Knew." Mention USB-stick distros. Many updated translation links.</td></tr><tr><td align="left">Revision 1.50</td><td align="left">19 July 2015</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Added link to "Let's Go Larval".</td></tr><tr><td align="left">Revision 1.49</td><td align="left">21 November 2014</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Added link to "How To Learn Hacking".</td></tr><tr><td align="left">Revision 1.48</td><td align="left">19 June 2014</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">freshmeat/freecode is dead, alas.</td></tr><tr><td align="left">Revision 1.47</td><td align="left">20 May 2014</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Fix up various stale links. Join a hackerspace!</td></tr><tr><td align="left">Revision 1.46</td><td align="left">25 Sep 2013</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Add micropatronage explanation and gittip link. Why you should not ask me for advice on how to get started.</td></tr><tr><td align="left">Revision 1.45</td><td align="left">12 May 2013</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Open Solaris isn't, and Unity screwed the pooch.</td></tr><tr><td align="left">Revision 1.44</td><td align="left">20 May 2012</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Updated the critique of Java.</td></tr><tr><td align="left">Revision 1.43</td><td align="left">07 Feb 2011</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Python passed Perl in popularity in 2010.</td></tr><tr><td align="left">Revision 1.42</td><td align="left">22 Oct 2010</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Added "Historical note".</td></tr><tr><td align="left">Revision 1.40</td><td align="left">3 Nov 2008</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Link fixes.</td></tr><tr><td align="left">Revision 1.39</td><td align="left">14 Aug 2008</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Link fixes.</td></tr><tr><td align="left">Revision 1.38</td><td align="left">8 Jan 2008</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Deprecate Java as a language to learn early.</td></tr><tr><td align="left">Revision 1.37</td><td align="left">4 Oct 2007</td><td align="left">esr</td></tr><tr><td align="left" colspan="3">Recommend Ubuntu as a Unix distro for newbies.</td></tr></tbody></table>
-
----
 
 ![](http://www.catb.org/esr/faqs/glider.png)
 
@@ -323,47 +320,6 @@ If you enjoyed the Zen poem, you might also like [Rootless Root: The Unix Koans 
 
 ## Frequently Asked Questions
 
-Q: [How do I tell if I am already a hacker?](#hacker_already)
-
-Q: [Will you teach me how to hack?](#teach_hack)
-
-Q: [How can I get started, then?](#getting_started)
-
-Q: [When do you have to start? Is it too late for me to learn?](#when_start)
-
-Q: [How long will it take me to learn to hack?](#how_long)
-
-Q: [Is Visual Basic a good language to start with?](#closed_lang)
-
-Q: [Would you help me to crack a system, or teach me how to crack?](#I_want_to_crack_and_Im_an_idiot)
-
-Q: [How can I get the password for someone else's account?](#passwords)
-
-Q: [How can I break into/read/monitor someone else's email?](#crackmail)
-
-Q: [How can I steal channel op privileges on IRC?](#crackop)
-
-Q: [I've been cracked. Will you help me fend off further attacks?](#anti_crack)
-
-Q: [I'm having problems with my Windows software. Will you help me?](#windows_grief)
-
-Q: [Where can I find some real hackers to talk with?](#real_hackers)
-
-Q: [Can you recommend useful books about hacking-related subjects?](#books)
-
-Q: [Do I need to be good at math to become a hacker?](#mathematics)
-
-Q: [What language should I learn first?](#language_first)
-
-Q: [What kind of hardware do I need?](#hardware)
-
-Q: [I want to contribute. Can you help me pick a problem to work on?](#started2)
-
-Q: [Do I need to hate and bash Microsoft?](#MS_hater)
-
-Q: [But won't open-source software leave programmers unable to make a living?](#no_living)
-
-Q: [Where can I get a free Unix?](#problems)
 
 | **Q:** | How do I tell if I am already a hacker? |
 | --- | --- |
