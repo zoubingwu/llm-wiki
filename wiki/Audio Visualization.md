@@ -1,7 +1,7 @@
 ---
 type: concept
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-05-13
 tags:
   - 音频
   - 可视化
@@ -32,6 +32,10 @@ source_count: 1
 - [[FFT and rFFT]] — 实际计算频谱的常用算法
 - [[Time Smoothing]] — 让可视化结果更平稳
 - [[Web Audio API]] — Web 端读取和处理音频的常用接口
+
+## 来源
+
+- [[音频可视化：采样、频率和傅里叶变换]]
 
 ## 相关概念
 

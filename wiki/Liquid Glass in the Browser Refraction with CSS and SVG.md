@@ -1,7 +1,7 @@
 ---
 type: source
 created: 2026-04-11
-updated: 2026-04-11
+updated: 2026-05-13
 tags:
   - source
   - frontend
@@ -12,7 +12,7 @@ source_count: 1
 
 # Liquid Glass in the Browser Refraction with CSS and SVG
 
-这篇文章用一个浏览器端原型拆解了 Liquid Glass 效果的核心组成：[[Refraction|折射]]、[[SVG Displacement Map|SVG 位移贴图]] 和 [[Specular Highlight|镜面高光]]。
+这篇 [[kube]] 文章用一个浏览器端原型拆解了 Liquid Glass 效果的核心组成：[[Refraction|折射]]、[[SVG Displacement Map|SVG 位移贴图]] 和 [[Specular Highlight|镜面高光]]。
 
 源文见：[Liquid Glass in the Browser Refraction with CSS and SVG](../articles/Liquid%20Glass%20in%20the%20Browser%20Refraction%20with%20CSS%20and%20SVG.md)。
 
