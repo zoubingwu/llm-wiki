@@ -55,6 +55,14 @@
 - [[Refraction]] — 光线跨介质传播时改变方向的现象，也是液态玻璃位移建模的基础
 - [[SVG Displacement Map]] — 用图像通道编码像素位移并交给 `<feDisplacementMap />` 执行
 - [[Specular Highlight]] — 材质表面的明亮反光区域，帮助玻璃效果建立厚度感
+- [[Atmospheric Scattering]] — 用大气体积中的散射和吸收建模天空、日落和行星大气颜色
+- [[Raymarching]] — 沿射线分步采样体积介质，累积密度、透射率和散射贡献
+- [[Rayleigh Scattering]] — 空气分子对短波长光的强散射，是蓝天的主要原因
+- [[Mie Scattering]] — 尘埃和气溶胶等较大颗粒形成太阳附近光晕与地平线雾化
+- [[Ozone Absorption]] — 臭氧吸收部分波长，让地平线、日落和暮光颜色发生偏移
+- [[Optical Depth and Transmittance]] — 描述光沿大气路径遇到多少介质以及剩余多少光
+- [[Planetary Atmosphere Rendering]] — 用大气球壳、深度缓冲和射线-球体相交渲染行星大气
+- [[LUT-based Atmospheric Scattering]] — 将昂贵的大气散射计算预计算成纹理查找表再合成
 - [[Keyboard Shortcut Support in Web Apps]] — 从事件采集、布局映射到命令分派的 Web 快捷键系统总览
 - [[Keyboard Event]] — 浏览器键盘事件是快捷键系统的第一层输入
 - [[keyCode]] — 已废弃的键盘事件属性，在跨布局场景里存在歧义
@@ -104,6 +112,7 @@
 - [[Amit J. Patel]] — Red Blob Games 作者，整理六边形网格、寻路和游戏开发可视化资料
 - [[Eric Steven Raymond]] — 黑客文化和开源运动作者，编写 How To Become A Hacker
 - [[Red Blob Games]] — Amit J. Patel 的交互式游戏开发算法与可视化写作网站
+- [[Sebastian Hillaire]] — 实时天空与大气渲染研究者，LUT 大气散射方法的重要参考
 
 ## 源摘要
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
@@ -120,6 +129,7 @@
 - [[Red Blob Games Hexagonal Grids]] — Amit J. Patel 关于六边形网格数学、坐标系统和算法实现的指南（2013-03-11）
 - [[How To Become A Hacker]] — Eric Steven Raymond 关于黑客文化、学习路径和开源声望机制的经典 FAQ（2001-01-01）
 - [[Implementation of Hex Grids]] — Red Blob Games 六边形网格实现 recipe，覆盖 `Hex`、`Layout`、map shape 和 offset 转换（2015-05-06）
+- [[On Rendering the Sky, Sunsets, and Planets - The Blog of Maxime Heckel]] — Maxime Heckel 关于浏览器实时大气散射、行星大气和 LUT 优化的 shader 实验（2026-05-12）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）

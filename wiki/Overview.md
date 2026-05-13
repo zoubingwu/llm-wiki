@@ -1,15 +1,15 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-04-26
+updated: 2026-05-13
 tags:
   - overview
-source_count: 13
+source_count: 15
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖十个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**Web 应用快捷键系统**、**六边形网格算法** 和 **黑客文化 / 开源传统**。
+个人知识库的主题总览。目前涵盖十一个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**六边形网格算法** 和 **黑客文化 / 开源传统**。
 
 ## Context Engineering（上下文工程）
 
@@ -62,6 +62,12 @@ source_count: 13
 这条知识线连接了光学直觉、位移贴图编码和浏览器滤镜约束，也补充了前端渲染层面对“Apple 风格视觉效果”可实现边界的理解。
 
 涉及：[[Liquid Glass Effect]]、[[Refraction]]、[[SVG Displacement Map]]、[[Specular Highlight]]。
+
+## 实时图形渲染中的大气散射
+
+研究如何用 shader 在浏览器和实时 3D 场景中渲染天空、日出日落、地平线雾霭和行星大气层。核心思路是把天空颜色视为光在大气体积中的散射与吸收结果，再用 [[Raymarching]]、深度缓冲和 LUT 优化把物理直觉压缩成可实时运行的后期处理。
+
+这条知识线从 [[On Rendering the Sky, Sunsets, and Planets - The Blog of Maxime Heckel]] 出发，串起 [[Atmospheric Scattering]]、[[Rayleigh Scattering]]、[[Mie Scattering]]、[[Ozone Absorption]]、[[Optical Depth and Transmittance]]、[[Planetary Atmosphere Rendering]] 和 [[LUT-based Atmospheric Scattering]]。
 
 ## Web 应用快捷键系统
 

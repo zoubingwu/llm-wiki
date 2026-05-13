@@ -233,3 +233,23 @@ Append-only 变更记录，最新在底部。
   - `Overview.md`
   - `index.md`
 - 源文件为纯英文原文，articles 保持原样
+
+## [2026-05-13] ingest | On Rendering the Sky, Sunsets, and Planets
+- 录入了 Maxime Heckel 关于浏览器实时大气散射、行星大气渲染和 LUT 优化的 shader 文章
+- 创建了以下页面：
+  - `On Rendering the Sky, Sunsets, and Planets - The Blog of Maxime Heckel.md` — 源摘要页，记录天空模型、后期处理、行星大气和 LUT 链路
+  - `Atmospheric Scattering.md` — 大气散射总览
+  - `Raymarching.md` — 沿射线分步采样体积介质的渲染方法
+  - `Rayleigh Scattering.md` — 瑞利散射与蓝天颜色
+  - `Mie Scattering.md` — 米氏散射与地平线雾化 / 光晕
+  - `Ozone Absorption.md` — 臭氧吸收对天空颜色的影响
+  - `Optical Depth and Transmittance.md` — 光学深度与透射率
+  - `Planetary Atmosphere Rendering.md` — 行星大气壳、深度缓冲和射线-球体相交
+  - `LUT-based Atmospheric Scattering.md` — 基于 LUT 的大气散射优化
+  - `Sebastian Hillaire.md` — LUT 大气渲染方法参考实体
+- 更新了以下页面：
+  - `Maxime Heckel.md`
+  - `Overview.md`
+  - `index.md`
+- 校对了以下源文件：
+  - `articles/On Rendering the Sky, Sunsets, and Planets - The Blog of Maxime Heckel.md` — 修正 raymarching、Uniforms、Optical Depth、Transmittance、Aerial Perspective LUT 等关键术语的中文机翻问题
