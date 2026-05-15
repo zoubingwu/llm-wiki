@@ -70,6 +70,10 @@
 - [[Keyboard Map API]] — 浏览器获取当前键盘布局映射的接口提案
 - [[Keybinding Service]] — 将规范化快捷键映射到命令并裁决冲突的服务
 - [[Context Key Expression]] — 用 `when` 表达式描述快捷键绑定的生效条件
+- [[Hybrid Native WebView Architecture]] — 用平台原生 shell、系统 WebView、Node 和 Rust 组合跨平台桌面应用
+- [[Native-feel WebView Desktop Apps]] — 让 WebView UI 在窗口、输入、动画和系统材质上表现得像原生桌面应用
+- [[Typed IPC for Multi-runtime Apps]] — 用集中声明和生成 typed clients 管理跨 Swift/C#、WebView、Node、Rust 的通信边界
+- [[Rust File Indexer]] — 用 Rust 独立进程扫描文件系统、构建跨平台搜索索引并跟随文件事件更新
 - [[Hexagonal Grid Geometry]] — 六边形网格的尺寸、方向、间距和角点计算
 - [[Hex Coordinate Systems]] — offset、cube、axial、doubled 四类六边形坐标系统
 - [[Cube Coordinates for Hex Grids]] — 用 `q + r + s = 0` 的三轴坐标表达六边形算法
@@ -109,6 +113,7 @@
 - [[Peng Lyu]] — 《Web 应用快捷键支持》系列作者
 - [[VS Code]] — 作为案例应用解释 Web 快捷键系统实现
 - [[node-native-keymap]] — 读取操作系统键盘布局的 Node 原生模块
+- [[Raycast]] — 桌面生产力工具，Raycast 2.0 展示了 native shell + system WebView 的跨平台架构
 - [[Amit J. Patel]] — Red Blob Games 作者，整理六边形网格、寻路和游戏开发可视化资料
 - [[Eric Steven Raymond]] — 黑客文化和开源运动作者，编写 How To Become A Hacker
 - [[Red Blob Games]] — Amit J. Patel 的交互式游戏开发算法与可视化写作网站
@@ -126,6 +131,7 @@
 - [[Web 应用快捷键支持（一）：正确处理 Keyboard Event]] — 解释 `keydown`、`keyCode` 歧义和 `key` / `code` 的起点问题（2019-08-11）
 - [[Web 应用快捷键支持（二）：codekey 的缺点和 Node native keymap]] — 解释 `code/key`、布局映射和 Keyboard Map API 的边界（2019-08-25）
 - [[Web 应用快捷键支持（三）：VS Code 快捷键服务的实现]] — 解释 `when`、冲突裁决和快捷键到命令的分派过程（2019-09-11）
+- [[A Technical Deep Dive Into the New Raycast]] — Raycast 2.0 跨平台重写的架构、WebView 原生手感、typed IPC 和 Rust 文件索引器（2026-05-14）
 - [[Red Blob Games Hexagonal Grids]] — Amit J. Patel 关于六边形网格数学、坐标系统和算法实现的指南（2013-03-11）
 - [[How To Become A Hacker]] — Eric Steven Raymond 关于黑客文化、学习路径和开源声望机制的经典 FAQ（2001-01-01）
 - [[Implementation of Hex Grids]] — Red Blob Games 六边形网格实现 recipe，覆盖 `Hex`、`Layout`、map shape 和 offset 转换（2015-05-06）

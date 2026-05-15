@@ -1,15 +1,15 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-05-13
+updated: 2026-05-15
 tags:
   - overview
-source_count: 15
+source_count: 16
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖十一个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**六边形网格算法** 和 **黑客文化 / 开源传统**。
+个人知识库的主题总览。目前涵盖十二个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法** 和 **黑客文化 / 开源传统**。
 
 ## Context Engineering（上下文工程）
 
@@ -76,6 +76,12 @@ source_count: 15
 这条知识线把浏览器输入事件、键盘布局检测、绑定解析和上下文条件系统连成了一条完整实现链路。
 
 涉及：[[Keyboard Shortcut Support in Web Apps]]、[[keyCode]]、[[Keyboard Map API]]、[[Context Key Expression]]、[[VS Code]]、[[node-native-keymap]]。
+
+## 跨平台桌面应用架构
+
+研究复杂桌面应用如何在 Web 技术、native shell、后台运行时和性能核心之间分工。重点问题包括跨平台 UI 复用、系统 API 控制、WebView 渲染行为、IPC 类型边界、文件系统索引和内存基线。
+
+这条知识线从 [[A Technical Deep Dive Into the New Raycast]] 出发，把 [[Raycast]] 2.0 作为案例，串起 [[Hybrid Native WebView Architecture]]、[[Native-feel WebView Desktop Apps]]、[[Typed IPC for Multi-runtime Apps]] 和 [[Rust File Indexer]]。它也和 [[Keyboard Shortcut Support in Web Apps]]、[[VS Code]] 形成桌面 Web 技术谱系。
 
 ## 六边形网格算法
 

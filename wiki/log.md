@@ -253,3 +253,18 @@ Append-only 变更记录，最新在底部。
   - `index.md`
 - 校对了以下源文件：
   - `articles/On Rendering the Sky, Sunsets, and Planets - The Blog of Maxime Heckel.md` — 修正 raymarching、Uniforms、Optical Depth、Transmittance、Aerial Perspective LUT 等关键术语的中文机翻问题
+
+## [2026-05-15] ingest | A Technical Deep Dive Into the New Raycast
+- 录入了 Raycast 2.0 跨平台重写的技术文章，建立了 native shell、system WebView、Node backend、Rust core 和 typed IPC 的桌面应用架构主题线
+- 创建了以下页面：
+  - `A Technical Deep Dive Into the New Raycast.md` — 源摘要页，记录 Raycast 2.0 的架构拆分、性能取舍和跨平台重写动机
+  - `Raycast.md` — Raycast 产品与架构实体页
+  - `Hybrid Native WebView Architecture.md` — 混合原生 WebView 架构概念页
+  - `Native-feel WebView Desktop Apps.md` — WebView 桌面应用原生手感概念页
+  - `Typed IPC for Multi-runtime Apps.md` — 多运行时类型化 IPC 概念页
+  - `Rust File Indexer.md` — Rust 文件索引器概念页
+- 更新了以下页面：
+  - `Overview.md` — 新增“跨平台桌面应用架构”主题
+  - `VS Code.md` — 补充 Electron 案例与 Raycast hybrid stack 的关系
+  - `index.md` — 新增 4 个概念、1 个实体和 1 条源摘要
+- 源文件为纯英文原文，articles 保持原样
