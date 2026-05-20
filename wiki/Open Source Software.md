@@ -1,11 +1,11 @@
 ---
 type: concept
 created: 2026-04-26
-updated: 2026-04-26
+updated: 2026-05-20
 tags:
   - open-source
   - software-culture
-source_count: 1
+source_count: 2
 ---
 
 # Open Source Software
@@ -24,6 +24,13 @@ source_count: 1
 
 [[Free Software Movement]] 试图以“自由软件”（Free Software）命名和定义这套实践。[[Eric Steven Raymond]] 的叙述强调，许多黑客接受共享源码实践，同时对自由软件运动的意识形态标签保留距离。
 
+## 产品信任与退出路径
+
+[[The Quiet Renovation at Bitwarden - ByteHaven - Where I ramble about bytes]] 补充了开源产品商业化后的信任问题。源码可见只是信任的一部分；用户还会观察价格承诺、管理层变化、价值观文本、API 稳定性和第三方实现空间。
+
+这条线把开源从开发文化扩展到产品治理：[[Open Source Trust Erosion]] 描述信任如何被渐进变化削弱，[[Open Source Fork Safety]] 描述用户和社区在许可证、数据迁移和客户端分叉上的后备能力。
+
 ## 来源
 
 - [[How To Become A Hacker]]
+- [[The Quiet Renovation at Bitwarden - ByteHaven - Where I ramble about bytes]]

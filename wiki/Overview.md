@@ -4,12 +4,12 @@ created: 2026-04-08
 updated: 2026-05-20
 tags:
   - overview
-source_count: 17
+source_count: 18
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖十三个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统** 和 **Tailscale 网络加速 / Peer Relay**。
+个人知识库的主题总览。目前涵盖十四个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
 
 ## Context Engineering（上下文工程）
 
@@ -100,3 +100,9 @@ source_count: 17
 研究 [[Tailscale]] 在复杂 NAT 和跨地域网络中的路径选择问题。核心问题是 Tailnet 设备如何在 direct 路径、[[DERP Relay]] 兜底路径和 [[Tailscale Peer Relay]] 自有中继路径之间切换，以及 relay 节点位置、UDP 可达性和 ACL 授权如何影响延迟。
 
 这条知识线从 [[国内自建 Peer Relay 实现 Tailscale 加速：RTT 160ms → 30ms]] 出发，串起 [[Tailnet]]、[[NAT Traversal]]、[[WireGuard]]、[[DERP Relay]] 和 [[Tailscale Peer Relay]]。
+
+## 开源产品信任与自托管
+
+研究开源产品在商业化、价格调整、管理层变化和 API 演进中如何影响用户信任与退出路径。核心问题是用户如何从源码、许可证、承诺文本、第三方兼容实现和自托管能力中判断长期控制权。
+
+这条知识线从 [[The Quiet Renovation at Bitwarden - ByteHaven - Where I ramble about bytes]] 出发，把 [[Bitwarden]] 和 [[Vaultwarden]] 作为案例，串起 [[Open Source Trust Erosion]]、[[Self-hosted Password Management]]、[[API Compatibility Drift]] 和 [[Open Source Fork Safety]]。

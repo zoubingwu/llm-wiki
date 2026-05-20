@@ -283,3 +283,21 @@ Append-only 变更记录，最新在底部。
   - `Overview.md` — 新增“Tailscale 网络加速 / Peer Relay”主题
   - `index.md` — 新增 5 个概念、1 个实体和 1 条源摘要
 - 源文件为纯中文原文，articles 保持原样
+
+## [2026-05-20] ingest | The Quiet Renovation at Bitwarden
+- 录入了 PPB1701 关于 Bitwarden 价格、管理层、价值观文案、免费承诺和 Vaultwarden 自托管风险的文章
+- 创建了以下页面：
+  - `The Quiet Renovation at Bitwarden - ByteHaven - Where I ramble about bytes.md` — 源摘要页，记录 Bitwarden 静默变化和 Vaultwarden 风险模型
+  - `Bitwarden.md` — 密码管理器产品与公司实体页
+  - `Vaultwarden.md` — 兼容 Bitwarden server API 的自托管服务端实体页
+  - `PPB1701.md` — ByteHaven 作者实体页
+  - `Open Source Trust Erosion.md` — 开源产品信任侵蚀概念页
+  - `API Compatibility Drift.md` — API 兼容性漂移概念页
+  - `Open Source Fork Safety.md` — 开源分叉安全网概念页
+  - `Self-hosted Password Management.md` — 自托管密码管理概念页
+- 更新了以下页面：
+  - `Open Source Software.md` — 补充开源产品商业化后的信任、治理和退出路径
+  - `Overview.md` — 新增“开源产品信任与自托管”主题
+  - `index.md` — 新增 4 个概念、3 个实体和 1 条源摘要
+- 校对了源文件中文机翻：
+  - `articles/The Quiet Renovation at Bitwarden - ByteHaven - Where I ramble about bytes.md` — 修正标题粘连、金额误译、LastPass 习语、Vaultwarden/API/fork 相关表述

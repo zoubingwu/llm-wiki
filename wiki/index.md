@@ -103,6 +103,10 @@
 - [[Tailnet]] — Tailscale 中属于同一组织或账号的私有设备网络
 - [[NAT Traversal]] — 让 NAT 或防火墙后的设备尽量建立点对点连接的一组技术
 - [[WireGuard]] — Tailscale 数据面所依赖的现代 UDP 加密隧道协议
+- [[Open Source Trust Erosion]] — 开源产品通过价格、承诺文本、治理信号和兼容策略渐进改变用户信任关系
+- [[Self-hosted Password Management]] — 用户自托管密码库服务端以保留数据、同步和退出路径控制权
+- [[API Compatibility Drift]] — 上游 API 与客户端契约渐进演化导致第三方兼容实现逐步落后的风险
+- [[Open Source Fork Safety]] — 社区依靠许可证、源码、数据可迁移性和分叉能力维持产品退出路径
 
 ## 实体
 - [[ByteByteGo]] — 技术博客，发布了 Context Engineering 指南
@@ -124,6 +128,9 @@
 - [[Red Blob Games]] — Amit J. Patel 的交互式游戏开发算法与可视化写作网站
 - [[Sebastian Hillaire]] — 实时天空与大气渲染研究者，LUT 大气散射方法的重要参考
 - [[Tailscale]] — 基于 WireGuard 的私有组网产品，提供 Tailnet、ACL、设备发现和路径选择
+- [[Bitwarden]] — 开源密码管理器产品，文章案例关注其价格、承诺、管理层和客户端/API 风险
+- [[Vaultwarden]] — 兼容 Bitwarden server API 的自托管密码管理服务端
+- [[PPB1701]] — ByteHaven 博客作者，关注开源产品、用户控制权和自托管
 
 ## 源摘要
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
@@ -143,6 +150,7 @@
 - [[Implementation of Hex Grids]] — Red Blob Games 六边形网格实现 recipe，覆盖 `Hex`、`Layout`、map shape 和 offset 转换（2015-05-06）
 - [[On Rendering the Sky, Sunsets, and Planets - The Blog of Maxime Heckel]] — Maxime Heckel 关于浏览器实时大气散射、行星大气和 LUT 优化的 shader 实验（2026-05-12）
 - [[国内自建 Peer Relay 实现 Tailscale 加速：RTT 160ms → 30ms]] — 用阿里云北京 VPS 启用 Tailscale Peer Relay，把国内 Tailnet 设备 RTT 从约 160ms 降到 29-54ms（2026-04-23）
+- [[The Quiet Renovation at Bitwarden - ByteHaven - Where I ramble about bytes]] — 记录 Bitwarden 价格、承诺、领导层和 Vaultwarden 自托管风险的信任变化案例（2026-05-16）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）
