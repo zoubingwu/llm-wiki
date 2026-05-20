@@ -98,6 +98,11 @@
 - [[Open Source Software]] — 现代黑客文化最重要的贡献场域和软件协作实践
 - [[Unix-centered Hacker Culture]] — 围绕 Unix、Linux、BSD 和互联网基础设施形成的学习传统
 - [[Free Software Movement]] — 以软件自由为核心的运动及其与 open source 术语的历史分化
+- [[Tailscale Peer Relay]] — Tailscale 中由自有 Tailnet 节点承担的原生 WireGuard UDP 中继能力
+- [[DERP Relay]] — Tailscale 在 direct 路径缺席时使用的兜底中继机制
+- [[Tailnet]] — Tailscale 中属于同一组织或账号的私有设备网络
+- [[NAT Traversal]] — 让 NAT 或防火墙后的设备尽量建立点对点连接的一组技术
+- [[WireGuard]] — Tailscale 数据面所依赖的现代 UDP 加密隧道协议
 
 ## 实体
 - [[ByteByteGo]] — 技术博客，发布了 Context Engineering 指南
@@ -118,6 +123,7 @@
 - [[Eric Steven Raymond]] — 黑客文化和开源运动作者，编写 How To Become A Hacker
 - [[Red Blob Games]] — Amit J. Patel 的交互式游戏开发算法与可视化写作网站
 - [[Sebastian Hillaire]] — 实时天空与大气渲染研究者，LUT 大气散射方法的重要参考
+- [[Tailscale]] — 基于 WireGuard 的私有组网产品，提供 Tailnet、ACL、设备发现和路径选择
 
 ## 源摘要
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
@@ -136,6 +142,7 @@
 - [[How To Become A Hacker]] — Eric Steven Raymond 关于黑客文化、学习路径和开源声望机制的经典 FAQ（2001-01-01）
 - [[Implementation of Hex Grids]] — Red Blob Games 六边形网格实现 recipe，覆盖 `Hex`、`Layout`、map shape 和 offset 转换（2015-05-06）
 - [[On Rendering the Sky, Sunsets, and Planets - The Blog of Maxime Heckel]] — Maxime Heckel 关于浏览器实时大气散射、行星大气和 LUT 优化的 shader 实验（2026-05-12）
+- [[国内自建 Peer Relay 实现 Tailscale 加速：RTT 160ms → 30ms]] — 用阿里云北京 VPS 启用 Tailscale Peer Relay，把国内 Tailnet 设备 RTT 从约 160ms 降到 29-54ms（2026-04-23）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）

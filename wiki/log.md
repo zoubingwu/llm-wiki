@@ -268,3 +268,18 @@ Append-only 变更记录，最新在底部。
   - `VS Code.md` — 补充 Electron 案例与 Raycast hybrid stack 的关系
   - `index.md` — 新增 4 个概念、1 个实体和 1 条源摘要
 - 源文件为纯英文原文，articles 保持原样
+
+## [2026-05-20] ingest | 国内自建 Peer Relay 实现 Tailscale 加速：RTT 160ms → 30ms
+- 录入了十里关于用国内 VPS 启用 Tailscale Peer Relay、缩短国内 Tailnet 设备中继路径的实践文章
+- 创建了以下页面：
+  - `国内自建 Peer Relay 实现 Tailscale 加速：RTT 160ms → 30ms.md` — 源摘要页，记录部署链路、延迟收益和运维坑点
+  - `Tailscale.md` — Tailscale 产品与路径选择实体页
+  - `Tailscale Peer Relay.md` — 自有 Tailnet 节点承担 UDP 中继的概念页
+  - `DERP Relay.md` — Tailscale 兜底中继机制概念页
+  - `Tailnet.md` — Tailscale 私有设备网络概念页
+  - `NAT Traversal.md` — NAT 后设备点对点连接机制概念页
+  - `WireGuard.md` — Tailscale 数据面基础协议概念页
+- 更新了以下页面：
+  - `Overview.md` — 新增“Tailscale 网络加速 / Peer Relay”主题
+  - `index.md` — 新增 5 个概念、1 个实体和 1 条源摘要
+- 源文件为纯中文原文，articles 保持原样

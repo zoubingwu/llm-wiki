@@ -1,15 +1,15 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-05-15
+updated: 2026-05-20
 tags:
   - overview
-source_count: 16
+source_count: 17
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖十二个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法** 和 **黑客文化 / 开源传统**。
+个人知识库的主题总览。目前涵盖十三个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统** 和 **Tailscale 网络加速 / Peer Relay**。
 
 ## Context Engineering（上下文工程）
 
@@ -94,3 +94,9 @@ source_count: 16
 研究 hacker 一词在软件共同体中的原始含义、学习路径、声望机制和开源历史。核心关注点是能力、态度、贡献和同行认可如何共同形成技术身份。
 
 这条知识线从 [[How To Become A Hacker]] 出发，串起 [[Hacker Culture]]、[[Hacker Attitude]]、[[Basic Hacking Skills]]、[[Hacker vs Cracker]]、[[Hacker Status and Reputation]]、[[Gift Culture in Hacker Culture]]、[[Open Source Software]]、[[Unix-centered Hacker Culture]] 和 [[Free Software Movement]]。
+
+## Tailscale 网络加速 / Peer Relay
+
+研究 [[Tailscale]] 在复杂 NAT 和跨地域网络中的路径选择问题。核心问题是 Tailnet 设备如何在 direct 路径、[[DERP Relay]] 兜底路径和 [[Tailscale Peer Relay]] 自有中继路径之间切换，以及 relay 节点位置、UDP 可达性和 ACL 授权如何影响延迟。
+
+这条知识线从 [[国内自建 Peer Relay 实现 Tailscale 加速：RTT 160ms → 30ms]] 出发，串起 [[Tailnet]]、[[NAT Traversal]]、[[WireGuard]]、[[DERP Relay]] 和 [[Tailscale Peer Relay]]。
