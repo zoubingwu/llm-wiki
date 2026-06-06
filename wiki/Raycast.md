@@ -1,7 +1,7 @@
 ---
 type: entity
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-20
 tags:
   - entity
   - desktop-app
@@ -40,7 +40,7 @@ Raycast 2.0 采用 [[Hybrid Native WebView Architecture]]：
 
 Raycast 选择自建 hybrid stack 的原因是它需要对 OS 集成保持细粒度控制：全局快捷键、剪贴板、accessibility APIs、窗口管理、无焦点浮层、原生 tooltip/action panel、WebKit/WebView2 初始化参数和渲染节流都属于产品体验的一部分。
 
-这条路线把 Electron/Tauri 的通用 infra 成本转移回团队内部，换来平台能力、视觉细节和性能路径上的控制权。
+这条路线把 [[Electron]]/Tauri 的通用 infra 成本转移回团队内部，换来平台能力、视觉细节和性能路径上的控制权。
 
 ## 相关页面
 
@@ -50,4 +50,4 @@ Raycast 选择自建 hybrid stack 的原因是它需要对 OS 集成保持细粒
 - [[Typed IPC for Multi-runtime Apps]]
 - [[Rust File Indexer]]
 - [[VS Code]]
-
+- [[Electron]]

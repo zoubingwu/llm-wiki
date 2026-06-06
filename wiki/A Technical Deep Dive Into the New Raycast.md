@@ -1,7 +1,7 @@
 ---
 type: source
 created: 2026-05-15
-updated: 2026-05-15
+updated: 2026-05-20
 tags:
   - source
   - desktop-app
@@ -21,7 +21,7 @@ source_count: 1
 ## 核心贡献
 
 - 解释 Raycast 从单平台原生 AppKit 应用转向跨平台架构的动因：Windows 支持、产品范围扩大、AppKit 约束、编译速度和招聘难度。
-- 比较 Electron、Tauri、Flutter、Qt、React Native for Desktop、跨平台 Swift 等路线，最后选择自建原生 shell + 系统 WebView 的混合方案。
+- 比较 [[Electron]]、Tauri、Flutter、Qt、React Native for Desktop、跨平台 Swift 等路线，最后选择自建原生 shell + 系统 WebView 的混合方案。
 - 把 Raycast 2.0 拆成四层：Swift/C# host app、React + TypeScript web frontend、Node backend、Rust core。
 - 说明 [[Typed IPC for Multi-runtime Apps|多运行时类型化 IPC]] 如何让 Swift/C#、WebView、Node 和 Rust 之间的接口保持一致。
 - 展示 [[Native-feel WebView Desktop Apps|WebView 桌面应用的原生手感]] 需要处理的平台惯例、原生浮层、WebKit/WebView2 节流、窗口 resize、首帧闪烁和 emoji 字体预热。
@@ -46,7 +46,7 @@ Raycast 对这个取舍的解释是：跨平台共享 UI、热更新开发体验
 
 ## 与现有主题的连接
 
-这篇文章补充了现有 wiki 中 [[Keyboard Shortcut Support in Web Apps]] 与 [[VS Code]] 之外的另一个桌面 Web 技术案例。VS Code 代表 Electron 路线，Raycast 代表自建 native shell + system WebView 路线；两者共同说明“Web 技术做桌面应用”的关键挑战已经从能否渲染 UI，推进到键盘、窗口、IPC、内存、可访问性和系统视觉一致性。
+这篇文章补充了现有 wiki 中 [[Keyboard Shortcut Support in Web Apps]] 与 [[VS Code]] 之外的另一个桌面 Web 技术案例。VS Code 代表 [[Electron]] 路线，Raycast 代表自建 native shell + system WebView 路线；两者共同说明“Web 技术做桌面应用”的关键挑战已经从能否渲染 UI，推进到键盘、窗口、IPC、内存、可访问性和系统视觉一致性。
 
 ## 关联页面
 
@@ -57,4 +57,4 @@ Raycast 对这个取舍的解释是：跨平台共享 UI、热更新开发体验
 - [[Rust File Indexer]]
 - [[Keyboard Shortcut Support in Web Apps]]
 - [[VS Code]]
-
+- [[Electron]]

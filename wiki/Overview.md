@@ -81,7 +81,7 @@ source_count: 18
 
 研究复杂桌面应用如何在 Web 技术、native shell、后台运行时和性能核心之间分工。重点问题包括跨平台 UI 复用、系统 API 控制、WebView 渲染行为、IPC 类型边界、文件系统索引和内存基线。
 
-这条知识线从 [[A Technical Deep Dive Into the New Raycast]] 出发，把 [[Raycast]] 2.0 作为案例，串起 [[Hybrid Native WebView Architecture]]、[[Native-feel WebView Desktop Apps]]、[[Typed IPC for Multi-runtime Apps]] 和 [[Rust File Indexer]]。它也和 [[Keyboard Shortcut Support in Web Apps]]、[[VS Code]] 形成桌面 Web 技术谱系。
+这条知识线从 [[A Technical Deep Dive Into the New Raycast]] 出发，把 [[Raycast]] 2.0 作为案例，串起 [[Hybrid Native WebView Architecture]]、[[Native-feel WebView Desktop Apps]]、[[Typed IPC for Multi-runtime Apps]]、[[Rust File Indexer]] 和 [[Electron]]。它也和 [[Keyboard Shortcut Support in Web Apps]]、[[VS Code]] 形成桌面 Web 技术谱系。
 
 ## 六边形网格算法
 

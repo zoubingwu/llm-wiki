@@ -74,6 +74,7 @@
 - [[Native-feel WebView Desktop Apps]] — 让 WebView UI 在窗口、输入、动画和系统材质上表现得像原生桌面应用
 - [[Typed IPC for Multi-runtime Apps]] — 用集中声明和生成 typed clients 管理跨 Swift/C#、WebView、Node、Rust 的通信边界
 - [[Rust File Indexer]] — 用 Rust 独立进程扫描文件系统、构建跨平台搜索索引并跟随文件事件更新
+- [[Electron]] — 将 Chromium、Node 和跨平台桌面应用基础设施打包成成熟运行时
 - [[Hexagonal Grid Geometry]] — 六边形网格的尺寸、方向、间距和角点计算
 - [[Hex Coordinate Systems]] — offset、cube、axial、doubled 四类六边形坐标系统
 - [[Cube Coordinates for Hex Grids]] — 用 `q + r + s = 0` 的三轴坐标表达六边形算法
