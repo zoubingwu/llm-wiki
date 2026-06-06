@@ -301,3 +301,20 @@ Append-only 变更记录，最新在底部。
   - `index.md` — 新增 4 个概念、3 个实体和 1 条源摘要
 - 校对了源文件中文机翻：
   - `articles/The Quiet Renovation at Bitwarden - ByteHaven - Where I ramble about bytes.md` — 修正标题粘连、金额误译、LastPass 习语、Vaultwarden/API/fork 相关表述
+
+## [2026-05-20] lint | 结构链接修复
+- 补齐了以下页面：
+  - `Electron.md` — 跨平台桌面应用运行时实体页，连接 Raycast、VS Code 和 hybrid WebView 架构主题线
+  - `Tailscale ACL.md` — Tailnet 访问控制概念页，连接 Peer Relay 的 tag、grant 和 relay capability 授权链路
+- 更新了以下页面以补强交叉引用：
+  - `A Technical Deep Dive Into the New Raycast.md`
+  - `Hybrid Native WebView Architecture.md`
+  - `VS Code.md`
+  - `Raycast.md`
+  - `Tailscale.md`
+  - `Tailscale Peer Relay.md`
+  - `Tailnet.md`
+  - `国内自建 Peer Relay 实现 Tailscale 加速：RTT 160ms → 30ms.md`
+  - `Overview.md`
+  - `index.md`
+- 校正了 `Red Blob Games Hexagonal Grids.md` 的 `source_count`，让 source page 只统计自身对应的源文章。

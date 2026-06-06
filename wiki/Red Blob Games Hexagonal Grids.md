@@ -1,12 +1,12 @@
 ---
 type: source
 created: 2026-04-26
-updated: 2026-04-26
+updated: 2026-05-20
 tags:
   - source
   - hexagonal-grids
   - game-development
-source_count: 2
+source_count: 1
 ---
 
 # Red Blob Games Hexagonal Grids
