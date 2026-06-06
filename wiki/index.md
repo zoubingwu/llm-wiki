@@ -100,6 +100,7 @@
 - [[Unix-centered Hacker Culture]] — 围绕 Unix、Linux、BSD 和互联网基础设施形成的学习传统
 - [[Free Software Movement]] — 以软件自由为核心的运动及其与 open source 术语的历史分化
 - [[Tailscale Peer Relay]] — Tailscale 中由自有 Tailnet 节点承担的原生 WireGuard UDP 中继能力
+- [[Tailscale ACL]] — 用 Tailnet 身份、tag 和 grants 控制访问与 Peer Relay 能力
 - [[DERP Relay]] — Tailscale 在 direct 路径缺席时使用的兜底中继机制
 - [[Tailnet]] — Tailscale 中属于同一组织或账号的私有设备网络
 - [[NAT Traversal]] — 让 NAT 或防火墙后的设备尽量建立点对点连接的一组技术
@@ -128,7 +129,7 @@
 - [[Eric Steven Raymond]] — 黑客文化和开源运动作者，编写 How To Become A Hacker
 - [[Red Blob Games]] — Amit J. Patel 的交互式游戏开发算法与可视化写作网站
 - [[Sebastian Hillaire]] — 实时天空与大气渲染研究者，LUT 大气散射方法的重要参考
-- [[Tailscale]] — 基于 WireGuard 的私有组网产品，提供 Tailnet、ACL、设备发现和路径选择
+- [[Tailscale]] — 基于 WireGuard 的私有组网产品，提供 Tailnet、Tailscale ACL、设备发现和路径选择
 - [[Bitwarden]] — 开源密码管理器产品，文章案例关注其价格、承诺、管理层和客户端/API 风险
 - [[Vaultwarden]] — 兼容 Bitwarden server API 的自托管密码管理服务端
 - [[PPB1701]] — ByteHaven 博客作者，关注开源产品、用户控制权和自托管

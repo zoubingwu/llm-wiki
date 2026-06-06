@@ -11,7 +11,7 @@ source_count: 1
 
 # Tailnet
 
-Tailnet 是 [[Tailscale]] 中属于同一组织或账号的私有设备网络。一个 Tailnet 内的设备拥有 Tailscale 分配的地址、身份和 ACL 约束，并通过 direct、[[Tailscale Peer Relay]] 或 [[DERP Relay]] 路径建立加密连接。
+Tailnet 是 [[Tailscale]] 中属于同一组织或账号的私有设备网络。一个 Tailnet 内的设备拥有 Tailscale 分配的地址、身份和 [[Tailscale ACL|ACL]] 约束，并通过 direct、[[Tailscale Peer Relay]] 或 [[DERP Relay]] 路径建立加密连接。
 
 ## 角色
 
@@ -21,7 +21,7 @@ Tailnet 把分散设备抽象成一个逻辑局域网。设备可以是笔记本
 
 ## 关键机制
 
-- 身份与 ACL：控制哪些设备、用户、tag 可以访问哪些目标。
+- 身份与 [[Tailscale ACL|ACL]]：控制哪些设备、用户、tag 可以访问哪些目标。
 - 路径选择：优先 direct，必要时进入 relay 路径。
 - 节点角色：同一 Tailnet 内的节点可以承担普通客户端、exit node、subnet router 或 peer relay 等角色。
 
@@ -32,3 +32,4 @@ Tailnet 把分散设备抽象成一个逻辑局域网。设备可以是笔记本
 - [[DERP Relay]]
 - [[NAT Traversal]]
 - [[WireGuard]]
+- [[Tailscale ACL]]

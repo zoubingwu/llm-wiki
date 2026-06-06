@@ -97,9 +97,9 @@ source_count: 18
 
 ## Tailscale 网络加速 / Peer Relay
 
-研究 [[Tailscale]] 在复杂 NAT 和跨地域网络中的路径选择问题。核心问题是 Tailnet 设备如何在 direct 路径、[[DERP Relay]] 兜底路径和 [[Tailscale Peer Relay]] 自有中继路径之间切换，以及 relay 节点位置、UDP 可达性和 ACL 授权如何影响延迟。
+研究 [[Tailscale]] 在复杂 NAT 和跨地域网络中的路径选择问题。核心问题是 Tailnet 设备如何在 direct 路径、[[DERP Relay]] 兜底路径和 [[Tailscale Peer Relay]] 自有中继路径之间切换，以及 relay 节点位置、UDP 可达性和 [[Tailscale ACL|ACL 授权]]如何影响延迟。
 
-这条知识线从 [[国内自建 Peer Relay 实现 Tailscale 加速：RTT 160ms → 30ms]] 出发，串起 [[Tailnet]]、[[NAT Traversal]]、[[WireGuard]]、[[DERP Relay]] 和 [[Tailscale Peer Relay]]。
+这条知识线从 [[国内自建 Peer Relay 实现 Tailscale 加速：RTT 160ms → 30ms]] 出发，串起 [[Tailnet]]、[[NAT Traversal]]、[[WireGuard]]、[[DERP Relay]]、[[Tailscale Peer Relay]] 和 [[Tailscale ACL]]。
 
 ## 开源产品信任与自托管
 

@@ -20,19 +20,19 @@ source_count: 1
 
 - 给出一个国内 Tailscale 加速场景：两台大陆家宽设备的 [[NAT Traversal]] 部分失败时，连接会落到香港 DERP，RTT 约 160ms。
 - 说明 [[Tailscale Peer Relay]] 的部署形态：复用一台已有 Tailscale 节点，开放一个 UDP relay 端口，用原生 [[WireGuard]] UDP 通道转发 Tailnet 内部流量。
-- 展示最小配置链路：VPS 安装 Tailscale，ACL 添加 `tag:relay` 与 `tailscale.com/cap/relay` grant，节点使用 `--advertise-tags=tag:relay` 加入 Tailnet，再设置 `tailscale set --relay-server-port=40000`。
+- 展示最小配置链路：VPS 安装 Tailscale，[[Tailscale ACL|ACL]] 添加 `tag:relay` 与 `tailscale.com/cap/relay` grant，节点使用 `--advertise-tags=tag:relay` 加入 Tailnet，再设置 `tailscale set --relay-server-port=40000`。
 - 记录实测结果：`tailscale ping` 从 `relay "hkg"` 切到 `peer-relay 203.0.113.42:40000:vni:1` 后，RTT 降到 29-54ms。
 
 ## 运维要点
 
-Peer Relay 的核心依赖是 UDP 可达性和 Tailnet ACL 授权。文章中放行了 UDP 40000 作为 relay 端口，并保留 UDP 41641 作为 tailscaled 默认 NAT 打洞端口。
+Peer Relay 的核心依赖是 UDP 可达性和 Tailnet [[Tailscale ACL|ACL 授权]]。文章中放行了 UDP 40000 作为 relay 端口，并保留 UDP 41641 作为 tailscaled 默认 NAT 打洞端口。
 
 VPS 加入 Tailnet 时，作者显式设置 `--accept-routes=false` 和 `--accept-dns=false`，让该节点承担 relay 角色，同时保持原有业务服务的路由与 DNS 行为稳定。
 
 ## 常见故障
 
 - `tagOwners` 在个人 Free tailnet 中使用明确邮箱最稳定，文章里的 `autogroup:admin` 示例触发了 tag 授权失败。
-- ACL 需要先包含 `tagOwners`，再执行 `tailscale up --advertise-tags=tag:relay`。
+- [[Tailscale ACL|ACL]] 需要先包含 `tagOwners`，再执行 `tailscale up --advertise-tags=tag:relay`。
 - `tailscale ping` 末尾的 `direct connection not established` 表示 P2P 打洞路径缺席，前面的 `via peer-relay(...)` 仍然说明中继路径健康。
 - VPS 上运行生产服务时，DNS 需要提前固定到稳定上游，避免 tailscaled 与 `systemd-resolved` 的配置切换影响业务域名解析。
 
@@ -44,3 +44,4 @@ VPS 加入 Tailnet 时，作者显式设置 `--accept-routes=false` 和 `--accep
 - [[Tailnet]]
 - [[NAT Traversal]]
 - [[WireGuard]]
+- [[Tailscale ACL]]

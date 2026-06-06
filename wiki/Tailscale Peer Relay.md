@@ -24,7 +24,7 @@ Tailscale Peer Relay 是 [[Tailscale]] 1.86 引入的 Tailnet 内部中继能力
 Peer Relay 的部署模型很轻：
 
 - relay 节点先作为普通 Tailscale 设备加入 Tailnet。
-- ACL 给 `tag:relay` 授权 `tailscale.com/cap/relay`。
+- [[Tailscale ACL|ACL]] 给 `tag:relay` 授权 `tailscale.com/cap/relay`。
 - relay 节点使用 `--advertise-tags=tag:relay` 声明角色。
 - `tailscale set --relay-server-port=<udp-port>` 开启 UDP relay 端口。
 
@@ -32,7 +32,7 @@ Peer Relay 的部署模型很轻：
 
 ## 运维关注点
 
-Peer Relay 的质量取决于 UDP 可达性、relay 节点位置、VPS 出入带宽和 Tailnet ACL。它承载的是 Tailnet 内部设备之间的转发流量，带宽成本会随屏幕共享、文件传输和长期连接增加。
+Peer Relay 的质量取决于 UDP 可达性、relay 节点位置、VPS 出入带宽和 Tailnet [[Tailscale ACL|ACL]]。它承载的是 Tailnet 内部设备之间的转发流量，带宽成本会随屏幕共享、文件传输和长期连接增加。
 
 ## 关联页面
 
@@ -41,3 +41,4 @@ Peer Relay 的质量取决于 UDP 可达性、relay 节点位置、VPS 出入带
 - [[DERP Relay]]
 - [[NAT Traversal]]
 - [[WireGuard]]
+- [[Tailscale ACL]]
