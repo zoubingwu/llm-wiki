@@ -318,3 +318,24 @@ Append-only 变更记录，最新在底部。
   - `Overview.md`
   - `index.md`
 - 校正了 `Red Blob Games Hexagonal Grids.md` 的 `source_count`，让 source page 只统计自身对应的源文章。
+
+## [2026-06-16] ingest | Say precisely what you mean.
+- 录入了 Index Vocabulary 关于界面设计术语的英文词汇表，建立了排版、颜色、图标、布局、动效、可访问性、信息架构、文案、设计系统、度量和组件的主题线
+- 创建了以下页面：
+  - `Say precisely what you mean..md` — 源摘要页，记录文章结构和与现有前端 / UX 页面关系
+  - `Interface Design Vocabulary.md` — 界面设计共享词汇总览
+  - `UI Typography.md` — 字距、行距、字体尺度、数字对齐和文本溢出
+  - `UI Color Systems.md` — 色彩空间、语义 token、对比度和暗色模式
+  - `UI Iconography.md` — 图标笔画、光学居中、状态样式和隐喻准确性
+  - `UI Layout.md` — 空间、响应式、视口、安全区、层叠和布局稳定性
+  - `UI Motion.md` — 缓动、时长、编排、反馈、性能和 reduced motion
+  - `Accessibility in UI Design.md` — 对比度、屏幕阅读器、焦点、语义 HTML 和状态表达
+  - `Information Architecture.md` — 导航、层级、路标、标签、内容盘点和卡片分类
+  - `UI Copywriting.md` — 微文案、CTA、错误信息、语气、扫描性和高风险动作语言
+  - `Design Systems.md` — 组件、token、变量、视觉语言和设计交付
+  - `Design Analytics.md` — A/B 测试、热图、漏斗、留存、流失和滚动深度
+  - `UI Components.md` — 按钮、输入、浮层、导航、反馈和数据展示组件
+- 更新了以下页面：
+  - `Overview.md` — 新增“界面设计词汇 / 设计系统”主题
+  - `index.md` — 新增 12 个概念 / 综述页面和 1 条源摘要
+- 源文件为纯英文原文，articles 保持原样

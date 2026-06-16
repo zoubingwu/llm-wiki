@@ -34,6 +34,18 @@
 - [[Intentional Cognitive Friction]] — 高风险任务中按风险校准的减速与确认机制
 - [[Slow AI]] — 面向长时运行智能体任务的交互模式
 - [[Intent by Discovery]] — 通过探索潜在方案空间逐步形成意图的长期 UX 模型
+- [[Interface Design Vocabulary]] — 用共享术语描述界面设计质量
+- [[UI Typography]] — 界面文字的字距、行距、尺度、数字对齐和溢出处理
+- [[UI Color Systems]] — 色彩空间、语义 token、对比度、暗色模式和感知色彩
+- [[UI Iconography]] — 图标笔画、光学居中、状态样式和隐喻准确性
+- [[UI Layout]] — 用空间、响应式、层叠和稳定性组织界面内容
+- [[UI Motion]] — 用缓动、时长、编排和反馈表达界面状态变化
+- [[Accessibility in UI Design]] — 覆盖对比度、屏幕阅读器、焦点、语义 HTML 和状态表达
+- [[Information Architecture]] — 组织内容、导航、标签、路标和查找路径
+- [[UI Copywriting]] — 通过微文案、CTA、错误信息和语气引导用户
+- [[Design Systems]] — 共享组件、token、变量、视觉语言和交付规则
+- [[Design Analytics]] — 用行为数据观察设计决策的转化、留存和流失效果
+- [[UI Components]] — 按钮、输入、浮层、导航、反馈和数据展示组件的基础语义
 - [[Audio Visualization]] — 将音频频率分量映射成动态图形的技术
 - [[Sound Wave]] — 描述声音振动随时间变化的波形表示
 - [[Frequency and Amplitude in Sound]] — 声音的频率与振幅分别对应音高与响度
@@ -153,6 +165,7 @@
 - [[On Rendering the Sky, Sunsets, and Planets - The Blog of Maxime Heckel]] — Maxime Heckel 关于浏览器实时大气散射、行星大气和 LUT 优化的 shader 实验（2026-05-12）
 - [[国内自建 Peer Relay 实现 Tailscale 加速：RTT 160ms → 30ms]] — 用阿里云北京 VPS 启用 Tailscale Peer Relay，把国内 Tailnet 设备 RTT 从约 160ms 降到 29-54ms（2026-04-23）
 - [[The Quiet Renovation at Bitwarden - ByteHaven - Where I ramble about bytes]] — 记录 Bitwarden 价格、承诺、领导层和 Vaultwarden 自托管风险的信任变化案例（2026-05-16）
+- [[Say precisely what you mean.]] — Index Vocabulary 关于界面设计术语、组件、系统和度量的词汇表（2026-06-16）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）

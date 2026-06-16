@@ -1,15 +1,15 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-05-20
+updated: 2026-06-16
 tags:
   - overview
-source_count: 18
+source_count: 19
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖十四个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
+个人知识库的主题总览。目前涵盖十五个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
 
 ## Context Engineering（上下文工程）
 
@@ -24,6 +24,12 @@ source_count: 18
 研究 AI 把用户角色从“执行步骤的人”转成“监督自动化的人”之后，交互设计、可用性指标和风险控制方式会如何被重写。
 
 这条知识线从 [[Intent-based Outcome Specification]] 出发，串起 [[Articulation Barrier]]、[[Orchestration Surface]]、[[Intentional Cognitive Friction]]、[[Slow AI]] 与 [[Intent by Discovery]]，也和 [[Long-term Memory for LLMs]]、[[Multi-agent System]] 等系统层能力发生交叉。
+
+## 界面设计词汇 / 设计系统
+
+研究设计师、工程师和产品人员如何用共享术语描述界面质量，把“看起来不对”拆成排版、颜色、图标、布局、动效、可访问性、信息架构、文案、组件和度量问题。
+
+这条知识线从 [[Say precisely what you mean.]] 出发，串起 [[Interface Design Vocabulary]]、[[UI Typography]]、[[UI Color Systems]]、[[UI Iconography]]、[[UI Layout]]、[[UI Motion]]、[[Accessibility in UI Design]]、[[Information Architecture]]、[[UI Copywriting]]、[[Design Systems]]、[[Design Analytics]] 和 [[UI Components]]。
 
 ## LLM Wiki 模式
 
