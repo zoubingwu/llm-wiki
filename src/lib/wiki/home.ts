@@ -10,6 +10,21 @@ export interface ArticleListItem {
   mtime: number;
 }
 
+export interface WikiListItem {
+  title: string;
+  type?: string | null;
+  created?: string | Date | null;
+  updated?: string | Date | null;
+  mtime: number;
+}
+
+const LATEST_WIKI_TYPES = new Set(["analysis", "concept", "entity", "overview"]);
+
+function toTimestamp(value: string | Date | null | undefined): number {
+  if (!value) return NaN;
+  return value instanceof Date ? value.getTime() : Date.parse(String(value));
+}
+
 export function pickFeaturedConcepts(indexBody: string, limit = 6): string[] {
   const conceptSection = indexBody.split(/^## /m).find((section) => section.startsWith("概念 Pages"));
   if (!conceptSection) {
@@ -33,11 +48,6 @@ export function parseRecentLogEntries(logBody: string, limit = 8): LogEntry[] {
 }
 
 export function sortLatestArticles(entries: ArticleListItem[]): ArticleListItem[] {
-  const toTimestamp = (value: string | Date | null | undefined): number => {
-    if (!value) return NaN;
-    return value instanceof Date ? value.getTime() : Date.parse(String(value));
-  };
-
   const toSortableValue = (entry: ArticleListItem): number => {
     const createdTimestamp = toTimestamp(entry.created);
     if (!Number.isNaN(createdTimestamp)) return createdTimestamp;
@@ -49,4 +59,20 @@ export function sortLatestArticles(entries: ArticleListItem[]): ArticleListItem[
   };
 
   return [...entries].sort((a, b) => toSortableValue(b) - toSortableValue(a));
+}
+
+export function sortLatestWikiEntries(entries: WikiListItem[]): WikiListItem[] {
+  const toSortableValue = (entry: WikiListItem): number => {
+    const updatedTimestamp = toTimestamp(entry.updated);
+    if (!Number.isNaN(updatedTimestamp)) return updatedTimestamp;
+
+    const createdTimestamp = toTimestamp(entry.created);
+    if (!Number.isNaN(createdTimestamp)) return createdTimestamp;
+
+    return entry.mtime;
+  };
+
+  return entries
+    .filter((entry) => entry.type && LATEST_WIKI_TYPES.has(entry.type))
+    .sort((a, b) => toSortableValue(b) - toSortableValue(a) || b.mtime - a.mtime || a.title.localeCompare(b.title));
 }

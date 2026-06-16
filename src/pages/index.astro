@@ -5,7 +5,7 @@ import { basename, join } from "node:path";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import { pageUrl } from "../lib/wiki/paths";
-import { parseRecentLogEntries, pickFeaturedConcepts, sortLatestArticles } from "../lib/wiki/home";
+import { parseRecentLogEntries, pickFeaturedConcepts, sortLatestArticles, sortLatestWikiEntries } from "../lib/wiki/home";
 
 function fileTitle(entry: { id: string; filePath?: string }) {
   return entry.filePath ? basename(entry.filePath, ".md") : entry.id;
@@ -23,6 +23,23 @@ const featured = pickFeaturedConcepts(indexEntry?.body ?? "").map((title) => ({
 }));
 
 const recentLogs = parseRecentLogEntries(logEntry?.body ?? "").slice(0, 8);
+const latestWiki = sortLatestWikiEntries(
+  wikiEntries.map((entry) => ({
+    title: fileTitle(entry),
+    type: entry.data?.type,
+    created: entry.data?.created,
+    updated: entry.data?.updated,
+    mtime: entry.filePath
+      ? (() => {
+          try {
+            return statSync(join(process.cwd(), entry.filePath)).mtimeMs;
+          } catch {
+            return 0;
+          }
+        })()
+      : 0,
+  })),
+).slice(0, 8);
 const latestArticles = sortLatestArticles(
   articleEntries.map((entry) => ({
     title: fileTitle(entry),
@@ -71,6 +88,22 @@ const homeDescription =
               {featured.map((item) => (
                 <li>
                   <a href={item.url}>{item.title}</a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+      </section>
+      <section class="home-section">
+        <h2>Latest Wiki</h2>
+        {
+          latestWiki.length === 0 ? (
+            <p class="empty-note">No wiki entries yet.</p>
+          ) : (
+            <ul class="home-list">
+              {latestWiki.map((item) => (
+                <li>
+                  <a href={pageUrl("wiki", item.title)}>{item.title}</a>
                 </li>
               ))}
             </ul>
