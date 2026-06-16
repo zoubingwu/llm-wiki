@@ -13,6 +13,14 @@
 - [[Context Window]] — 模型单次交互能看到的词元总数，有效长度远小于营销值
 - [[Lost in the Middle Problem]] — LLM 对输入中间部分关注度不足的现象
 - [[Retrieval-Augmented Generation (RAG)]] — 检索增强生成，只拉取相关信息注入上下文
+- [[AI Inference Engineering]] — 在生产环境中高效运行已训练模型，平衡延迟、吞吐量、成本和质量
+- [[LLM Inference Phases]] — prefill 和 decode 两个阶段分别受算力与内存带宽限制
+- [[Inference Batching]] — 将多个推理请求交织处理，用单用户延迟换取总吞吐量
+- [[Prefix Caching]] — 复用共享开头片段的 KV-Cache，减少 prefill 成本和 TTFT
+- [[Model Quantization]] — 用低精度权重降低计算和内存带宽压力
+- [[Speculative Decoding]] — 用小模型草拟候选词元，再由主模型批量验证以提高 TPS
+- [[Model Parallelism for Inference]] — 用 tensor parallelism 和 expert parallelism 将模型分布到多 GPU
+- [[Disaggregated Inference Serving]] — 将 prefill 和 decode 拆成独立服务与 GPU 池
 - [[Scratchpads]] — 智能体长任务中将中间步骤写入外部存储
 - [[Long-term Memory for LLMs]] — LLM 跨会话持久化信息
 - [[Multi-agent System]] — 将任务分配给多个专业化智能体，各自拥有干净的上下文
@@ -145,9 +153,11 @@
 - [[Bitwarden]] — 开源密码管理器产品，文章案例关注其价格、承诺、管理层和客户端/API 风险
 - [[Vaultwarden]] — 兼容 Bitwarden server API 的自托管密码管理服务端
 - [[PPB1701]] — ByteHaven 博客作者，关注开源产品、用户控制权和自托管
+- [[Cursor]] — AI 代码编辑器，文章中作为开放模型自托管和低延迟推理优化案例
 
 ## 源摘要
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
+- [[A Guide to AI Inference Engineering]] — ByteByteGo 关于 LLM 推理阶段、服务指标和六类推理优化技术的指南（2026-06-15）
 - [[llm-wiki]] — karpathy 关于 LLM Wiki 模式的原始概念文件（2026-04-04）
 - [[Context Engineering for AI Agents Lessons from Building Manus]] — Manus 团队的实战经验（2025-07-18）
 - [[音频可视化：采样、频率和傅里叶变换]] — 从声音波形、采样到频谱可视化的实现链路（2021-08-06）

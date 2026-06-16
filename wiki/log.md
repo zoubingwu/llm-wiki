@@ -339,3 +339,24 @@ Append-only 变更记录，最新在底部。
   - `Overview.md` — 新增“界面设计词汇 / 设计系统”主题
   - `index.md` — 新增 12 个概念 / 综述页面和 1 条源摘要
 - 源文件为纯英文原文，articles 保持原样
+
+## [2026-06-16] ingest | A Guide to AI Inference Engineering
+- 录入了 ByteByteGo 关于 LLM 推理工程的文章，建立了 prefill / decode、TTFT / TPS 和模型服务优化主题线
+- 创建了以下页面：
+  - `A Guide to AI Inference Engineering.md` — 源摘要页，记录文章核心贡献和与现有 LLM / KV-Cache 页面关系
+  - `AI Inference Engineering.md` — 推理工程总览概念页
+  - `LLM Inference Phases.md` — prefill 和 decode 两阶段概念页
+  - `Inference Batching.md` — 推理合批概念页
+  - `Prefix Caching.md` — 前缀缓存概念页
+  - `Model Quantization.md` — 模型量化概念页
+  - `Speculative Decoding.md` — 推测式解码概念页
+  - `Model Parallelism for Inference.md` — 推理中的模型并行概念页
+  - `Disaggregated Inference Serving.md` — 解耦式推理服务概念页
+  - `Cursor.md` — AI 代码编辑器实体页，记录 Composer 2.0 的低延迟推理案例
+- 更新了以下页面：
+  - `KV-Cache.md` — 补充 prefill、prefix caching、disaggregated serving 和量化敏感性
+  - `ByteByteGo.md` — 新增该文章为相关文章
+  - `Overview.md` — 新增“AI 推理工程 / 模型服务”主题
+  - `index.md` — 新增 8 个概念、1 个实体和 1 条源摘要
+- 校对了源文件中文机翻：
+  - `articles/A Guide to AI Inference Engineering.md` — 修正 bilingual heading 粘连、token / prompt / KV cache / prefill / decode / TTFT 等核心术语和若干机器翻译句子

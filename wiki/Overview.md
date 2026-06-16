@@ -4,12 +4,12 @@ created: 2026-04-08
 updated: 2026-06-16
 tags:
   - overview
-source_count: 19
+source_count: 20
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖十五个核心主题：**上下文工程**（Context Engineering）、**AI 时代的用户体验**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
+个人知识库的主题总览。目前涵盖十六个核心主题：**上下文工程**（Context Engineering）、**AI 推理工程 / 模型服务**、**AI 时代的用户体验**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
 
 ## Context Engineering（上下文工程）
 
@@ -18,6 +18,12 @@ source_count: 19
 核心发现：输入更多信息反而可能降低模型表现（[[Context Rot]] 问题），需要通过 [[Context Engineering]] 的四种策略（Write、Select、Compress、Isolate）来优化。
 
 涉及：[[Attention Mechanism]]、[[Context Window]]、[[Retrieval-Augmented Generation (RAG)]]、[[Lost in the Middle Problem]] 等。
+
+## AI 推理工程 / 模型服务
+
+研究训练后模型如何在生产环境中以可控延迟、吞吐量、成本和质量运行。核心切入点是 [[LLM Inference Phases]]：prefill 受算力限制，用 TTFT 衡量；decode 受内存带宽限制，用 TPS 衡量。
+
+这条知识线从 [[A Guide to AI Inference Engineering]] 出发，串起 [[AI Inference Engineering]]、[[Inference Batching]]、[[Prefix Caching]]、[[Model Quantization]]、[[Speculative Decoding]]、[[Model Parallelism for Inference]]、[[Disaggregated Inference Serving]] 和 [[KV-Cache]]。
 
 ## AI 时代的用户体验
 

@@ -1,13 +1,13 @@
 ---
 type: concept
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-06-16
 tags:
   - LLM
   - inference
   - cache
   - cost
-source_count: 1
+source_count: 2
 ---
 
 # KV-Cache
@@ -25,6 +25,14 @@ Manus 认为 **KV-Cache 命中率是生产阶段 AI 智能体最重要的指标*
 - Manus 的平均输入输出词元比例约 **100:1**
 - 前缀相同的上下文可复用 KV-Cache，极大降低 TTFT（Time‑To‑First‑Token）和推理成本
 
+## 在推理服务中的作用
+
+[[LLM Inference Phases|Prefill]] 阶段会处理完整输入提示，并输出响应的第一个词元和 KV-Cache。后续 decode 阶段可以引用这些注意力中间值，持续生成后续词元。
+
+[[Prefix Caching]] 会复用共享开头片段的 KV-Cache：系统提示、工具定义或长上下文前缀保持一致时，推理引擎可以减少重复 prefill 计算。[[Disaggregated Inference Serving]] 则会把 prefill 生成的 KV-Cache 通过网络发送给 decode engine，让两类工作负载独立扩展。
+
+KV-Cache 对 [[Model Quantization]] 也更敏感。缓存中的精度误差会沿后续词元生成过程传播，因此生产系统需要谨慎选择 KV cache 的量化策略。
+
 ## 成本差异举例
 
 - Claude Sonnet：缓存的输入词元为 0.30 USD/MTok，未缓存为 3 USD/MTok（**10 倍** 差距）
@@ -41,3 +49,7 @@ Manus 认为 **KV-Cache 命中率是生产阶段 AI 智能体最重要的指标*
 - [[Context Engineering]] — KV-Cache 是上下文工程的核心成本考虑
 - [[Agent Loop]]
 - [[Manus]] — 实战案例来源
+- [[LLM Inference Phases]]
+- [[Prefix Caching]]
+- [[Disaggregated Inference Serving]]
+- [[Model Quantization]]
