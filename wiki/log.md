@@ -360,3 +360,20 @@ Append-only 变更记录，最新在底部。
   - `index.md` — 新增 8 个概念、1 个实体和 1 条源摘要
 - 校对了源文件中文机翻：
   - `articles/A Guide to AI Inference Engineering.md` — 修正 bilingual heading 粘连、token / prompt / KV cache / prefill / decode / TTFT 等核心术语和若干机器翻译句子
+
+## [2026-06-21] ingest | How to fix your entire life in 1 day
+- 录入了 Dan Koe 关于身份改变、目标系统、控制论式智力和一日自我重置流程的 X 长文，建立了“身份改变 / 目标系统”主题线
+- 创建了以下页面：
+  - `How to fix your entire life in 1 day.md` — 源摘要页，记录文章对身份、目标、反馈回路和游戏化行动系统的整合
+  - `Dan Koe.md` — 作者实体页
+  - `Identity-Based Behavior Change.md` — 基于身份的行为改变概念页
+  - `Goal-Oriented Behavior.md` — 目标导向行为概念页
+  - `Ego Development Stages.md` — 自我发展阶段概念页
+  - `Cybernetic Intelligence.md` — 控制论式智力概念页
+  - `Vision and Anti-Vision.md` — 愿景与反愿景概念页
+  - `Self-Change Protocol.md` — 一日自我改变流程概念页
+  - `Life as a Game.md` — 人生游戏化概念页
+- 更新了以下页面：
+  - `Overview.md` — 新增“身份改变 / 目标系统”主题
+  - `index.md` — 新增 7 个概念、1 个实体和 1 条源摘要
+- 源文件英文原文保持不改，本次未继续调整 articles 中文翻译

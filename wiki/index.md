@@ -119,6 +119,13 @@
 - [[Open Source Software]] — 现代黑客文化最重要的贡献场域和软件协作实践
 - [[Unix-centered Hacker Culture]] — 围绕 Unix、Linux、BSD 和互联网基础设施形成的学习传统
 - [[Free Software Movement]] — 以软件自由为核心的运动及其与 open source 术语的历史分化
+- [[Identity-Based Behavior Change]] — 先改变自我认同，再让目标行为自然跟随的改变框架
+- [[Goal-Oriented Behavior]] — 把行为理解为服务显性或隐性目标的目的论视角
+- [[Ego Development Stages]] — 从冲动型到合一型的心智 / 自我发展阶段框架
+- [[Cybernetic Intelligence]] — 用目标、行动、感知、比较和反馈回路理解智力
+- [[Vision and Anti-Vision]] — 用想要的人生和拒绝的人生共同组织改变动力
+- [[Self-Change Protocol]] — 一天内完成心理挖掘、模式打断和洞见综合的流程
+- [[Life as a Game]] — 把生活组织成胜利条件、任务、规则和反馈系统
 - [[Tailscale Peer Relay]] — Tailscale 中由自有 Tailnet 节点承担的原生 WireGuard UDP 中继能力
 - [[Tailscale ACL]] — 用 Tailnet 身份、tag 和 grants 控制访问与 Peer Relay 能力
 - [[DERP Relay]] — Tailscale 在 direct 路径缺席时使用的兜底中继机制
@@ -154,6 +161,7 @@
 - [[Vaultwarden]] — 兼容 Bitwarden server API 的自托管密码管理服务端
 - [[PPB1701]] — ByteHaven 博客作者，关注开源产品、用户控制权和自托管
 - [[Cursor]] — AI 代码编辑器，文章中作为开放模型自托管和低延迟推理优化案例
+- [[Dan Koe]] — 围绕个人成长、创作者商业和生活设计写作的作者
 
 ## 源摘要
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
@@ -176,6 +184,7 @@
 - [[国内自建 Peer Relay 实现 Tailscale 加速：RTT 160ms → 30ms]] — 用阿里云北京 VPS 启用 Tailscale Peer Relay，把国内 Tailnet 设备 RTT 从约 160ms 降到 29-54ms（2026-04-23）
 - [[The Quiet Renovation at Bitwarden - ByteHaven - Where I ramble about bytes]] — 记录 Bitwarden 价格、承诺、领导层和 Vaultwarden 自托管风险的信任变化案例（2026-05-16）
 - [[Say precisely what you mean.]] — Index Vocabulary 关于界面设计术语、组件、系统和度量的词汇表（2026-06-16）
+- [[How to fix your entire life in 1 day]] — Dan Koe 关于身份改变、目标系统和一日自我重置流程的 X 长文（2026-01-12）
 
 ## 分析 / 对比
 （暂无，后续 query 中产生的分析将归档于此）

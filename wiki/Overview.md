@@ -1,15 +1,15 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-06-16
+updated: 2026-06-21
 tags:
   - overview
-source_count: 20
+source_count: 21
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖十六个核心主题：**上下文工程**（Context Engineering）、**AI 推理工程 / 模型服务**、**AI 时代的用户体验**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
+个人知识库的主题总览。目前涵盖十七个核心主题：**上下文工程**（Context Engineering）、**AI 推理工程 / 模型服务**、**AI 时代的用户体验**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**身份改变 / 目标系统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
 
 ## Context Engineering（上下文工程）
 
@@ -106,6 +106,12 @@ source_count: 20
 研究 hacker 一词在软件共同体中的原始含义、学习路径、声望机制和开源历史。核心关注点是能力、态度、贡献和同行认可如何共同形成技术身份。
 
 这条知识线从 [[How To Become A Hacker]] 出发，串起 [[Hacker Culture]]、[[Hacker Attitude]]、[[Basic Hacking Skills]]、[[Hacker vs Cracker]]、[[Hacker Status and Reputation]]、[[Gift Culture in Hacker Culture]]、[[Open Source Software]]、[[Unix-centered Hacker Culture]] 和 [[Free Software Movement]]。
+
+## 身份改变 / 目标系统
+
+研究个人改变如何从表层目标进入身份、感知镜头、反馈回路和每日行动系统。核心问题是一个人如何看见旧身份的代价，建立新的愿景和反愿景，再把生活组织成能持续迭代的目标系统。
+
+这条知识线从 [[How to fix your entire life in 1 day]] 出发，串起 [[Identity-Based Behavior Change]]、[[Goal-Oriented Behavior]]、[[Ego Development Stages]]、[[Cybernetic Intelligence]]、[[Vision and Anti-Vision]]、[[Self-Change Protocol]] 和 [[Life as a Game]]。
 
 ## Tailscale 网络加速 / Peer Relay
 
