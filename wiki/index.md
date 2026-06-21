@@ -83,6 +83,12 @@
 - [[Optical Depth and Transmittance]] — 描述光沿大气路径遇到多少介质以及剩余多少光
 - [[Planetary Atmosphere Rendering]] — 用大气球壳、深度缓冲和射线-球体相交渲染行星大气
 - [[LUT-based Atmospheric Scattering]] — 将昂贵的大气散射计算预计算成纹理查找表再合成
+- [[Modern Browser Architecture]] — 从网络、解析、渲染、JavaScript、进程和安全边界理解现代浏览器
+- [[Browser Networking and Resource Loading]] — 浏览器从 URL 到响应字节流的资源获取和优先级链路
+- [[Browser Rendering Pipeline]] — DOM、CSSOM、layout、paint、raster 和 composite 组成的页面渲染流水线
+- [[Browser Multi-Process Architecture]] — 用 Browser、Renderer、GPU、Network 等进程拆分浏览器职责
+- [[Site Isolation]] — 用站点级 renderer 进程、OOPIF 和 sandbox 降低跨站风险
+- [[JavaScript Module Loading]] — 浏览器用模块图、module map、dynamic import 和 import maps 加载 ES modules
 - [[Keyboard Shortcut Support in Web Apps]] — 从事件采集、布局映射到命令分派的 Web 快捷键系统总览
 - [[Keyboard Event]] — 浏览器键盘事件是快捷键系统的第一层输入
 - [[keyCode]] — 已废弃的键盘事件属性，在跨布局场景里存在歧义
@@ -162,6 +168,12 @@
 - [[PPB1701]] — ByteHaven 博客作者，关注开源产品、用户控制权和自托管
 - [[Cursor]] — AI 代码编辑器，文章中作为开放模型自托管和低延迟推理优化案例
 - [[Dan Koe]] — 围绕个人成长、创作者商业和生活设计写作的作者
+- [[Addy Osmani]] — 前端性能、JavaScript 和 Chrome / Chromium 生态相关技术作者
+- [[Chromium]] — Chrome、Edge、Brave 和 WebView2 等运行时背后的开源浏览器项目
+- [[Blink]] — Chromium 的渲染引擎，负责 DOM、CSS、layout、paint 和 compositor 管线
+- [[V8 JavaScript Engine]] — Chromium 中执行 JavaScript 和 WebAssembly 的引擎
+- [[Gecko]] — Firefox 的浏览器引擎，代表 Stylo、WebRender 和 Fission 架构线
+- [[WebKit]] — Safari 和 Apple 系统 WebView 的浏览器引擎
 
 ## 源摘要
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
@@ -185,6 +197,7 @@
 - [[The Quiet Renovation at Bitwarden - ByteHaven - Where I ramble about bytes]] — 记录 Bitwarden 价格、承诺、领导层和 Vaultwarden 自托管风险的信任变化案例（2026-05-16）
 - [[Say precisely what you mean.]] — Index Vocabulary 关于界面设计术语、组件、系统和度量的词汇表（2026-06-16）
 - [[How to fix your entire life in 1 day]] — Dan Koe 关于身份改变、目标系统和一日自我重置流程的 X 长文（2026-01-12）
+- [[How modern browsers work]] — Addy Osmani 关于现代浏览器网络、渲染、V8、多进程和安全隔离的导览（2026-06-21）
 
 ## 分析 / 对比
-（暂无，后续 query 中产生的分析将归档于此）
+- [[Browser Engine Comparison]] — 对比 Chromium / Blink、Gecko 和 WebKit 在样式、图形、JavaScript 和进程模型上的实现差异

@@ -4,12 +4,12 @@ created: 2026-04-08
 updated: 2026-06-21
 tags:
   - overview
-source_count: 21
+source_count: 22
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖十七个核心主题：**上下文工程**（Context Engineering）、**AI 推理工程 / 模型服务**、**AI 时代的用户体验**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**身份改变 / 目标系统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
+个人知识库的主题总览。目前涵盖十八个核心主题：**上下文工程**（Context Engineering）、**AI 推理工程 / 模型服务**、**AI 时代的用户体验**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**现代浏览器内部机制**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**身份改变 / 目标系统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
 
 ## Context Engineering（上下文工程）
 
@@ -80,6 +80,12 @@ source_count: 21
 研究如何用 shader 在浏览器和实时 3D 场景中渲染天空、日出日落、地平线雾霭和行星大气层。核心思路是把天空颜色视为光在大气体积中的散射与吸收结果，再用 [[Raymarching]]、深度缓冲和 LUT 优化把物理直觉压缩成可实时运行的后期处理。
 
 这条知识线从 [[On Rendering the Sky, Sunsets, and Planets - The Blog of Maxime Heckel]] 出发，串起 [[Atmospheric Scattering]]、[[Rayleigh Scattering]]、[[Mie Scattering]]、[[Ozone Absorption]]、[[Optical Depth and Transmittance]]、[[Planetary Atmosphere Rendering]] 和 [[LUT-based Atmospheric Scattering]]。
+
+## 现代浏览器内部机制
+
+研究浏览器如何把 URL、HTML、CSS 和 JavaScript 转成安全、可交互、可合成的页面。核心问题包括 [[Browser Networking and Resource Loading]]、[[Browser Rendering Pipeline]]、[[V8 JavaScript Engine]]、[[JavaScript Module Loading]]、[[Browser Multi-Process Architecture]] 和 [[Site Isolation]] 如何协同。
+
+这条知识线从 [[How modern browsers work]] 出发，以 [[Chromium]] 为主线，串起 [[Modern Browser Architecture]]、[[Blink]]、[[Gecko]]、[[WebKit]] 和 [[Browser Engine Comparison]]，也连接 [[Electron]]、[[Native-feel WebView Desktop Apps]] 和浏览器端图形效果主题。
 
 ## Web 应用快捷键系统
 

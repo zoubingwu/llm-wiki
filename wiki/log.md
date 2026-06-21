@@ -377,3 +377,26 @@ Append-only 变更记录，最新在底部。
   - `Overview.md` — 新增“身份改变 / 目标系统”主题
   - `index.md` — 新增 7 个概念、1 个实体和 1 条源摘要
 - 源文件英文原文保持不改，本次未继续调整 articles 中文翻译
+
+## [2026-06-21] ingest | How modern browsers work
+- 录入了 Addy Osmani 关于现代浏览器网络栈、渲染管线、V8、多进程架构、站点隔离和浏览器引擎差异的文章，建立了“现代浏览器内部机制”主题线
+- 创建了以下页面：
+  - `How modern browsers work.md` — 源摘要页，记录文章对浏览器内部机制的系统导览
+  - `Modern Browser Architecture.md` — 现代浏览器架构总览
+  - `Browser Networking and Resource Loading.md` — 浏览器网络与资源加载概念页
+  - `Browser Rendering Pipeline.md` — 浏览器渲染流水线概念页
+  - `Browser Multi-Process Architecture.md` — 浏览器多进程架构概念页
+  - `Site Isolation.md` — 站点隔离与沙盒概念页
+  - `V8 JavaScript Engine.md` — V8 JavaScript 引擎实体页
+  - `JavaScript Module Loading.md` — JavaScript 模块加载概念页
+  - `Browser Engine Comparison.md` — Chromium / Blink、Gecko、WebKit 对比分析页
+  - `Chromium.md` — Chromium 浏览器项目实体页
+  - `Blink.md` — Blink 渲染引擎实体页
+  - `Gecko.md` — Gecko 浏览器引擎实体页
+  - `WebKit.md` — WebKit 浏览器引擎实体页
+  - `Addy Osmani.md` — 作者实体页
+- 更新了以下页面：
+  - `Overview.md` — 新增“现代浏览器内部机制”主题
+  - `index.md` — 新增 6 个概念 / 综述页面、6 个实体、1 个分析页和 1 条源摘要
+- 校对了源文件中文机翻：
+  - `articles/How modern browsers work.md` — 修正章节标题、关键小节标题和一条延伸阅读标题的中英文粘连
