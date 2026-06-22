@@ -400,3 +400,22 @@ Append-only 变更记录，最新在底部。
   - `index.md` — 新增 6 个概念 / 综述页面、6 个实体、1 个分析页和 1 条源摘要
 - 校对了源文件中文机翻：
   - `articles/How modern browsers work.md` — 修正章节标题、关键小节标题和一条延伸阅读标题的中英文粘连
+
+## [2026-06-22] ingest | Dumb Sandbox, Smart Host
+- 录入了 @intuitiveml 关于云智能体运行时中可信主机、简单沙盒和桥接边界的 X 长文，建立了“云智能体运行时 / 安全边界”主题线
+- 创建了以下页面：
+  - `Dumb Sandbox, Smart Host.md` — 源摘要页，记录文章对 host / sandbox 分工、桥接调用、作用域凭证和失败场景测试的论述
+  - `Smart Host Dumb Sandbox.md` — 智能主机、简单沙盒架构原则
+  - `Cloud Agent Runtime.md` — 云智能体运行时概念页
+  - `Agent Sandbox.md` — 智能体沙盒执行边界概念页
+  - `Agent Host Control Plane.md` — 可信主机控制平面概念页
+  - `Agent Tool Bridge.md` — 智能体工具桥接层概念页
+  - `Scoped Credentials for Agents.md` — 智能体作用域凭证概念页
+- 更新了以下页面：
+  - `Agent Loop.md` — 补充云智能体运行时中的沙盒执行与主机侧信任边界
+  - `Orchestration Surface.md` — 补充用户侧编排界面与主机侧边界跨越记录的关系
+  - `Slow AI.md` — 补充无人值守长时运行任务中的主机持久化、重试和恢复责任
+  - `Overview.md` — 新增“云智能体运行时 / 安全边界”主题
+  - `index.md` — 新增 6 个概念页面和 1 条源摘要
+- 校对了源文件中文机翻：
+  - `articles/Dumb Sandbox, Smart Host.md` — 拆分中英文粘连段落，修正 agent、gateway、model-chosen code、prompt injection dump environment、provider key 等关键术语和误译

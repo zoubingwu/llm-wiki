@@ -27,6 +27,12 @@
 - [[LLM Wiki Pattern]] — 由 LLM 构建和维护的持久化知识库，知识编译一次后持续更新
 - [[KV-Cache]] — 键值缓存对 AI 智能体性能至关重要，直接影响延迟和成本
 - [[Agent Loop]] — AI 智能体的标准循环流程，上下文增长与输出失衡
+- [[Cloud Agent Runtime]] — 云端长时运行智能体的主机、沙盒、桥接、凭证和观测边界
+- [[Smart Host Dumb Sandbox]] — 让可信主机掌管身份、密钥、计费和状态，让沙盒只承担执行
+- [[Agent Sandbox]] — 可丢弃的不可信执行边界，运行模型选择的代码和 shell 命令
+- [[Agent Host Control Plane]] — 云智能体运行中的可信控制平面，保存身份、策略、状态和审计记录
+- [[Agent Tool Bridge]] — 沙盒跨回产品和认证服务时经过的狭窄、可审计通道
+- [[Scoped Credentials for Agents]] — 面向单次运行和短时间窗口的智能体作用域凭证模式
 - [[State Machine for Agents]] — 用状态机管理工具可用性，通过词元屏蔽保持上下文稳定
 - [[Recitation for Attention Manipulation]] — 通过重复读写（todo.md）将目标保持在上下文末尾，避免迷失在中间
 - [[File System as Context]] — 将文件系统视为终极上下文，作为无限、持久的外部内存
@@ -198,6 +204,7 @@
 - [[Say precisely what you mean.]] — Index Vocabulary 关于界面设计术语、组件、系统和度量的词汇表（2026-06-16）
 - [[How to fix your entire life in 1 day]] — Dan Koe 关于身份改变、目标系统和一日自我重置流程的 X 长文（2026-01-12）
 - [[How modern browsers work]] — Addy Osmani 关于现代浏览器网络、渲染、V8、多进程和安全隔离的导览（2026-06-21）
+- [[Dumb Sandbox, Smart Host]] — @intuitiveml 关于云智能体可信主机、不可信沙盒和桥接边界的 X 长文（2026-06-17）
 
 ## 分析 / 对比
 - [[Browser Engine Comparison]] — 对比 Chromium / Blink、Gecko 和 WebKit 在样式、图形、JavaScript 和进程模型上的实现差异

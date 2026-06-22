@@ -1,12 +1,12 @@
 ---
 type: concept
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-06-22
 tags:
   - AI
   - UX
   - agent
-source_count: 1
+source_count: 2
 ---
 
 # Orchestration Surface
@@ -39,6 +39,12 @@ source_count: 1
 
 因此编排界面还要能处理协作意图（Collaborative Intent）：识别来自多个人类利益相关者或多个专业智能体的冲突指令，并在执行前把冲突暴露出来。
 
+## 运行时对应层
+
+[[Dumb Sandbox, Smart Host]] 给编排界面补上了系统侧对应层：用户能看到的权限请求、执行回执和事后解释，需要由 [[Agent Host Control Plane]] 记录的边界跨越来支撑。
+
+当 [[Agent Sandbox]] 通过 [[Agent Tool Bridge]] 调用认证服务、写入工件、消耗 credit 或触发重试时，主机侧记录会成为回执和审计的事实来源。这样编排界面可以说明一次运行触达了哪些系统、使用了哪些凭证、产生了哪些状态变化，以及哪些部分仍可恢复或撤销。
+
 ## 相关概念
 
 - [[Intent-based Outcome Specification]]
@@ -46,3 +52,4 @@ source_count: 1
 - [[Slow AI]]
 - [[Multi-agent System]]
 - [[Intent by Discovery Designing the AI User Experience]]
+- [[Smart Host Dumb Sandbox]]

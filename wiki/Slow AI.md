@@ -1,12 +1,12 @@
 ---
 type: concept
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-06-22
 tags:
   - AI
   - UX
   - agent
-source_count: 1
+source_count: 2
 ---
 
 # Slow AI
@@ -33,9 +33,16 @@ source_count: 1
 
 Slow AI 需要的是对中间判断、剩余风险和可回收成果的持续解释，因此它更接近长程项目管理界面，而不是加载动画。
 
+## 无人值守运行的系统边界
+
+[[Dumb Sandbox, Smart Host]] 从运行时角度解释了 Slow AI 为什么需要可信主机：长时运行任务可能在用户离线时继续执行，也可能由 cron、API 或其他智能体触发。此时身份、计费、持久事件日志、策略、重试和最终状态需要由 [[Agent Host Control Plane]] 保存。
+
+[[Agent Sandbox]] 可以承载执行和临时文件。沙盒崩溃时，主机侧记录让系统仍能恢复、重试、解释已发生的动作，并给用户重新接入任务上下文。
+
 ## 相关概念
 
 - [[Orchestration Surface]]
 - [[Intentional Cognitive Friction]]
 - [[Agent Loop]]
 - [[Intent by Discovery Designing the AI User Experience]]
+- [[Smart Host Dumb Sandbox]]
