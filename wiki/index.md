@@ -14,6 +14,12 @@
 - [[Lost in the Middle Problem]] — LLM 对输入中间部分关注度不足的现象
 - [[Retrieval-Augmented Generation (RAG)]] — 检索增强生成，只拉取相关信息注入上下文
 - [[AI Inference Engineering]] — 在生产环境中高效运行已训练模型，平衡延迟、吞吐量、成本和质量
+- [[Self-hosted LLMs Local AI Hardware]] — 本地运行开放 LLM 时的显存、带宽、软件栈和推理引擎系列总览
+- [[Local AI Hardware]] — 用容量、内存带宽和软件栈判断本地 AI 硬件
+- [[LLM VRAM Sizing]] — 用参数量、bits per weight 和运行时开销估算 LLM 显存需求
+- [[Memory Bandwidth for LLM Inference]] — decode 阶段速度的核心硬件约束
+- [[LLM Inference Engines]] — 推理服务中的内存管理、调度、缓存、并行和 API 软件层
+- [[LLM Inference Benchmarking]] — 用模型、权重、引擎、硬件、负载和指标描述推理 benchmark
 - [[LLM Inference Phases]] — prefill 和 decode 两个阶段分别受算力与内存带宽限制
 - [[Inference Batching]] — 将多个推理请求交织处理，用单用户延迟换取总吞吐量
 - [[Prefix Caching]] — 复用共享开头片段的 KV-Cache，减少 prefill 成本和 TTFT
@@ -175,6 +181,7 @@
 - [[Cursor]] — AI 代码编辑器，文章中作为开放模型自托管和低延迟推理优化案例
 - [[Dan Koe]] — 围绕个人成长、创作者商业和生活设计写作的作者
 - [[Addy Osmani]] — 前端性能、JavaScript 和 Chrome / Chromium 生态相关技术作者
+- [[Ahmad Osman]] — 本地 AI、自托管 LLM、推理硬件和推理引擎写作者
 - [[Chromium]] — Chrome、Edge、Brave 和 WebView2 等运行时背后的开源浏览器项目
 - [[Blink]] — Chromium 的渲染引擎，负责 DOM、CSS、layout、paint 和 compositor 管线
 - [[V8 JavaScript Engine]] — Chromium 中执行 JavaScript 和 WebAssembly 的引擎
@@ -205,6 +212,9 @@
 - [[How to fix your entire life in 1 day]] — Dan Koe 关于身份改变、目标系统和一日自我重置流程的 X 长文（2026-01-12）
 - [[How modern browsers work]] — Addy Osmani 关于现代浏览器网络、渲染、V8、多进程和安全隔离的导览（2026-06-21）
 - [[Dumb Sandbox, Smart Host]] — @intuitiveml 关于云智能体可信主机、不可信沙盒和桥接边界的 X 长文（2026-06-17）
+- [[GPU Memory Math for LLMs (2026 Edition)]] — Ahmad Osman 自托管 LLM / 本地 AI 系列第 1 部分，解释参数量、bits per weight 与显存估算（2026-04-04）
+- [[Memory Bandwidth for Local AI Hardware (2026 Edition)]] — Ahmad Osman 自托管 LLM / 本地 AI 系列第 2 部分，解释容量、带宽与软件栈的硬件判断框架（2026-04-07）
+- [[Inference Engines for LLMs & Local AI Hardware (2026 Edition)]] — Ahmad Osman 自托管 LLM / 本地 AI 系列第 3 部分，解释推理引擎选择与硬件 / workload / serving model 的关系（2026-05-21）
 
 ## 分析 / 对比
 - [[Browser Engine Comparison]] — 对比 Chromium / Blink、Gecko 和 WebKit 在样式、图形、JavaScript 和进程模型上的实现差异

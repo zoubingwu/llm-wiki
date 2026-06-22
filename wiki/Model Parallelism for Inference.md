@@ -1,13 +1,13 @@
 ---
 type: concept
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-06-22
 tags:
   - LLM
   - inference
   - GPU
   - serving
-source_count: 1
+source_count: 3
 ---
 
 # Model Parallelism for Inference
@@ -26,9 +26,17 @@ source_count: 1
 
 expert parallelism 的通信开销通常低于 tensor parallelism，更适合跨节点部署。生产系统常把两者组合起来：节点内使用 tensor parallelism，节点间使用 expert parallelism。
 
+## 互连约束
+
+[[Memory Bandwidth for Local AI Hardware (2026 Edition)]] 和 [[Inference Engines for LLMs & Local AI Hardware (2026 Edition)]] 都强调，多 GPU 扩展会把瓶颈从单卡显存和带宽推向 interconnect、topology、sync overhead 和 software maturity。
+
+Tensor parallelism 对 NVLink / NVSwitch 这类高带宽互连更敏感。没有强互连时，pipeline parallelism 可能更适合某些部署。MoE 模型还需要考虑 expert routing 带来的 all-to-all traffic。
+
 ## 相关概念
 
 - [[AI Inference Engineering]]
 - [[LLM Inference Phases]]
 - [[Transformer]]
 - [[Disaggregated Inference Serving]]
+- [[Local AI Hardware]]
+- [[LLM Inference Engines]]

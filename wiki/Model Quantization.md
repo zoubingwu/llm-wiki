@@ -1,12 +1,12 @@
 ---
 type: concept
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-06-22
 tags:
   - LLM
   - inference
   - optimization
-source_count: 1
+source_count: 3
 ---
 
 # Model Quantization
@@ -28,9 +28,17 @@ source_count: 1
 
 生产系统通常会保留 attention 的较高精度，再对其他部分做更激进的压缩。
 
+## 本地推理格式
+
+[[GPU Memory Math for LLMs (2026 Edition)]] 将量化直接转成 [[LLM VRAM Sizing]]：FP16 / BF16 约 2 GB per 1B parameters，FP8 / INT8 约 1 GB per 1B parameters，4-bit quantization 约 0.5 GB per 1B parameters。
+
+GGUF、EXL2、EXL3、AWQ、GPTQ、FP8、FP4、MLX formats 和 ONNX 的可移植性不同。[[Inference Engines for LLMs & Local AI Hardware (2026 Edition)]] 强调，正确量化格式取决于目标 [[LLM Inference Engines|推理引擎]] 是否有 optimized kernels，而不是文件本身看起来有多小。
+
 ## 相关概念
 
 - [[AI Inference Engineering]]
 - [[Attention Mechanism]]
 - [[KV-Cache]]
 - [[Transformer]]
+- [[LLM VRAM Sizing]]
+- [[LLM Inference Engines]]

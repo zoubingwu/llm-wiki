@@ -419,3 +419,30 @@ Append-only 变更记录，最新在底部。
   - `index.md` — 新增 6 个概念页面和 1 条源摘要
 - 校对了源文件中文机翻：
   - `articles/Dumb Sandbox, Smart Host.md` — 拆分中英文粘连段落，修正 agent、gateway、model-chosen code、prompt injection dump environment、provider key 等关键术语和误译
+
+## [2026-06-22] ingest | Self-hosted LLMs / Local AI Hardware series
+- 录入了 Ahmad Osman 关于自托管 LLM / 本地 AI 的三篇系列文章，建立了“自托管 LLM / 本地 AI 硬件”主题线
+- 创建了以下页面：
+  - `Self-hosted LLMs Local AI Hardware.md` — 系列总览页，串联显存估算、内存带宽和推理引擎选择
+  - `GPU Memory Math for LLMs (2026 Edition).md` — 系列第 1 部分源摘要页，记录参数量、bits per weight、GGUF 和 VRAM tax
+  - `Memory Bandwidth for Local AI Hardware (2026 Edition).md` — 系列第 2 部分源摘要页，记录容量、带宽、软件栈和硬件档位
+  - `Inference Engines for LLMs & Local AI Hardware (2026 Edition).md` — 系列第 3 部分源摘要页，记录 llama.cpp、MLX、ExLlama、vLLM、SGLang、TensorRT-LLM 和 Dynamo 的选择框架
+  - `Local AI Hardware.md` — 本地 AI 硬件概念页
+  - `LLM VRAM Sizing.md` — LLM 显存估算概念页
+  - `Memory Bandwidth for LLM Inference.md` — LLM 推理内存带宽概念页
+  - `LLM Inference Engines.md` — LLM 推理引擎概念页
+  - `LLM Inference Benchmarking.md` — LLM 推理 benchmark 概念页
+  - `Ahmad Osman.md` — 作者实体页
+- 更新了以下页面：
+  - `AI Inference Engineering.md` — 补充本地硬件、显存估算、带宽和推理引擎选择
+  - `LLM Inference Phases.md` — 补充 decode 与内存带宽的硬件对应关系
+  - `KV-Cache.md` — 补充本地显存预算和推理引擎中的 cache 管理
+  - `Model Quantization.md` — 补充 bits per weight、GGUF、EXL / MLX / ONNX 等格式与引擎优化关系
+  - `Model Parallelism for Inference.md` — 补充多 GPU 互连、topology 和 pipeline / tensor parallelism 取舍
+  - `Disaggregated Inference Serving.md` — 补充 SGLang 和 Dynamo 语境下的 prefill-decode disaggregation
+  - `Overview.md` — 新增“自托管 LLM / 本地 AI 硬件”主题
+  - `index.md` — 新增 6 个概念 / 综述页面、1 个实体和 3 条源摘要
+- articles 处理：
+  - `articles/GPU Memory Math for LLMs (2026 Edition).md` — 保持英文源文原样
+  - `articles/Memory Bandwidth for Local AI Hardware (2026 Edition).md` — 保持英文源文原样
+  - `articles/Inference Engines for LLMs & Local AI Hardware (2026 Edition).md` — 按用户要求仅为系列第 3 部分追加中文翻译章节，英文原文保持原样

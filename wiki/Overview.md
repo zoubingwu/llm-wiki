@@ -4,12 +4,12 @@ created: 2026-04-08
 updated: 2026-06-22
 tags:
   - overview
-source_count: 23
+source_count: 26
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖十九个核心主题：**上下文工程**（Context Engineering）、**AI 推理工程 / 模型服务**、**AI 时代的用户体验**、**云智能体运行时 / 安全边界**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**现代浏览器内部机制**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**身份改变 / 目标系统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
+个人知识库的主题总览。目前涵盖二十个核心主题：**上下文工程**（Context Engineering）、**AI 推理工程 / 模型服务**、**自托管 LLM / 本地 AI 硬件**、**AI 时代的用户体验**、**云智能体运行时 / 安全边界**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**现代浏览器内部机制**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**身份改变 / 目标系统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
 
 ## Context Engineering（上下文工程）
 
@@ -23,7 +23,13 @@ source_count: 23
 
 研究训练后模型如何在生产环境中以可控延迟、吞吐量、成本和质量运行。核心切入点是 [[LLM Inference Phases]]：prefill 受算力限制，用 TTFT 衡量；decode 受内存带宽限制，用 TPS 衡量。
 
-这条知识线从 [[A Guide to AI Inference Engineering]] 出发，串起 [[AI Inference Engineering]]、[[Inference Batching]]、[[Prefix Caching]]、[[Model Quantization]]、[[Speculative Decoding]]、[[Model Parallelism for Inference]]、[[Disaggregated Inference Serving]] 和 [[KV-Cache]]。
+这条知识线从 [[A Guide to AI Inference Engineering]] 出发，串起 [[AI Inference Engineering]]、[[Inference Batching]]、[[Prefix Caching]]、[[Model Quantization]]、[[Speculative Decoding]]、[[Model Parallelism for Inference]]、[[Disaggregated Inference Serving]]、[[KV-Cache]] 和 [[LLM Inference Engines]]。
+
+## 自托管 LLM / 本地 AI 硬件
+
+研究本地或自管环境中运行开放 LLM 时，模型大小、显存、内存带宽、统一内存、推理引擎和 benchmark 如何共同决定实际体验。核心问题是模型是否装得下、decode 是否足够快、软件栈是否能兑现硬件规格。
+
+这条知识线从 [[Self-hosted LLMs Local AI Hardware]] 出发，串起 [[GPU Memory Math for LLMs (2026 Edition)]]、[[Memory Bandwidth for Local AI Hardware (2026 Edition)]]、[[Inference Engines for LLMs & Local AI Hardware (2026 Edition)]]、[[Local AI Hardware]]、[[LLM VRAM Sizing]]、[[Memory Bandwidth for LLM Inference]] 和 [[LLM Inference Benchmarking]]。
 
 ## AI 时代的用户体验
 
