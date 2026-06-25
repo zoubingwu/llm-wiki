@@ -446,3 +446,23 @@ Append-only 变更记录，最新在底部。
   - `articles/GPU Memory Math for LLMs (2026 Edition).md` — 保持英文源文原样
   - `articles/Memory Bandwidth for Local AI Hardware (2026 Edition).md` — 保持英文源文原样
   - `articles/Inference Engines for LLMs & Local AI Hardware (2026 Edition).md` — 按用户要求仅为系列第 3 部分追加中文翻译章节，英文原文保持原样
+
+## [2026-06-26] ingest | Is Having Agents in the Room Meant to Be Chaotic?
+- 录入了 Raft 团队关于智能体在共享工作空间中导致噪音的原因和 AX 设计解决方案的文章
+- 创建了以下页面：
+  - `Is Having Agents in the Room Meant to Be Chaotic.md` — 源摘要页
+  - `Agent Experience Design (AX).md` — 智能体体验设计学科概念页
+  - `Agent Inbox.md` — 智能体收件箱界面概念页
+  - `Held Draft.md` — 保留的草稿界面概念页
+  - `Perception Empathy.md` — 感知共情设计原则概念页
+  - `Action Explicitness.md` — 动作明确性设计原则概念页
+  - `Raft Workspace.md` — Raft 智能体原生工作空间实体页
+  - `Tenny.md` — 作者实体页
+- 更新了以下页面以补强交叉引用：
+  - `Multi-agent System.md` — 补充共享房间交互质量视角
+  - `Agent Loop.md` — 补充回合制循环在共享空间中的状态一致性问题
+  - `Orchestration Surface.md` — 补充 AX 与编排界面的对应关系
+  - `Overview.md` — 新增「智能体体验设计（AX）」主题
+  - `index.md` — 新增 5 个概念、2 个实体和 1 条源摘要
+- 校对了源文件中文机翻：
+  - `articles/Is Having Agents in the Room Meant to Be Chaotic.md` — 修正 surface → 界面、agent-native → 智能体原生、inverts → 反转、AX 标题中英文粘连

@@ -1,6 +1,11 @@
 # Wiki Index
 
 ## 概念 Pages
+- [[Agent Experience Design (AX)]] — 专为 AI 智能体感知和行动模式设计的界面学科，类比 UX 对人类的意义
+- [[Agent Inbox]] — 智能体按需拉取信号而非被推送淹没的收件箱界面
+- [[Held Draft]] — 发送前检查房间状态的草稿保留机制，提供修改/原样/沉默/强制四条路径
+- [[Perception Empathy]] — AX 设计原则：理解智能体在行动时刻实际看到什么、缺少什么
+- [[Action Explicitness]] — AX 设计原则：将智能体的内部决策选项显式外化为可选路径
 - [[Overview]] — 当前知识库总览，串联上下文工程、AI UX 与 LLM Wiki 模式
 - [[Context Engineering]] — 设计和管理 LLM 上下文窗口的四种策略（Write、Select、Compress、Isolate）
 - [[Context Rot]] — 输入长度增加导致 LLM 性能断崖式下降
@@ -156,6 +161,8 @@
 - [[Open Source Fork Safety]] — 社区依靠许可证、源码、数据可迁移性和分叉能力维持产品退出路径
 
 ## 实体
+- [[Raft Workspace]] — 智能体原生工作空间，引入 Agent Inbox 和 Held Draft
+- [[Tenny]] — Raft 团队作者
 - [[ByteByteGo]] — 技术博客，发布了 Context Engineering 指南
 - [[Karpathy]] — Andrej Karpathy，提出 context engineering 概念
 - [[Chroma]] — AI 公司，2025 年 Context Rot 研究的发布者
@@ -189,6 +196,7 @@
 - [[WebKit]] — Safari 和 Apple 系统 WebView 的浏览器引擎
 
 ## 源摘要
+- [[Is Having Agents in the Room Meant to Be Chaotic]] — Raft 团队关于智能体共享工作空间中的噪音、AX 设计和 Inbox/Held Draft 解决方案（2026-05-21）
 - [[A Guide to Context Engineering for LLMs]] — ByteByteGo 关于上下文工程的全面指南（2025-12-16）
 - [[A Guide to AI Inference Engineering]] — ByteByteGo 关于 LLM 推理阶段、服务指标和六类推理优化技术的指南（2026-06-15）
 - [[llm-wiki]] — karpathy 关于 LLM Wiki 模式的原始概念文件（2026-04-04）

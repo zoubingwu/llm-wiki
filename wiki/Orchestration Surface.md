@@ -53,3 +53,4 @@ source_count: 2
 - [[Multi-agent System]]
 - [[Intent by Discovery Designing the AI User Experience]]
 - [[Smart Host Dumb Sandbox]]
+- [[Agent Experience Design (AX)]] — AX 处理智能体-房间之间的信号界面，编排界面处理人-智能体之间的意图协商

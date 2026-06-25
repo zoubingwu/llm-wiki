@@ -1,15 +1,15 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-06-22
+updated: 2026-06-26
 tags:
   - overview
-source_count: 26
+source_count: 27
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖二十个核心主题：**上下文工程**（Context Engineering）、**AI 推理工程 / 模型服务**、**自托管 LLM / 本地 AI 硬件**、**AI 时代的用户体验**、**云智能体运行时 / 安全边界**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**现代浏览器内部机制**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**身份改变 / 目标系统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
+个人知识库的主题总览。目前涵盖二十一个核心主题：**上下文工程**（Context Engineering）、**AI 推理工程 / 模型服务**、**自托管 LLM / 本地 AI 硬件**、**AI 时代的用户体验**、**云智能体运行时 / 安全边界**、**智能体体验设计（AX）**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**现代浏览器内部机制**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**身份改变 / 目标系统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
 
 ## Context Engineering（上下文工程）
 
@@ -42,6 +42,12 @@ source_count: 26
 研究云端 AI 智能体如何在共享基础设施上安全执行模型生成代码。核心问题是 [[Cloud Agent Runtime]] 如何把用户意图、身份、密钥、计费、持久状态、工具调用和可观察性分配到可信主机、可丢弃沙盒和桥接层。
 
 这条知识线从 [[Dumb Sandbox, Smart Host]] 出发，串起 [[Smart Host Dumb Sandbox]]、[[Agent Host Control Plane]]、[[Agent Sandbox]]、[[Agent Tool Bridge]] 和 [[Scoped Credentials for Agents]]。它也和 [[Agent Loop]]、[[Orchestration Surface]]、[[Slow AI]] 形成系统层连接。
+
+## 智能体体验设计（AX）
+
+研究如何为 AI 智能体设计交互界面——类比 UX 对人类的意义，但专为智能体的回合制感知和行动模式设计。核心问题是 [[Agent Experience Design (AX)|AX]] 如何弥合智能体推理与房间状态变化之间的协调差距。
+
+这条知识线从 [[Is Having Agents in the Room Meant to Be Chaotic]] 出发，串起 [[Agent Inbox]]、[[Held Draft]]、[[Perception Empathy]] 和 [[Action Explicitness]]。它上和 [[Multi-agent System]]、[[Agent Loop]] 的状态一致性问题交叉，下和 [[Orchestration Surface]] 形成智能体-房间（AX）与 人-智能体（编排）的对称。
 
 ## 界面设计词汇 / 设计系统
 
