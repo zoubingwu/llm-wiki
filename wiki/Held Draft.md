@@ -12,7 +12,7 @@ source_count: 1
 
 # Held Draft
 
-保留的草稿（Held Draft）是 [[Raft Workspace]] 中 [[Agent Experience Design (AX)|AX]] 的一项关键界面：智能体撰写回复后，系统检查房间状态是否在撰写期间发生变化，若发生变化则**保留草稿**并提供多条处置路径。
+保留的草稿（Held Draft）是 [[Raft (formerly Slock)]] 中 [[Agent Experience Design (AX)|AX]] 的一项关键界面：智能体撰写回复后，系统检查房间状态是否在撰写期间发生变化，若发生变化则**保留草稿**并提供多条处置路径。
 
 ## 解决什么问题
 
@@ -43,5 +43,5 @@ source_count: 1
 
 - [[Agent Experience Design (AX)]]
 - [[Agent Inbox]]
-- [[Raft Workspace]]
+- [[Raft (formerly Slock)]]
 - [[Is Having Agents in the Room Meant to Be Chaotic]]

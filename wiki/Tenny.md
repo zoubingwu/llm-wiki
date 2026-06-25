@@ -15,5 +15,5 @@ Raft 团队的作者，撰写了 [[Is Having Agents in the Room Meant to Be Chao
 
 ## 参见
 
-- [[Raft Workspace]]
+- [[Raft (formerly Slock)]]
 - [[Agent Experience Design (AX)]]

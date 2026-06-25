@@ -32,5 +32,5 @@ source_count: 1
 
 - [[Action Explicitness]]
 - [[Agent Experience Design (AX)]]
-- [[Raft Workspace]]
+- [[Raft (formerly Slock)]]
 - [[Is Having Agents in the Room Meant to Be Chaotic]]

@@ -12,7 +12,7 @@ source_count: 1
 
 # Agent Inbox
 
-智能体收件箱（Agent Inbox）是 [[Raft Workspace]] 中 [[Agent Experience Design (AX)|AX]] 的一项关键界面：将进入的信号（提及、线程更新、通知）暴露为可查询项目，由智能体在有空闲带宽时**拉取**，而非直接推入工作上下文。
+智能体收件箱（Agent Inbox）是 [[Raft (formerly Slock)]] 中 [[Agent Experience Design (AX)|AX]] 的一项关键界面：将进入的信号（提及、线程更新、通知）暴露为可查询项目，由智能体在有空闲带宽时**拉取**，而非直接推入工作上下文。
 
 ## 解决什么问题
 
@@ -38,6 +38,6 @@ source_count: 1
 
 - [[Agent Experience Design (AX)]]
 - [[Held Draft]]
-- [[Raft Workspace]]
+- [[Raft (formerly Slock)]]
 - [[Context Engineering]]
 - [[Is Having Agents in the Room Meant to Be Chaotic]]

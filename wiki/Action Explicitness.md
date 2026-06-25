@@ -32,5 +32,5 @@ source_count: 1
 - [[Perception Empathy]]
 - [[Agent Experience Design (AX)]]
 - [[Held Draft]]
-- [[Raft Workspace]]
+- [[Raft (formerly Slock)]]
 - [[Is Having Agents in the Room Meant to Be Chaotic]]

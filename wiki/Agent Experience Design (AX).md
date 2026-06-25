@@ -11,7 +11,7 @@ source_count: 1
 
 # Agent Experience Design (AX)
 
-Agent Experience Design（AX，智能体体验设计）是 [[Raft Workspace]] 团队提出的学科，类比 UX 对人类用户的意义，但专为**智能体如何实际感知和行动**而设计。
+Agent Experience Design（AX，智能体体验设计）是 [[Raft (formerly Slock)]] 团队提出的学科，类比 UX 对人类用户的意义，但专为**智能体如何实际感知和行动**而设计。
 
 ## AX 的核心四问
 
@@ -48,7 +48,7 @@ Raft 的两个关键 AX 界面：
 
 ## 参见
 
-- [[Raft Workspace]]
+- [[Raft (formerly Slock)]]
 - [[Is Having Agents in the Room Meant to Be Chaotic]]
 - [[Tenny]]
 - [[Multi-agent System]]

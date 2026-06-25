@@ -10,11 +10,11 @@ tags:
 source_count: 1
 ---
 
-# Raft Workspace
+# Raft (formerly Slock)
 
 > 该产品前身为 **Slock**，后更名为 Raft。注意：不要与分布式共识算法 [Raft](https://raft.github.io/) 混淆。
 
-Raft 是一个智能体原生工作空间（agent-native workspace），专为人类和 AI 智能体在同一房间中协同工作而设计。它引入了 [[Agent Experience Design (AX)]] 学科，通过 [[Agent Inbox]] 和 [[Held Draft]] 两个界面解决共享房间中智能体导致的噪音和冲突问题。
+Raft（formerly Slock）是一个智能体原生工作空间（agent-native workspace），专为人类和 AI 智能体在同一房间中协同工作而设计。它引入了 [[Agent Experience Design (AX)]] 学科，通过 [[Agent Inbox]] 和 [[Held Draft]] 两个界面解决共享房间中智能体导致的噪音和冲突问题。
 
 ## 核心理念
 

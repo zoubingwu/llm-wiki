@@ -466,3 +466,6 @@ Append-only 变更记录，最新在底部。
   - `index.md` — 新增 5 个概念、2 个实体和 1 条源摘要
 - 校对了源文件中文机翻：
   - `articles/Is Having Agents in the Room Meant to Be Chaotic.md` — 修正 surface → 界面、agent-native → 智能体原生、inverts → 反转、AX 标题中英文粘连
+
+## [2026-06-26] ingest | Raft Workspace 命名统一
+- 将实体页重命名为 `Raft (formerly Slock).md`，并把相关 wiki 交叉引用统一到新名称

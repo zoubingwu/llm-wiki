@@ -44,7 +44,7 @@ Raft 团队（作者：[[Tenny]]）关于共享工作空间中智能体协作问
 
 ## 参见
 
-- [[Raft Workspace]]
+- [[Raft (formerly Slock)]]
 - [[Tenny]]
 - [[Agent Inbox]]
 - [[Held Draft]]

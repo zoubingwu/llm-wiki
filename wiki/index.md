@@ -161,7 +161,7 @@
 - [[Open Source Fork Safety]] — 社区依靠许可证、源码、数据可迁移性和分叉能力维持产品退出路径
 
 ## 实体
-- [[Raft Workspace]] — 智能体原生工作空间，引入 Agent Inbox 和 Held Draft
+- [[Raft (formerly Slock)]] — 智能体原生工作空间，前身为 Slock，引入 Agent Inbox 和 Held Draft
 - [[Tenny]] — Raft 团队作者
 - [[ByteByteGo]] — 技术博客，发布了 Context Engineering 指南
 - [[Karpathy]] — Andrej Karpathy，提出 context engineering 概念
