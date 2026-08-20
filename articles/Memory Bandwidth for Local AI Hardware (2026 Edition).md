@@ -2,7 +2,7 @@
 title: "Memory Bandwidth for Local AI Hardware (2026 Edition)"
 source: "https://x.com/TheAhmadOsman/status/2041331757329285589"
 author:
-  - "[[@TheAhmadOsman]]"
+  - "[[Ahmad Osman]]"
 published: 2026-04-07
 created: 2026-06-22
 description: "If you’re running models locally, thinking “bigger memory pool = better AI box” falls apart the moment you care about actual speed.Capacity ..."

@@ -196,6 +196,7 @@
 - [[Vicent Martí]] — 《Git at any scale》作者，参与 Cursor 的 Git 基础设施工作
 - [[Dan Koe]] — 围绕个人成长、创作者商业和生活设计写作的作者
 - [[Addy Osmani]] — 前端性能、JavaScript 和 Chrome / Chromium 生态相关技术作者
+- [[intuitiveml]] — 云智能体可信主机、执行沙盒与工具桥接安全边界的技术作者
 - [[Ahmad Osman]] — 本地 AI、自托管 LLM、推理硬件和推理引擎写作者
 - [[Chromium]] — Chrome、Edge、Brave 和 WebView2 等运行时背后的开源浏览器项目
 - [[Blink]] — Chromium 的渲染引擎，负责 DOM、CSS、layout、paint 和 compositor 管线
@@ -227,7 +228,7 @@
 - [[Say precisely what you mean.]] — Index Vocabulary 关于界面设计术语、组件、系统和度量的词汇表（2026-06-16）
 - [[How to fix your entire life in 1 day]] — Dan Koe 关于身份改变、目标系统和一日自我重置流程的 X 长文（2026-01-12）
 - [[How modern browsers work]] — Addy Osmani 关于现代浏览器网络、渲染、V8、多进程和安全隔离的导览（2026-06-21）
-- [[Dumb Sandbox, Smart Host]] — @intuitiveml 关于云智能体可信主机、不可信沙盒和桥接边界的 X 长文（2026-06-17）
+- [[Dumb Sandbox, Smart Host]] — [[intuitiveml]] 关于云智能体可信主机、不可信沙盒和桥接边界的 X 长文（2026-06-17）
 - [[GPU Memory Math for LLMs (2026 Edition)]] — Ahmad Osman 自托管 LLM / 本地 AI 系列第 1 部分，解释参数量、bits per weight 与显存估算（2026-04-04）
 - [[Memory Bandwidth for Local AI Hardware (2026 Edition)]] — Ahmad Osman 自托管 LLM / 本地 AI 系列第 2 部分，解释容量、带宽与软件栈的硬件判断框架（2026-04-07）
 - [[Inference Engines for LLMs & Local AI Hardware (2026 Edition)]] — Ahmad Osman 自托管 LLM / 本地 AI 系列第 3 部分，解释推理引擎选择与硬件 / workload / serving model 的关系（2026-05-21）

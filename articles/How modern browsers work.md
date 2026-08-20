@@ -2,7 +2,7 @@
 title: "How modern browsers work"
 source: "https://x.com/addyosmani/status/2068394292796871019"
 author:
-  - "[[@addyosmani]]"
+  - "[[Addy Osmani]]"
 published: 2026-06-21
 created: 2026-06-21
 description: "Web developers often treat the browser as a black box that magically transforms HTML, CSS, and JavaScript into interactive web applications...."

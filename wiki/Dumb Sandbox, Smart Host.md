@@ -1,7 +1,7 @@
 ---
 type: source
 created: 2026-06-22
-updated: 2026-06-22
+updated: 2026-08-20
 tags:
   - source
   - AI
@@ -13,7 +13,7 @@ source_count: 1
 
 # Dumb Sandbox, Smart Host
 
-这篇 X 长文提出 [[Smart Host Dumb Sandbox]] 作为云智能体运行时（Cloud Agent Runtime）的核心架构原则：可信、长寿命的主机负责身份、密钥、计费、持久化、重试、策略和可观察性；可丢弃的沙盒只承担模型选择代码和 shell 命令的执行。
+[[intuitiveml]] 的这篇 X 长文提出 [[Smart Host Dumb Sandbox]] 作为云智能体运行时（Cloud Agent Runtime）的核心架构原则：可信、长寿命的主机负责身份、密钥、计费、持久化、重试、策略和可观察性；可丢弃的沙盒只承担模型选择代码和 shell 命令的执行。
 
 源文见：[Dumb Sandbox, Smart Host](../articles/Dumb%20Sandbox%2C%20Smart%20Host.md)。
 
@@ -41,3 +41,4 @@ source_count: 1
 - [[Agent Loop]]
 - [[Orchestration Surface]]
 - [[Slow AI]]
+- [[intuitiveml]]

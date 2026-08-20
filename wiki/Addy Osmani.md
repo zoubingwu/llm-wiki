@@ -1,7 +1,7 @@
 ---
 type: entity
 created: 2026-06-21
-updated: 2026-06-21
+updated: 2026-08-20
 tags:
   - author
   - browser
@@ -11,7 +11,7 @@ source_count: 1
 
 # Addy Osmani
 
-Addy Osmani（@addyosmani）是前端性能、JavaScript 和 Chrome / Chromium 生态写作中常见的技术作者。`articles/How modern browsers work.md` 的作者字段标记为 `@addyosmani`。
+Addy Osmani（@addyosmani）是前端性能、JavaScript 和 Chrome / Chromium 生态写作中常见的技术作者。[[How modern browsers work]] 的源文发布于其 @addyosmani 账号。
 
 ## 在当前 wiki 中的位置
 

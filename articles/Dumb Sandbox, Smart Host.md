@@ -2,7 +2,7 @@
 title: "Dumb Sandbox, Smart Host"
 source: "https://x.com/intuitiveml/status/2066982286395068540"
 author:
-  - "[[@intuitiveml]]"
+  - "[[intuitiveml]]"
 published: 2026-06-17
 created: 2026-06-22
 description: "Most cloud agent architectures start by asking what the sandbox can do. Can it run shell commands? Can it install pack..."

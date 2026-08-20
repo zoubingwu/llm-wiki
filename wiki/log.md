@@ -490,3 +490,8 @@ Append-only 变更记录，最新在底部。
   - `index.md` — 登记本次全部概念、综述、实体和源摘要
 - articles 处理：
   - `articles/Git at any scale.md` — 中英文保持独立段落，英文正文保持不动；校对 packfile、quorum、compaction、provenance、reference transaction、Continuity、Origin、gossip UDP 等明显机翻与标题问题，清理抓取残留 description，并保留源文中的全部交互式 SVG
+
+## [2026-08-20] lint | 悬空作者链接修复
+- 将文章 frontmatter 中的 `@addyosmani` 与 `@TheAhmadOsman` 悬空链接改为已有实体页 `[[Addy Osmani]]` 和 `[[Ahmad Osman]]`
+- 创建 `intuitiveml.md` 作者实体页，并让 `Dumb Sandbox, Smart Host.md` 的文章元数据、源摘要页和索引统一链接到 `[[intuitiveml]]`
+- 确认音频文章代码块中的 `[[Prototype]]: AudioBuffer` 是浏览器控制台输出示例，渲染器会跳过代码块，不属于 wikilink

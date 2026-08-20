@@ -2,7 +2,7 @@
 title: "Inference Engines for LLMs & Local AI Hardware (2026 Edition)"
 source: "https://x.com/TheAhmadOsman/status/2057183854444843202"
 author:
-  - "[[@TheAhmadOsman]]"
+  - "[[Ahmad Osman]]"
 published: 2026-05-21
 created: 2026-06-22
 description: "You don't pick an inference engine first. You pick a hardware strategy, a workload shape, and a serving model. The engine follows.That is th..."

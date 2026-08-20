@@ -2,7 +2,7 @@
 title: "GPU Memory Math for LLMs (2026 Edition)"
 source: "https://x.com/TheAhmadOsman/status/2040103488714068245"
 author:
-  - "[[@TheAhmadOsman]]"
+  - "[[Ahmad Osman]]"
 published: 2026-04-04
 created: 2026-06-22
 description: "If you’re running models locally, thinking “model → VRAM” falls apart once you account for how the weights were trained and quantized in the..."
