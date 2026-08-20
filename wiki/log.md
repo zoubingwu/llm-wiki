@@ -469,3 +469,24 @@ Append-only 变更记录，最新在底部。
 
 ## [2026-06-26] ingest | Raft Workspace 命名统一
 - 将实体页重命名为 `Raft (formerly Slock).md`，并把相关 wiki 交叉引用统一到新名称
+
+## [2026-08-19] ingest | Git at any scale
+- 录入了 Cursor 博客《Git at any scale》：大规模 Git 托管从 GitHub Spokes（packfile 复制 + 3PC 协调）到 Cursor Continuity（WAL-first / S3 事实来源）的架构演进
+- 创建了以下页面：
+  - `Git at any scale.md` — 源摘要页
+  - `Spokes.md` — GitHub 的 Git 应用级复制架构概念页（packfile + reference transaction + 3PC 协调、强一致、已知缺陷）
+  - `Continuity (Cnt).md` — Cursor 的 WAL-first Git 存储系统概念页（S3 事实来源、rendezvous hashing、ETag 条件 GET、压缩摊销）
+- 补完 ingest 时继续创建了以下页面：
+  - `Git Repository Hosting.md` — 文件系统、packfile、对象分发三条扩展路线与一致性约束总览
+  - `Git Packfile.md` — Git 存储 / 网络格式、随机读取与 repack 成本概念页
+  - `Git Reference Transaction.md` — push 对象传输与引用发布边界概念页
+  - `GitHub.md` — GitHub 早期存储演进与 Spokes 实体页
+  - `Origin.md` — Cursor Git 托管平台实体页
+  - `Vicent Martí.md` — 文章作者实体页
+- 更新了以下页面：
+  - `Cursor.md` — 补充 Continuity / Origin 业务线
+  - `Spokes.md`、`Continuity (Cnt).md` — 校正复制、线性化、性能测试范围并补强交叉引用
+  - `Overview.md` — 新增「Git 托管 / 分布式存储架构」主题并将来源计数更新为 28
+  - `index.md` — 登记本次全部概念、综述、实体和源摘要
+- articles 处理：
+  - `articles/Git at any scale.md` — 中英文保持独立段落，英文正文保持不动；校对 packfile、quorum、compaction、provenance、reference transaction、Continuity、Origin、gossip UDP 等明显机翻与标题问题，清理抓取残留 description，并保留源文中的全部交互式 SVG

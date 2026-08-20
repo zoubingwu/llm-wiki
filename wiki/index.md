@@ -159,6 +159,11 @@
 - [[Self-hosted Password Management]] — 用户自托管密码库服务端以保留数据、同步和退出路径控制权
 - [[API Compatibility Drift]] — 上游 API 与客户端契约渐进演化导致第三方兼容实现逐步落后的风险
 - [[Open Source Fork Safety]] — 社区依靠许可证、源码、数据可迁移性和分叉能力维持产品退出路径
+- [[Git Repository Hosting]] — 集中托管 Git 时的文件系统、packfile、对象分发与一致性约束总览
+- [[Git Packfile]] — Git 存储和网络传输的基础二进制格式，也是大规模托管的随机读取与压缩瓶颈
+- [[Git Reference Transaction]] — 通过更新 ref 发布 push，使对象数据传输与可见性变更分离的事务边界
+- [[Spokes]] — GitHub 的 Git 应用级复制架构，以 packfile 扇出和 3PC 引用事务协调保持强一致
+- [[Continuity (Cnt)]] — Cursor 的 WAL-first Git 存储系统，以 S3 为事实来源，让只读吞吐随副本线性扩展
 
 ## 实体
 - [[Raft (formerly Slock)]] — 智能体原生工作空间，前身为 Slock，引入 Agent Inbox 和 Held Draft
@@ -185,7 +190,10 @@
 - [[Bitwarden]] — 开源密码管理器产品，文章案例关注其价格、承诺、管理层和客户端/API 风险
 - [[Vaultwarden]] — 兼容 Bitwarden server API 的自托管密码管理服务端
 - [[PPB1701]] — ByteHaven 博客作者，关注开源产品、用户控制权和自托管
-- [[Cursor]] — AI 代码编辑器，文章中作为开放模型自托管和低延迟推理优化案例
+- [[Cursor]] — AI 代码编辑器及相关开发团队，文章案例覆盖低延迟推理、Continuity Git 存储与 Origin 托管平台
+- [[GitHub]] — 集中式 Git 托管与软件协作平台，早期开发了 Spokes 存储复制架构
+- [[Origin]] — Cursor 基于 Continuity 构建的 Git 托管平台
+- [[Vicent Martí]] — 《Git at any scale》作者，参与 Cursor 的 Git 基础设施工作
 - [[Dan Koe]] — 围绕个人成长、创作者商业和生活设计写作的作者
 - [[Addy Osmani]] — 前端性能、JavaScript 和 Chrome / Chromium 生态相关技术作者
 - [[Ahmad Osman]] — 本地 AI、自托管 LLM、推理硬件和推理引擎写作者
@@ -223,6 +231,7 @@
 - [[GPU Memory Math for LLMs (2026 Edition)]] — Ahmad Osman 自托管 LLM / 本地 AI 系列第 1 部分，解释参数量、bits per weight 与显存估算（2026-04-04）
 - [[Memory Bandwidth for Local AI Hardware (2026 Edition)]] — Ahmad Osman 自托管 LLM / 本地 AI 系列第 2 部分，解释容量、带宽与软件栈的硬件判断框架（2026-04-07）
 - [[Inference Engines for LLMs & Local AI Hardware (2026 Edition)]] — Ahmad Osman 自托管 LLM / 本地 AI 系列第 3 部分，解释推理引擎选择与硬件 / workload / serving model 的关系（2026-05-21）
+- [[Git at any scale]] — Vicent Martí 对大规模 Git 托管架构的梳理：从 GitHub Spokes 的 3PC 协调到 Cursor WAL-first 的 Continuity 系统（2026-08-18）
 
 ## 分析 / 对比
 - [[Browser Engine Comparison]] — 对比 Chromium / Blink、Gecko 和 WebKit 在样式、图形、JavaScript 和进程模型上的实现差异

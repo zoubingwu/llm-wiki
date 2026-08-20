@@ -1,15 +1,15 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-06-26
+updated: 2026-08-20
 tags:
   - overview
-source_count: 27
+source_count: 28
 ---
 
 # Overview
 
-个人知识库的主题总览。目前涵盖二十一个核心主题：**上下文工程**（Context Engineering）、**AI 推理工程 / 模型服务**、**自托管 LLM / 本地 AI 硬件**、**AI 时代的用户体验**、**云智能体运行时 / 安全边界**、**智能体体验设计（AX）**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**现代浏览器内部机制**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**身份改变 / 目标系统**、**Tailscale 网络加速 / Peer Relay** 和 **开源产品信任与自托管**。
+个人知识库的主题总览。目前涵盖二十二个核心主题：**上下文工程**（Context Engineering）、**AI 推理工程 / 模型服务**、**自托管 LLM / 本地 AI 硬件**、**AI 时代的用户体验**、**云智能体运行时 / 安全边界**、**智能体体验设计（AX）**、**界面设计词汇 / 设计系统**、**LLM Wiki 模式**、**Transformer 架构 / 注意力机制**、**音频信号处理 / 音频可视化**、**前端动画中的物理模型**、**浏览器中的折射玻璃效果**、**实时图形渲染中的大气散射**、**现代浏览器内部机制**、**Web 应用快捷键系统**、**跨平台桌面应用架构**、**六边形网格算法**、**黑客文化 / 开源传统**、**身份改变 / 目标系统**、**Tailscale 网络加速 / Peer Relay**、**开源产品信任与自托管**和 **Git 托管 / 分布式存储架构**。
 
 ## Context Engineering（上下文工程）
 
@@ -148,3 +148,9 @@ source_count: 27
 研究开源产品在商业化、价格调整、管理层变化和 API 演进中如何影响用户信任与退出路径。核心问题是用户如何从源码、许可证、承诺文本、第三方兼容实现和自托管能力中判断长期控制权。
 
 这条知识线从 [[The Quiet Renovation at Bitwarden - ByteHaven - Where I ramble about bytes]] 出发，把 [[Bitwarden]] 和 [[Vaultwarden]] 作为案例，串起 [[Open Source Trust Erosion]]、[[Self-hosted Password Management]]、[[API Compatibility Drift]] 和 [[Open Source Fork Safety]]。
+
+## Git 托管 / 分布式存储架构
+
+研究为单机与分布式开发设计的 Git，如何被改造成集中式、高可用、可水平扩展的托管服务。核心约束来自 [[Git Packfile|packfile]] 的随机读取、[[Git Reference Transaction|引用事务]]的可见性边界、强一致性要求，以及大型 monorepo 与 agent 海量小仓库相反的副本需求。
+
+这条知识线从 [[Git at any scale]] 出发，以 [[GitHub]] 的 [[Spokes]] 和 [[Cursor]] 的 [[Continuity (Cnt)]] 为对照，串起 [[Git Repository Hosting]]、[[Git Packfile]]、[[Git Reference Transaction]] 与产品化平台 [[Origin]]。
