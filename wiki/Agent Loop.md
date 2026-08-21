@@ -1,17 +1,17 @@
 ---
 type: concept
 created: 2026-04-09
-updated: 2026-06-22
+updated: 2026-08-21
 tags:
   - 智能体
   - loop
   - context
-source_count: 2
+source_count: 3
 ---
 
 # Agent Loop
 
-Agent Loop 指 AI 智能体执行任务的标准循环：接收输入 -> 选择动作 -> 执行 -> 观察 -> 更新上下文 -> 重复。
+Agent Loop 指 AI 智能体执行任务的标准循环：接收输入 -> 选择动作 -> 执行 -> 观察 -> 更新上下文 -> 重复。[[Agent Harness]] 为这个循环提供 system prompt、工具和模型适配环境。
 
 ## 典型流程
 
@@ -52,3 +52,5 @@ Agent Loop 指 AI 智能体执行任务的标准循环：接收输入 -> 选择�
 - [[State Machine for Agents]]
 - [[Smart Host Dumb Sandbox]]
 - [[Agent Experience Design (AX)]]
+- [[Agent Harness]]
+- [[Model Translation Layer]]

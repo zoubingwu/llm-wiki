@@ -1,17 +1,17 @@
 ---
 type: concept
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-08-21
 tags:
   - LLM
   - 智能体
   - memory
-source_count: 1
+source_count: 2
 ---
 
 # Scratchpads
 
-Scratchpads（草稿本）是智能体在执行长时间任务时，将中间计划、笔记和推理步骤保存到外部存储的方法。
+Scratchpads（草稿本）是智能体在执行长时间任务时，将中间计划、笔记和推理步骤保存到外部存储的方法。[[Reasoning Traces]] 说明，模型内部也可能把中间推理写入 scratchpad；外部 scratchpad 与模型输出 channel 的可见性、持久性和安全边界不同。
 
 ## 为什么需要
 
@@ -34,3 +34,4 @@ Scratchpads（草稿本）是智能体在执行长时间任务时，将中间计
 
 - [[Long-term Memory for LLMs]]
 - [[Multi-agent System]]
+- [[Reasoning Traces]]

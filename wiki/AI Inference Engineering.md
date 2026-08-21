@@ -1,13 +1,13 @@
 ---
 type: concept
 created: 2026-06-16
-updated: 2026-06-22
+updated: 2026-08-21
 tags:
   - LLM
   - inference
   - serving
   - infrastructure
-source_count: 4
+source_count: 5
 ---
 
 # AI Inference Engineering
@@ -21,7 +21,7 @@ LLM 推理的结构性约束来自 [[LLM Inference Phases|prefill 和 decode]] �
 - prefill 一次性处理完整输入提示，受 GPU 算力限制，核心指标是首次词元时间（Time to First Token, TTFT）。
 - decode 逐个生成后续词元，受内存带宽限制，核心指标是每秒词元数（Tokens Per Second, TPS）。
 
-推理工程的大部分优化都围绕这个拆分展开：让 prefill 更快、让 decode 更快，或者重新组织系统让两者独立扩展。
+推理工程的大部分优化都围绕这个拆分展开：让 prefill 更快、让 decode 更快，或者重新组织系统让两者独立扩展。[[What Is Reasoning]] 还说明，reasoning effort 会通过 system prompt 和输出 channel 影响实际推理行为，并可能改变 KV cache 的可复用性。
 
 ## 主要技术
 
@@ -57,3 +57,6 @@ LLM 推理的结构性约束来自 [[LLM Inference Phases|prefill 和 decode]] �
 - [[Transformer]]
 - [[Attention Mechanism]]
 - [[Context Engineering]]
+- [[What Is Reasoning]]
+- [[Reasoning Traces]]
+- [[Reasoning Effort]]

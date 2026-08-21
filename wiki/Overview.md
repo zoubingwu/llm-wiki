@@ -1,10 +1,10 @@
 ---
 type: overview
 created: 2026-04-08
-updated: 2026-08-20
+updated: 2026-08-21
 tags:
   - overview
-source_count: 28
+source_count: 30
 ---
 
 # Overview
@@ -23,7 +23,7 @@ source_count: 28
 
 研究训练后模型如何在生产环境中以可控延迟、吞吐量、成本和质量运行。核心切入点是 [[LLM Inference Phases]]：prefill 受算力限制，用 TTFT 衡量；decode 受内存带宽限制，用 TPS 衡量。
 
-这条知识线从 [[A Guide to AI Inference Engineering]] 出发，串起 [[AI Inference Engineering]]、[[Inference Batching]]、[[Prefix Caching]]、[[Model Quantization]]、[[Speculative Decoding]]、[[Model Parallelism for Inference]]、[[Disaggregated Inference Serving]]、[[KV-Cache]] 和 [[LLM Inference Engines]]。
+这条知识线从 [[A Guide to AI Inference Engineering]] 出发，串起 [[AI Inference Engineering]]、[[Inference Batching]]、[[Prefix Caching]]、[[Model Quantization]]、[[Speculative Decoding]]、[[Model Parallelism for Inference]]、[[Disaggregated Inference Serving]]、[[KV-Cache]] 和 [[LLM Inference Engines]]；[[What Is Reasoning]] 进一步把推理轨迹、推理力度、channel token 和 system prompt 的关系落到模型输出格式上。
 
 ## 自托管 LLM / 本地 AI 硬件
 
@@ -41,7 +41,7 @@ source_count: 28
 
 研究云端 AI 智能体如何在共享基础设施上安全执行模型生成代码。核心问题是 [[Cloud Agent Runtime]] 如何把用户意图、身份、密钥、计费、持久状态、工具调用和可观察性分配到可信主机、可丢弃沙盒和桥接层。
 
-这条知识线从 [[Dumb Sandbox, Smart Host]] 出发，串起 [[Smart Host Dumb Sandbox]]、[[Agent Host Control Plane]]、[[Agent Sandbox]]、[[Agent Tool Bridge]] 和 [[Scoped Credentials for Agents]]。它也和 [[Agent Loop]]、[[Orchestration Surface]]、[[Slow AI]] 形成系统层连接。
+这条知识线从 [[Dumb Sandbox, Smart Host]] 出发，串起 [[Smart Host Dumb Sandbox]]、[[Agent Host Control Plane]]、[[Agent Sandbox]]、[[Agent Tool Bridge]] 和 [[Scoped Credentials for Agents]]。[[What is a Harness]] 从用户可拥有的本地运行环境角度补充了 [[Agent Harness]]、system prompt、工具、agentic loop 和模型翻译层。它也和 [[Agent Loop]]、[[Orchestration Surface]]、[[Slow AI]] 形成系统层连接。
 
 ## 智能体体验设计（AX）
 
@@ -61,7 +61,7 @@ source_count: 28
 
 人负责：提供源资料、提出问题、审查结果。LLM 负责：总结、交叉引用、归档、维护一致性。
 
-涉及：[[Scratchpads]]、[[Long-term Memory for LLMs]]、Obsidian 工具链（Web Clipper、Dataview、Marp）。
+涉及：[[Scratchpads]]、[[Long-term Memory for LLMs]]、[[Reasoning Traces]]、Obsidian 工具链（Web Clipper、Dataview、Marp）。
 
 ## Transformer 架构与注意力机制
 

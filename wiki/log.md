@@ -495,3 +495,24 @@ Append-only 变更记录，最新在底部。
 - 将文章 frontmatter 中的 `@addyosmani` 与 `@TheAhmadOsman` 悬空链接改为已有实体页 `[[Addy Osmani]]` 和 `[[Ahmad Osman]]`
 - 创建 `intuitiveml.md` 作者实体页，并让 `Dumb Sandbox, Smart Host.md` 的文章元数据、源摘要页和索引统一链接到 `[[intuitiveml]]`
 - 确认音频文章代码块中的 `[[Prototype]]: AudioBuffer` 是浏览器控制台输出示例，渲染器会跳过代码块，不属于 wikilink
+
+## [2026-08-21] ingest | What Is Reasoning + What is a Harness?
+- 录入了两篇英文文章，并为文章补充了逐段中文翻译，英文原文保持不动：
+  - `articles/What Is Reasoning.md` — 校对并翻译 reasoning traces、analysis / final channel、reasoning effort、prefill 和 KV cache 相关内容，保留安全过滤器截图
+  - `articles/What is a Harness.md` — 翻译攀岩 harness 比喻、agent harness 的四个组成部分、用户自主权和中立开源 harness 论点，保留 Royal Robbins 图片；文件名去掉问号以避免站点路径解析歧义
+- 创建了以下页面：
+  - `What Is Reasoning.md` — 源摘要页
+  - `Reasoning Traces.md` — 推理轨迹与输出 channel 概念页
+  - `Reasoning Effort.md` — 推理力度与 system prompt 控制概念页
+  - `What is a Harness.md` — Earendil 发布的 agent harness 源摘要页
+  - `Agent Harness.md` — 智能体 Harness 概念页
+  - `Model Translation Layer.md` — 多模型适配层概念页
+  - `System Prompt.md` — 运行时系统提示概念页
+  - `Armin Ronacher.md` — 作者实体页
+  - `Pi.md` — agent harness 案例实体页
+- 更新了以下页面：
+  - `AI Inference Engineering.md` — 补充 reasoning traces / reasoning effort
+  - `Agent Loop.md` — 补充 Agent Harness 和模型适配环境
+  - `Scratchpads.md` — 区分模型内部 reasoning scratchpad 与外部 scratchpad
+  - `Overview.md` — 来源计数更新为 30，补充两条知识线交叉引用
+  - `index.md` — 登记全部新页面与源摘要

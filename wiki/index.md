@@ -19,6 +19,8 @@
 - [[Lost in the Middle Problem]] — LLM 对输入中间部分关注度不足的现象
 - [[Retrieval-Augmented Generation (RAG)]] — 检索增强生成，只拉取相关信息注入上下文
 - [[AI Inference Engineering]] — 在生产环境中高效运行已训练模型，平衡延迟、吞吐量、成本和质量
+- [[Reasoning Traces]] — 模型在最终答案前生成、并可通过 analysis channel 路由的中间文本
+- [[Reasoning Effort]] — 通过 system prompt、训练约定和 token 边界控制推理行为
 - [[Self-hosted LLMs Local AI Hardware]] — 本地运行开放 LLM 时的显存、带宽、软件栈和推理引擎系列总览
 - [[Local AI Hardware]] — 用容量、内存带宽和软件栈判断本地 AI 硬件
 - [[LLM VRAM Sizing]] — 用参数量、bits per weight 和运行时开销估算 LLM 显存需求
@@ -38,6 +40,9 @@
 - [[LLM Wiki Pattern]] — 由 LLM 构建和维护的持久化知识库，知识编译一次后持续更新
 - [[KV-Cache]] — 键值缓存对 AI 智能体性能至关重要，直接影响延迟和成本
 - [[Agent Loop]] — AI 智能体的标准循环流程，上下文增长与输出失衡
+- [[Agent Harness]] — 为模型提供系统提示、工具、智能体循环和模型适配层的运行环境
+- [[Model Translation Layer]] — 将统一的 harness 能力适配到多个模型接口的翻译层
+- [[System Prompt]] — 规定模型角色、工具、推理行为和上下文边界的运行时指令层
 - [[Cloud Agent Runtime]] — 云端长时运行智能体的主机、沙盒、桥接、凭证和观测边界
 - [[Smart Host Dumb Sandbox]] — 让可信主机掌管身份、密钥、计费和状态，让沙盒只承担执行
 - [[Agent Sandbox]] — 可丢弃的不可信执行边界，运行模型选择的代码和 shell 命令
@@ -194,6 +199,8 @@
 - [[GitHub]] — 集中式 Git 托管与软件协作平台，早期开发了 Spokes 存储复制架构
 - [[Origin]] — Cursor 基于 Continuity 构建的 Git 托管平台
 - [[Vicent Martí]] — 《Git at any scale》作者，参与 Cursor 的 Git 基础设施工作
+- [[Armin Ronacher]] — 解释 reasoning traces、reasoning effort 和推理格式的作者
+- [[Pi]] — 本地、可扩展、模型中立的 agent harness 案例
 - [[Dan Koe]] — 围绕个人成长、创作者商业和生活设计写作的作者
 - [[Addy Osmani]] — 前端性能、JavaScript 和 Chrome / Chromium 生态相关技术作者
 - [[intuitiveml]] — 云智能体可信主机、执行沙盒与工具桥接安全边界的技术作者
@@ -233,6 +240,8 @@
 - [[Memory Bandwidth for Local AI Hardware (2026 Edition)]] — Ahmad Osman 自托管 LLM / 本地 AI 系列第 2 部分，解释容量、带宽与软件栈的硬件判断框架（2026-04-07）
 - [[Inference Engines for LLMs & Local AI Hardware (2026 Edition)]] — Ahmad Osman 自托管 LLM / 本地 AI 系列第 3 部分，解释推理引擎选择与硬件 / workload / serving model 的关系（2026-05-21）
 - [[Git at any scale]] — Vicent Martí 对大规模 Git 托管架构的梳理：从 GitHub Spokes 的 3PC 协调到 Cursor WAL-first 的 Continuity 系统（2026-08-18）
+- [[What Is Reasoning]] — Armin Ronacher 对 reasoning traces、推理力度和 analysis / final channel 的解释（2026-08-19）
+- [[What is a Harness]] — Earendil 对 agent harness 四个组成部分和用户自主权的入门解释（2026-08-20）
 
 ## 分析 / 对比
 - [[Browser Engine Comparison]] — 对比 Chromium / Blink、Gecko 和 WebKit 在样式、图形、JavaScript 和进程模型上的实现差异
