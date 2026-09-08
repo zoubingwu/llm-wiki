@@ -1,0 +1,13 @@
+---
+import { getCollection } from "astro:content";
+import BrowseLayout from "../../layouts/BrowseLayout.astro";
+
+const entries = await getCollection("wiki");
+---
+
+<BrowseLayout
+  title="All Wiki"
+  description="Browse every wiki page, including concepts, entities, overviews, analyses, source summaries, the index, and the log."
+  collection="wiki"
+  entries={entries}
+/>

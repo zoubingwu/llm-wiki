@@ -10,7 +10,7 @@ function fileTitle(entry: { id: string; filePath?: string }) {
 
 export async function GET() {
   const wikiEntries = await getCollection("wiki");
-  const urls = ["/", ...wikiEntries.map((entry) => pageUrl("wiki", fileTitle(entry)))];
+  const urls = ["/", "/wiki/", "/articles/", ...wikiEntries.map((entry) => pageUrl("wiki", fileTitle(entry)))];
   const base = "https://wiki.zoubingwu.com";
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

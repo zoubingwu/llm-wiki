@@ -1,0 +1,13 @@
+---
+import { getCollection } from "astro:content";
+import BrowseLayout from "../../layouts/BrowseLayout.astro";
+
+const entries = await getCollection("articles");
+---
+
+<BrowseLayout
+  title="All Sources"
+  description="Browse the complete archive of source articles."
+  collection="articles"
+  entries={entries}
+/>

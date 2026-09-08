@@ -1,0 +1,57 @@
+---
+import { basename } from "node:path";
+import Header from "../components/Header.astro";
+import { pageUrl } from "../lib/wiki/paths";
+import type { WikiCollectionName } from "../lib/wiki/types";
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  collection: WikiCollectionName;
+  entries: { id: string; filePath?: string }[];
+}
+
+const { title, description, collection, entries } = Astro.props;
+const items = entries
+  .map((entry) => {
+    const title = entry.filePath ? basename(entry.filePath, ".md") : entry.id;
+    return { title, url: pageUrl(collection, title) };
+  })
+  .sort((a, b) => a.title.localeCompare(b.title, "zh-CN", { numeric: true }));
+---
+
+<BaseLayout title={title} description={description}>
+  <Header />
+  <main class="home-shell">
+    <article class="home-main content-prose">
+      <header class="article-header home-header">
+        <nav aria-label="Browse">
+          <a href="/">Home</a> · <a href="/wiki/" aria-current={collection === "wiki" ? "page" : undefined}>All Wiki</a> · <a
+            href="/articles/"
+            aria-current={collection === "articles" ? "page" : undefined}>All Sources</a>
+        </nav>
+        <h1 class="article-header__title">{title}</h1>
+        <p>{description}</p>
+        <p class="home__description">{items.length} entries · Sorted by title</p>
+      </header>
+      <section class="home-section" aria-label={title}>
+        {items.length === 0 ? (
+          <p class="empty-note">No entries yet.</p>
+        ) : (
+          <ul class="home-list browse-list">
+            {items.map((item) => (
+              <li><a href={item.url}>{item.title}</a></li>
+            ))}
+          </ul>
+        )}
+      </section>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .browse-list {
+    overflow-wrap: anywhere;
+  }
+</style>

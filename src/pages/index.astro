@@ -96,35 +96,27 @@ const homeDescription =
       </section>
       <section class="home-section">
         <h2>Latest Wiki</h2>
-        {
-          latestWiki.length === 0 ? (
-            <p class="empty-note">No wiki entries yet.</p>
-          ) : (
-            <ul class="home-list">
-              {latestWiki.map((item) => (
-                <li>
-                  <a href={pageUrl("wiki", item.title)}>{item.title}</a>
-                </li>
-              ))}
-            </ul>
-          )
-        }
+        {latestWiki.length === 0 && <p class="empty-note">No wiki entries yet.</p>}
+        <ul class="home-list">
+          {latestWiki.map((item) => (
+            <li>
+              <a href={pageUrl("wiki", item.title)}>{item.title}</a>
+            </li>
+          ))}
+          <li><a href="/wiki/">Browse all wiki</a></li>
+        </ul>
       </section>
       <section class="home-section">
         <h2>Latest Sources</h2>
-        {
-          latestArticles.length === 0 ? (
-            <p class="empty-note">No source files yet.</p>
-          ) : (
-            <ul class="home-list">
-              {latestArticles.map((item) => (
-                <li>
-                  <a href={pageUrl("articles", item.title)}>{item.title}</a>
-                </li>
-              ))}
-            </ul>
-          )
-        }
+        {latestArticles.length === 0 && <p class="empty-note">No source files yet.</p>}
+        <ul class="home-list">
+          {latestArticles.map((item) => (
+            <li>
+              <a href={pageUrl("articles", item.title)}>{item.title}</a>
+            </li>
+          ))}
+          <li><a href="/articles/">Browse all sources</a></li>
+        </ul>
       </section>
       <section class="home-section">
         <h2>Recent Activity</h2>
