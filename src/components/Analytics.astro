@@ -1,0 +1,18 @@
+---
+// 访问统计：Feasible Analytics（analytics.inksphere.org）
+// 仅在构建产物中注入（astro build），`astro dev` 开发服务器下不加载，避免本地访问污染统计。
+//
+// 两个 <script> 都用 is:inline，让 Astro 原样输出这段第三方代码：
+// 第一段是官方提供的队列 stub，必须保持原始写法，不能被打包/改写成 ES module。
+const enabled = import.meta.env.PROD;
+const scriptSrc = "https://analytics.inksphere.org/js/fs-xcxds2vsacjid5od.js";
+---
+
+{
+  enabled && (
+    <>
+      <script is:inline>window.feasible=window.feasible||function(){(window.feasible.q=window.feasible.q||[]).push(arguments)};</script>
+      <script is:inline defer src={scriptSrc} />
+    </>
+  )
+}
