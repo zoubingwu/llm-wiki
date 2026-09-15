@@ -7,7 +7,6 @@ export interface ArticleListItem {
   title: string;
   created?: string | Date | null;
   published?: string | Date | null;
-  mtime: number;
 }
 
 export interface WikiListItem {
@@ -15,7 +14,6 @@ export interface WikiListItem {
   type?: string | null;
   created?: string | Date | null;
   updated?: string | Date | null;
-  mtime: number;
 }
 
 const LATEST_WIKI_TYPES = new Set(["analysis", "concept", "entity", "overview"]);
@@ -23,6 +21,13 @@ const LATEST_WIKI_TYPES = new Set(["analysis", "concept", "entity", "overview"])
 function toTimestamp(value: string | Date | null | undefined): number {
   if (!value) return NaN;
   return value instanceof Date ? value.getTime() : Date.parse(String(value));
+}
+
+// 首页排序只依赖 frontmatter 里的日期，打平时按标题，且显式指定 zh-CN 排序规则
+// （与 BrowseLayout 一致）。不要引入文件 mtime 之类依赖构建环境的信息：同一个 commit
+// 在本地与 CI 上会因为文件时间戳不同而产出不同的首页顺序。
+function compareTitles(a: string, b: string): number {
+  return a.localeCompare(b, "zh-CN", { numeric: true });
 }
 
 export function pickFeaturedConcepts(indexBody: string, limit = 6): string[] {
@@ -55,10 +60,12 @@ export function sortLatestArticles(entries: ArticleListItem[]): ArticleListItem[
     const publishedTimestamp = toTimestamp(entry.published);
     if (!Number.isNaN(publishedTimestamp)) return publishedTimestamp;
 
-    return entry.mtime;
+    return 0;
   };
 
-  return [...entries].sort((a, b) => toSortableValue(b) - toSortableValue(a));
+  return [...entries].sort(
+    (a, b) => toSortableValue(b) - toSortableValue(a) || compareTitles(a.title, b.title)
+  );
 }
 
 export function sortLatestWikiEntries(entries: WikiListItem[]): WikiListItem[] {
@@ -69,10 +76,10 @@ export function sortLatestWikiEntries(entries: WikiListItem[]): WikiListItem[] {
     const createdTimestamp = toTimestamp(entry.created);
     if (!Number.isNaN(createdTimestamp)) return createdTimestamp;
 
-    return entry.mtime;
+    return 0;
   };
 
   return entries
     .filter((entry) => entry.type && LATEST_WIKI_TYPES.has(entry.type))
-    .sort((a, b) => toSortableValue(b) - toSortableValue(a) || b.mtime - a.mtime || a.title.localeCompare(b.title));
+    .sort((a, b) => toSortableValue(b) - toSortableValue(a) || compareTitles(a.title, b.title));
 }

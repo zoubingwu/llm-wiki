@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { statSync } from "node:fs";
-import { basename, join } from "node:path";
+import { basename } from "node:path";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import { pageUrl } from "../lib/wiki/paths";
@@ -29,15 +28,6 @@ const latestWiki = sortLatestWikiEntries(
     type: entry.data?.type,
     created: entry.data?.created,
     updated: entry.data?.updated,
-    mtime: entry.filePath
-      ? (() => {
-          try {
-            return statSync(join(process.cwd(), entry.filePath)).mtimeMs;
-          } catch {
-            return 0;
-          }
-        })()
-      : 0,
   })),
 ).slice(0, 8);
 const latestArticles = sortLatestArticles(
@@ -45,15 +35,6 @@ const latestArticles = sortLatestArticles(
     title: fileTitle(entry),
     created: entry.data?.created,
     published: entry.data?.published,
-    mtime: entry.filePath
-      ? (() => {
-          try {
-            return statSync(join(process.cwd(), entry.filePath)).mtimeMs;
-          } catch {
-            return 0;
-          }
-        })()
-      : 0,
   })),
 ).slice(0, 8);
 const homeDescription =
